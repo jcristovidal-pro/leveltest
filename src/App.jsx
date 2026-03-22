@@ -18,13 +18,101 @@ const C = {
 const TIMER_TOTAL = 25;
 const LETTERS = ["A","B","C","D"];
 
+// ─── SVG ICONS ────────────────────────────────────────────────────────────────
+const icons = {
+  mecanica_suelos: ({ size=28, color="currentColor" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* soil layers / strata */}
+      <path d="M2 18 Q6 14 12 16 Q18 18 22 14"/>
+      <path d="M2 13 Q6 9 12 11 Q18 13 22 9"/>
+      <path d="M2 8 Q7 5 12 6 Q17 7 22 4"/>
+      <line x1="8" y1="18" x2="8" y2="22"/>
+      <line x1="12" y1="16" x2="12" y2="22"/>
+      <line x1="16" y1="17" x2="16" y2="22"/>
+    </svg>
+  ),
+  concreto: ({ size=28, color="currentColor" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* cylinder specimen */}
+      <ellipse cx="12" cy="5" rx="7" ry="2.5"/>
+      <line x1="5" y1="5" x2="5" y2="19"/>
+      <line x1="19" y1="5" x2="19" y2="19"/>
+      <ellipse cx="12" cy="19" rx="7" ry="2.5"/>
+      {/* compression arrows */}
+      <line x1="12" y1="1" x2="12" y2="3"/>
+      <polyline points="10,2 12,0 14,2"/>
+      <line x1="12" y1="21" x2="12" y2="23"/>
+      <polyline points="10,22 12,24 14,22"/>
+    </svg>
+  ),
+  asfalto_pavimentos: ({ size=28, color="currentColor" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* road cross-section layers */}
+      <rect x="2" y="15" width="20" height="3" rx="0.5"/>
+      <rect x="2" y="12" width="20" height="3" rx="0.5"/>
+      <rect x="2" y="9" width="20" height="3" rx="0.5"/>
+      {/* road markings */}
+      <line x1="8" y1="10.5" x2="10" y2="10.5" strokeDasharray="2 2"/>
+      <line x1="14" y1="10.5" x2="16" y2="10.5" strokeDasharray="2 2"/>
+      {/* Marshall arrow load */}
+      <line x1="12" y1="3" x2="12" y2="7"/>
+      <polyline points="10,6 12,8 14,6"/>
+    </svg>
+  ),
+  geotecnia_cimentaciones: ({ size=28, color="currentColor" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* foundation footprint */}
+      <rect x="6" y="3" width="12" height="5" rx="0.5"/>
+      {/* pile */}
+      <line x1="9" y1="8" x2="9" y2="20"/>
+      <line x1="15" y1="8" x2="15" y2="20"/>
+      {/* pile tip */}
+      <polyline points="7,19 9,21 11,19"/>
+      <polyline points="13,19 15,21 17,19"/>
+      {/* soil line */}
+      <line x1="2" y1="11" x2="22" y2="11" strokeDasharray="3 2"/>
+    </svg>
+  ),
+  laboratorio_materiales: ({ size=28, color="currentColor" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* flask / beaker */}
+      <path d="M9 3h6M10 3v6L6 17a2 2 0 001.8 3h8.4A2 2 0 0018 17L14 9V3"/>
+      {/* liquid level */}
+      <line x1="7.5" y1="15" x2="16.5" y2="15"/>
+      {/* bubbles */}
+      <circle cx="10" cy="17" r="0.5" fill={color}/>
+      <circle cx="13" cy="18" r="0.5" fill={color}/>
+    </svg>
+  ),
+  rocas_mineria: ({ size=28, color="currentColor" }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+      {/* rock core sample */}
+      <ellipse cx="12" cy="4" rx="5" ry="1.5"/>
+      <line x1="7" y1="4" x2="7" y2="18"/>
+      <line x1="17" y1="4" x2="17" y2="18"/>
+      <ellipse cx="12" cy="18" rx="5" ry="1.5"/>
+      {/* fracture lines inside core */}
+      <line x1="7" y1="8" x2="17" y2="10"/>
+      <line x1="7" y1="13" x2="17" y2="11"/>
+      {/* pickaxe hint */}
+      <line x1="19" y1="3" x2="22" y2="6"/>
+      <line x1="21" y1="3" x2="19" y2="5"/>
+    </svg>
+  ),
+};
+
+const CatIcon = ({ id, size=28, color }) => {
+  const Icon = icons[id];
+  return Icon ? <Icon size={size} color={color || C.teal}/> : null;
+};
+
 const CATEGORIES = [
-  { id:"mecanica_suelos",         label:"Mecánica de Suelos",           icon:"⛰️",  desc:"Propiedades, clasificación, resistencia y consolidación" },
-  { id:"concreto",                label:"Concreto",                      icon:"🏗️",  desc:"Tecnología, diseño de mezclas y control de calidad" },
-  { id:"asfalto_pavimentos",      label:"Asfalto y Pavimentos",          icon:"🛣️",  desc:"Mezclas asfálticas, Marshall, Superpave y gestión vial" },
-  { id:"geotecnia_cimentaciones", label:"Geotecnia y Cimentaciones",     icon:"🔩",  desc:"Cimentaciones, taludes, presión lateral y asentamientos" },
-  { id:"laboratorio_materiales",  label:"Laboratorio de Materiales",     icon:"🔬",  desc:"Ensayos de cemento, áridos, acero, madera y metrología" },
-  { id:"rocas_mineria",           label:"Rocas, Minería y Geomecánica",  icon:"⚒️",  desc:"Mecánica de rocas, RMR, Q, GSI, túneles y minería" },
+  { id:"mecanica_suelos",         label:"Mecánica de Suelos",           desc:"Propiedades, clasificación, resistencia y consolidación" },
+  { id:"concreto",                label:"Concreto",                      desc:"Tecnología, diseño de mezclas y control de calidad" },
+  { id:"asfalto_pavimentos",      label:"Asfalto y Pavimentos",          desc:"Mezclas asfálticas, Marshall, Superpave y gestión vial" },
+  { id:"geotecnia_cimentaciones", label:"Geotecnia y Cimentaciones",     desc:"Cimentaciones, taludes, presión lateral y asentamientos" },
+  { id:"laboratorio_materiales",  label:"Laboratorio de Materiales",     desc:"Ensayos de cemento, áridos, acero, madera y metrología" },
+  { id:"rocas_mineria",           label:"Rocas, Minería y Geomecánica",  desc:"Mecánica de rocas, RMR, Q, GSI, túneles y minería" },
 ];
 
 // ─── CSS ──────────────────────────────────────────────────────────────────────
@@ -144,7 +232,15 @@ const css = `
     content:'✓';position:absolute;top:12px;right:14px;
     color:${C.teal};font-size:13px;font-weight:700;
   }
-  .lt-cat-icon{font-size:22px;margin-bottom:10px;display:block}
+  .lt-cat-icon{
+    width:44px;height:44px;border-radius:10px;
+    background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.15);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:14px;flex-shrink:0;
+  }
+  .lt-cat-card.selected .lt-cat-icon{
+    background:rgba(20,184,166,0.15);border-color:rgba(20,184,166,0.35);
+  }
   .lt-cat-name{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:${C.white};margin-bottom:4px}
   .lt-cat-count{font-size:11px;color:${C.teal};margin-bottom:4px;font-weight:600}
   .lt-cat-desc{font-size:11px;color:${C.subtle};line-height:1.5}
@@ -587,7 +683,7 @@ export default function LevelTestApp() {
               <div key={cat.id}
                 className={`lt-cat-card ${selectedCats.includes(cat.id) ? "selected" : ""}`}
                 onClick={() => toggleCat(cat.id)}>
-                <span className="lt-cat-icon">{cat.icon}</span>
+                <div className="lt-cat-icon"><CatIcon id={cat.id} size={22}/></div>
                 <div className="lt-cat-name">{cat.label}</div>
                 <div className="lt-cat-count">{cat.count} preguntas</div>
                 <div className="lt-cat-desc">{cat.desc}</div>
@@ -648,7 +744,9 @@ export default function LevelTestApp() {
           rightSlot={
             <div style={{ display:"flex", alignItems:"center", gap:10 }}>
               {streak >= 2 && <div className="lt-streak">🔥 {streak} racha</div>}
-              <div className="lt-header-tag">{catInfo?.icon} {catInfo?.label}</div>
+              <div className="lt-header-tag" style={{display:"flex",alignItems:"center",gap:6}}>
+                <CatIcon id={q.category} size={14} color={C.subtle}/> {catInfo?.label}
+              </div>
             </div>
           }
         />
