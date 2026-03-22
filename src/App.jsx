@@ -17,12 +17,71 @@ const C = {
 
 const TIMER_TOTAL = 25;
 const LETTERS = ["A","B","C","D"];
+const SLIDE_INTERVAL = 5000;
+const COUNTER_BASE = 3000; // base real evaluations
+const COUNTER_KEY  = "lt_eval_count"; // localStorage key
+
+// read/write persistent counter
+const getCounter = () => {
+  try { return parseInt(localStorage.getItem(COUNTER_KEY) || "0", 10); } catch { return 0; }
+};
+const incrementCounter = () => {
+  try {
+    const n = getCounter() + 1;
+    localStorage.setItem(COUNTER_KEY, String(n));
+    return n;
+  } catch { return 0; }
+};
+
+// ─── HERO SLIDES ──────────────────────────────────────────────────────────────
+// Slide 2 badge is injected dynamically with live counter in the component
+const SLIDES = [
+  {
+    badge: "Diagnóstico técnico profesional",
+    title: <>Pon a prueba tus<br/><span className="accent">conocimientos técnicos</span>.</>,
+    sub: "Descubre tu nivel real en ingeniería civil y laboratorio. Avalado por normas ASTM, ACI, AASHTO, ISO y mas — los estándares que la industria exige.",
+    cta: "Iniciar evaluación →",
+  },
+  {
+    badge: null, // ← injected: "+3,XXX profesionales evaluados"
+    title: <>No es un test.<br/>Es tu <span className="accent">diagnóstico técnico</span>.</>,
+    sub: "Ingenieros y técnicos de toda LATAM ya conocen su nivel real. Descubre dónde estás y qué necesitas para avanzar.",
+    cta: "Evalúate ahora →",
+  },
+  {
+    badge: "Perú · Colombia · México · Chile · Ecuador · Agentina · Bolivia y Centroamerica",
+    title: <>En toda Latinoamérica,<br/><span className="accent">una sola plataforma</span>.</>,
+    sub: "Mide tu competencia técnica con los mismos estándares internacionales que se aplican en proyectos reales de LATAM.",
+    cta: "Comenzar evaluación →",
+  },
+  {
+    badge: "Suelos · Concreto · Asfalto · Geotecnia · Lab · Geomecánica",
+    title: <>6 áreas técnicas.<br/><span className="accent">Un solo diagnóstico</span>.</>,
+    sub: "Evalúate en las disciplinas más demandadas de la ingeniería civil. Preguntas de nivel básico a avanzado con normas reales.",
+    cta: "Ver mis áreas →",
+  },
+  {
+    badge: "LEVELTEST+ PRO",
+    title: <>Tu diagnóstico,<br/>tu <span className="accent">ruta de aprendizaje</span>.</>,
+    sub: "Basado en tu resultado, ILTEC diseña la ruta de cursos exacta que necesitas para avanzar al siguiente nivel profesional.",
+    cta: "Evalúate hoy →",
+  },
+];
+
+// ─── COURSE LINKS por categoría ───────────────────────────────────────────────
+const COURSE_LINKS = {
+  mecanica_suelos:         { label: "Ver cursos de Mecánica de Suelos",     url: "https://iltec.lat/auto-learn/" },
+  concreto:                { label: "Ver cursos de Tecnología del Concreto", url: "https://iltec.lat/product/diseno-de-concreto/" },
+  asfalto_pavimentos:      { label: "Ver cursos de Pavimentos y Asfalto",    url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+  geotecnia_cimentaciones: { label: "Ver cursos de Geotecnia",               url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+  laboratorio_materiales:  { label: "Ver cursos de Laboratorio",             url: "https://iltec.lat/testing/" },
+  rocas_mineria:           { label: "Ver cursos de Geomecánica y Minería",   url: "https://iltec.lat/product/curso-rocas-astm/" },
+};
 
 // ─── SVG ICONS ────────────────────────────────────────────────────────────────
 const icons = {
   mecanica_suelos: ({ size=28, color="currentColor" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {/* soil layers / strata */}
       <path d="M2 18 Q6 14 12 16 Q18 18 22 14"/>
       <path d="M2 13 Q6 9 12 11 Q18 13 22 9"/>
       <path d="M2 8 Q7 5 12 6 Q17 7 22 4"/>
@@ -33,12 +92,10 @@ const icons = {
   ),
   concreto: ({ size=28, color="currentColor" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {/* cylinder specimen */}
       <ellipse cx="12" cy="5" rx="7" ry="2.5"/>
       <line x1="5" y1="5" x2="5" y2="19"/>
       <line x1="19" y1="5" x2="19" y2="19"/>
       <ellipse cx="12" cy="19" rx="7" ry="2.5"/>
-      {/* compression arrows */}
       <line x1="12" y1="1" x2="12" y2="3"/>
       <polyline points="10,2 12,0 14,2"/>
       <line x1="12" y1="21" x2="12" y2="23"/>
@@ -47,54 +104,39 @@ const icons = {
   ),
   asfalto_pavimentos: ({ size=28, color="currentColor" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {/* road cross-section layers */}
       <rect x="2" y="15" width="20" height="3" rx="0.5"/>
       <rect x="2" y="12" width="20" height="3" rx="0.5"/>
       <rect x="2" y="9" width="20" height="3" rx="0.5"/>
-      {/* road markings */}
-      <line x1="8" y1="10.5" x2="10" y2="10.5" strokeDasharray="2 2"/>
-      <line x1="14" y1="10.5" x2="16" y2="10.5" strokeDasharray="2 2"/>
-      {/* Marshall arrow load */}
       <line x1="12" y1="3" x2="12" y2="7"/>
       <polyline points="10,6 12,8 14,6"/>
     </svg>
   ),
   geotecnia_cimentaciones: ({ size=28, color="currentColor" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {/* foundation footprint */}
       <rect x="6" y="3" width="12" height="5" rx="0.5"/>
-      {/* pile */}
       <line x1="9" y1="8" x2="9" y2="20"/>
       <line x1="15" y1="8" x2="15" y2="20"/>
-      {/* pile tip */}
       <polyline points="7,19 9,21 11,19"/>
       <polyline points="13,19 15,21 17,19"/>
-      {/* soil line */}
       <line x1="2" y1="11" x2="22" y2="11" strokeDasharray="3 2"/>
     </svg>
   ),
   laboratorio_materiales: ({ size=28, color="currentColor" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {/* flask / beaker */}
       <path d="M9 3h6M10 3v6L6 17a2 2 0 001.8 3h8.4A2 2 0 0018 17L14 9V3"/>
-      {/* liquid level */}
       <line x1="7.5" y1="15" x2="16.5" y2="15"/>
-      {/* bubbles */}
       <circle cx="10" cy="17" r="0.5" fill={color}/>
       <circle cx="13" cy="18" r="0.5" fill={color}/>
     </svg>
   ),
   rocas_mineria: ({ size=28, color="currentColor" }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke={color} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      {/* rock core sample */}
       <ellipse cx="12" cy="4" rx="5" ry="1.5"/>
       <line x1="7" y1="4" x2="7" y2="18"/>
       <line x1="17" y1="4" x2="17" y2="18"/>
       <ellipse cx="12" cy="18" rx="5" ry="1.5"/>
-      {/* fracture lines inside core */}
       <line x1="7" y1="8" x2="17" y2="10"/>
       <line x1="7" y1="13" x2="17" y2="11"/>
-      {/* pickaxe hint */}
       <line x1="19" y1="3" x2="22" y2="6"/>
       <line x1="21" y1="3" x2="19" y2="5"/>
     </svg>
@@ -120,127 +162,157 @@ const css = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Space+Grotesk:wght@500;600;700&display=swap');
 
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-
-  body{
-    font-family:'DM Sans',sans-serif;
-    background:${C.bg};
-    color:${C.white};
-    min-height:100vh;
-    -webkit-font-smoothing:antialiased;
-  }
-
+  body{font-family:'DM Sans',sans-serif;background:${C.bg};color:${C.white};min-height:100vh;-webkit-font-smoothing:antialiased}
   ::-webkit-scrollbar{width:4px}
   ::-webkit-scrollbar-track{background:${C.bg}}
   ::-webkit-scrollbar-thumb{background:${C.subtle};border-radius:2px}
 
   .lt-app{min-height:100vh;display:flex;flex-direction:column}
 
-  /* HEADER */
+  /* ── HEADER ── */
   .lt-header{
     display:flex;align-items:center;justify-content:space-between;
     padding:18px 40px;border-bottom:1px solid ${C.border};
     background:rgba(15,23,42,0.95);
     position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);
   }
-  .lt-logo{display:flex;align-items:baseline;gap:10px}
-  .lt-logo-main{
-    font-family:'Space Grotesk',sans-serif;font-size:21px;
-    font-weight:700;letter-spacing:-0.5px;color:${C.white};
-  }
+  .lt-logo{display:flex;align-items:baseline;gap:10px;cursor:pointer;text-decoration:none}
+  .lt-logo-main{font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:700;letter-spacing:-0.5px;color:${C.white};transition:color .2s}
+  .lt-logo-main:hover{color:${C.teal}}
   .lt-logo-main span{color:${C.teal}}
-  .lt-logo-by{font-size:11px;font-weight:500;color:${C.subtle};letter-spacing:0.5px;text-transform:uppercase}
-  .lt-header-tag{font-size:11px;color:${C.subtle};letter-spacing:0.8px;text-transform:uppercase;border:1px solid ${C.border};padding:4px 10px;border-radius:4px}
+  .lt-logo-by{font-size:11px;font-weight:500;color:${C.subtle};letter-spacing:0.5px;text-transform:uppercase;cursor:pointer;transition:color .2s}
+  .lt-logo-by:hover{color:${C.teal}}
+  .lt-header-tag{font-size:10px;color:${C.subtle};letter-spacing:0.6px;text-transform:uppercase;border:1px solid ${C.border};padding:4px 10px;border-radius:4px;line-height:1.4;text-align:right}
 
-  /* LOADING */
-  .lt-loading{
-    flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;
+  /* ── FOOTER ── */
+  .lt-footer{
+    text-align:center;padding:14px 24px;
+    border-top:1px solid ${C.border};
+    font-size:11px;color:${C.subtle};letter-spacing:0.5px;
+    display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
   }
-  .lt-spinner{
-    width:36px;height:36px;border:3px solid ${C.border};
-    border-top-color:${C.teal};border-radius:50%;
-    animation:spin 0.8s linear infinite;
-  }
+  .lt-footer a{color:${C.subtle};text-decoration:none;transition:color .2s}
+  .lt-footer a:hover{color:${C.teal}}
+  .lt-footer-dot{width:3px;height:3px;border-radius:50%;background:${C.border}}
+
+  /* ── LOADING ── */
+  .lt-loading{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+  .lt-spinner{width:36px;height:36px;border:3px solid ${C.border};border-top-color:${C.teal};border-radius:50%;animation:spin .8s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
   .lt-loading p{font-size:13px;color:${C.subtle}}
 
-  /* LANDING */
-  .lt-landing{
-    flex:1;display:flex;flex-direction:column;align-items:center;
-    justify-content:center;padding:60px 24px;position:relative;overflow:hidden;
+  /* ── LANDING HERO SLIDES ── */
+  .lt-landing{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 24px 40px;position:relative;overflow:hidden}
+  .lt-landing::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(20,184,166,0.055) 0%,transparent 70%);pointer-events:none}
+
+  .lt-hero-slide{
+    display:flex;flex-direction:column;align-items:center;
+    animation:slideIn .5s ease;
+    max-width:760px;width:100%;text-align:center;
   }
-  .lt-landing::before{
-    content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);
-    width:700px;height:700px;
-    background:radial-gradient(circle,rgba(20,184,166,0.055) 0%,transparent 70%);
-    pointer-events:none;
-  }
+  @keyframes slideIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
   .lt-landing-badge{
     display:inline-flex;align-items:center;gap:6px;
     background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.22);
     border-radius:20px;padding:5px 14px;font-size:11px;font-weight:600;
-    color:${C.teal};letter-spacing:1px;text-transform:uppercase;margin-bottom:28px;
+    color:${C.teal};letter-spacing:1px;text-transform:uppercase;margin-bottom:24px;
   }
-  .lt-landing-badge::before{
-    content:'';width:6px;height:6px;background:${C.teal};border-radius:50%;
-    animation:pulse 2s infinite;
-  }
+  .lt-landing-badge::before{content:'';width:6px;height:6px;background:${C.teal};border-radius:50%;animation:pulse 2s infinite}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
 
   .lt-landing-title{
     font-family:'Space Grotesk',sans-serif;
-    font-size:clamp(34px,6vw,62px);font-weight:700;text-align:center;
-    line-height:1.1;letter-spacing:-1.5px;color:${C.white};
-    max-width:760px;margin-bottom:20px;
+    font-size:clamp(32px,5.5vw,60px);font-weight:700;line-height:1.1;
+    letter-spacing:-1.5px;color:${C.white};margin-bottom:18px;
   }
   .lt-landing-title .accent{color:${C.teal}}
-
-  .lt-landing-sub{
-    font-size:16px;color:${C.muted};text-align:center;
-    max-width:480px;line-height:1.7;margin-bottom:44px;
-  }
+  .lt-landing-sub{font-size:16px;color:${C.muted};max-width:480px;line-height:1.7;margin-bottom:36px}
 
   .lt-cta-primary{
     background:${C.teal};color:#0F172A;border:none;border-radius:8px;
-    padding:15px 40px;font-family:'Space Grotesk',sans-serif;
-    font-size:14px;font-weight:700;letter-spacing:0.3px;cursor:pointer;
-    transition:background .2s,transform .15s;
-    display:inline-flex;align-items:center;gap:8px;
+    padding:15px 40px;font-family:'Space Grotesk',sans-serif;font-size:14px;
+    font-weight:700;letter-spacing:0.3px;cursor:pointer;
+    transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:8px;
   }
   .lt-cta-primary:hover{background:${C.tealHov};transform:translateY(-1px)}
 
-  .lt-landing-stats{
-    display:flex;gap:48px;margin-top:60px;padding-top:48px;border-top:1px solid ${C.border};
-  }
+  /* slide dots */
+  .lt-slide-dots{display:flex;gap:8px;margin-top:32px;align-items:center}
+  .lt-slide-dot{width:6px;height:6px;border-radius:3px;background:${C.border};cursor:pointer;transition:all .3s}
+  .lt-slide-dot.active{width:20px;background:${C.teal}}
+
+  /* stats bar */
+  .lt-landing-stats{display:flex;gap:40px;margin-top:48px;padding-top:40px;border-top:1px solid ${C.border}}
   .lt-stat{text-align:center}
   .lt-stat-num{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:${C.white}}
   .lt-stat-label{font-size:11px;color:${C.subtle};margin-top:4px;text-transform:uppercase;letter-spacing:.8px}
 
-  /* CONFIG */
-  .lt-selector{flex:1;padding:48px 24px;max-width:920px;margin:0 auto;width:100%}
+  /* ── EMAIL CAPTURE MODAL ── */
+  .lt-modal-overlay{
+    position:fixed;inset:0;background:rgba(10,15,28,0.85);
+    backdrop-filter:blur(8px);z-index:200;
+    display:flex;align-items:center;justify-content:center;padding:24px;
+    animation:fadeOverlay .25s ease;
+  }
+  @keyframes fadeOverlay{from{opacity:0}to{opacity:1}}
+  .lt-modal{
+    background:${C.surface};border:1px solid rgba(20,184,166,0.2);
+    border-radius:16px;padding:40px;max-width:440px;width:100%;
+    animation:modalIn .3s cubic-bezier(.34,1.56,.64,1);
+    position:relative;
+  }
+  @keyframes modalIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+
+  .lt-modal-icon{
+    width:52px;height:52px;border-radius:12px;
+    background:rgba(20,184,166,0.1);border:1px solid rgba(20,184,166,0.2);
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto 20px;
+  }
+  .lt-modal-title{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:${C.white};text-align:center;margin-bottom:8px;letter-spacing:-.3px}
+  .lt-modal-sub{font-size:13px;color:${C.subtle};text-align:center;line-height:1.65;margin-bottom:24px}
+  .lt-modal-sub strong{color:${C.teal}}
+
+  .lt-modal-benefits{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
+  .lt-modal-benefit{display:flex;align-items:center;gap:10px;font-size:12px;color:${C.muted}}
+  .lt-modal-benefit::before{content:'✓';color:${C.teal};font-weight:700;font-size:11px;flex-shrink:0}
+
+  .lt-modal-form{display:flex;flex-direction:column;gap:10px}
+  .lt-modal-input{
+    background:rgba(15,23,42,0.8);border:1px solid ${C.border};border-radius:8px;
+    padding:12px 16px;font-size:14px;color:${C.white};outline:none;
+    font-family:'DM Sans',sans-serif;transition:border-color .2s;
+  }
+  .lt-modal-input::placeholder{color:${C.subtle}}
+  .lt-modal-input:focus{border-color:rgba(20,184,166,0.5)}
+  .lt-modal-submit{
+    background:${C.teal};color:#0F172A;border:none;border-radius:8px;
+    padding:13px;font-family:'Space Grotesk',sans-serif;font-size:14px;
+    font-weight:700;cursor:pointer;transition:background .2s;
+  }
+  .lt-modal-submit:hover{background:${C.tealHov}}
+  .lt-modal-submit:disabled{opacity:.6;cursor:not-allowed}
+  .lt-modal-skip{
+    text-align:center;margin-top:10px;font-size:11px;color:${C.subtle};
+    cursor:pointer;transition:color .2s;
+  }
+  .lt-modal-skip:hover{color:${C.muted}}
+  .lt-modal-privacy{font-size:10px;color:${C.subtle};text-align:center;margin-top:8px;line-height:1.5}
+
+  /* ── CONFIG ── */
+  .lt-selector{flex:1;padding:48px 24px 24px;max-width:920px;margin:0 auto;width:100%}
   .lt-step-label{font-size:11px;color:${C.teal};font-weight:600;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:6px}
   .lt-selector-title{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;color:${C.white};letter-spacing:-.5px}
   .lt-selector-sub{font-size:13px;color:${C.subtle};margin-top:6px;margin-bottom:28px}
 
   .lt-cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin-bottom:32px}
-  .lt-cat-card{
-    background:${C.surface};border:1px solid ${C.border};border-radius:10px;
-    padding:20px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;
-  }
+  .lt-cat-card{background:${C.surface};border:1px solid ${C.border};border-radius:10px;padding:20px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
   .lt-cat-card:hover{border-color:rgba(20,184,166,0.4);transform:translateY(-1px)}
   .lt-cat-card.selected{border-color:${C.teal};background:rgba(20,184,166,0.06)}
-  .lt-cat-card.selected::after{
-    content:'✓';position:absolute;top:12px;right:14px;
-    color:${C.teal};font-size:13px;font-weight:700;
-  }
-  .lt-cat-icon{
-    width:44px;height:44px;border-radius:10px;
-    background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.15);
-    display:flex;align-items:center;justify-content:center;
-    margin-bottom:14px;flex-shrink:0;
-  }
-  .lt-cat-card.selected .lt-cat-icon{
-    background:rgba(20,184,166,0.15);border-color:rgba(20,184,166,0.35);
-  }
+  .lt-cat-card.selected::after{content:'✓';position:absolute;top:12px;right:14px;color:${C.teal};font-size:13px;font-weight:700}
+  .lt-cat-icon{width:44px;height:44px;border-radius:10px;background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:14px;flex-shrink:0}
+  .lt-cat-card.selected .lt-cat-icon{background:rgba(20,184,166,0.15);border-color:rgba(20,184,166,0.35)}
   .lt-cat-name{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:${C.white};margin-bottom:4px}
   .lt-cat-count{font-size:11px;color:${C.teal};margin-bottom:4px;font-weight:600}
   .lt-cat-desc{font-size:11px;color:${C.subtle};line-height:1.5}
@@ -249,98 +321,56 @@ const css = `
   .lt-config-group{flex:1;min-width:180px}
   .lt-config-label{font-size:11px;color:${C.subtle};font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:10px;display:block}
   .lt-pills{display:flex;gap:8px;flex-wrap:wrap}
-  .lt-pill{
-    background:transparent;border:1px solid ${C.border};border-radius:6px;
-    padding:7px 14px;font-size:12px;font-weight:500;color:${C.muted};
-    cursor:pointer;transition:all .15s;
-  }
+  .lt-pill{background:transparent;border:1px solid ${C.border};border-radius:6px;padding:7px 14px;font-size:12px;font-weight:500;color:${C.muted};cursor:pointer;transition:all .15s}
   .lt-pill:hover{border-color:rgba(20,184,166,0.4);color:${C.teal}}
   .lt-pill.active{background:rgba(20,184,166,0.1);border-color:${C.teal};color:${C.teal}}
 
-  /* QUIZ */
+  /* ── QUIZ ── */
   .lt-quiz{flex:1;padding:32px 24px;max-width:720px;margin:0 auto;width:100%}
   .lt-quiz-topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;gap:14px}
   .lt-progress-wrap{flex:1;height:3px;background:${C.surface};border-radius:2px;overflow:hidden}
   .lt-progress-bar{height:100%;background:${C.teal};border-radius:2px;transition:width .4s ease}
   .lt-q-counter{font-size:12px;color:${C.subtle};font-weight:500;white-space:nowrap}
-
   .lt-timer-ring{position:relative;width:42px;height:42px;flex-shrink:0}
   .lt-timer-ring svg{transform:rotate(-90deg)}
-  .lt-timer-text{
-    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-    font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;
-  }
+  .lt-timer-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700}
 
   .lt-quiz-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}
-  .lt-norm-tag{
-    display:inline-block;font-size:10px;font-weight:600;color:${C.teal};
-    background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);
-    border-radius:4px;padding:2px 8px;letter-spacing:.5px;text-transform:uppercase;
-  }
-  .lt-diff-tag{
-    display:inline-block;font-size:10px;font-weight:600;border-radius:4px;
-    padding:2px 8px;letter-spacing:.5px;text-transform:uppercase;
-  }
+  .lt-norm-tag{display:inline-block;font-size:10px;font-weight:600;color:${C.teal};background:rgba(20,184,166,0.08);border:1px solid rgba(20,184,166,0.2);border-radius:4px;padding:2px 8px;letter-spacing:.5px;text-transform:uppercase}
+  .lt-diff-tag{display:inline-block;font-size:10px;font-weight:600;border-radius:4px;padding:2px 8px;letter-spacing:.5px;text-transform:uppercase}
   .lt-diff-básico{background:rgba(100,116,139,0.12);color:${C.subtle}}
   .lt-diff-intermedio{background:rgba(245,158,11,0.1);color:${C.warn}}
   .lt-diff-avanzado{background:rgba(239,68,68,0.1);color:${C.error}}
-
   .lt-subtopic{font-size:11px;color:${C.subtle}}
 
-  .lt-question-text{
-    font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;
-    color:${C.white};line-height:1.55;letter-spacing:-.3px;margin-bottom:24px;
-  }
-
+  .lt-question-text{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;color:${C.white};line-height:1.55;letter-spacing:-.3px;margin-bottom:24px}
   .lt-options{display:flex;flex-direction:column;gap:10px}
-  .lt-option{
-    background:${C.surface};border:1px solid ${C.border};border-radius:8px;
-    padding:15px 18px;cursor:pointer;transition:all .15s;
-    display:flex;align-items:flex-start;gap:12px;text-align:left;width:100%;
-  }
+  .lt-option{background:${C.surface};border:1px solid ${C.border};border-radius:8px;padding:15px 18px;cursor:pointer;transition:all .15s;display:flex;align-items:flex-start;gap:12px;text-align:left;width:100%}
   .lt-option:hover:not(:disabled){border-color:rgba(20,184,166,0.45);background:rgba(30,41,59,.95)}
   .lt-option.correct{border-color:${C.success};background:rgba(34,197,94,0.07)}
   .lt-option.incorrect{border-color:${C.error};background:rgba(239,68,68,0.07)}
   .lt-option.dimmed{opacity:.38}
-  .lt-option-letter{
-    width:27px;height:27px;border-radius:6px;flex-shrink:0;
-    background:rgba(100,116,139,0.14);border:1px solid ${C.border};
-    display:flex;align-items:center;justify-content:center;
-    font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;
-    color:${C.subtle};transition:all .15s;
-  }
+  .lt-option-letter{width:27px;height:27px;border-radius:6px;flex-shrink:0;background:rgba(100,116,139,0.14);border:1px solid ${C.border};display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:11px;font-weight:700;color:${C.subtle};transition:all .15s}
   .lt-option.correct .lt-option-letter{background:rgba(34,197,94,0.14);border-color:${C.success};color:${C.success}}
   .lt-option.incorrect .lt-option-letter{background:rgba(239,68,68,0.14);border-color:${C.error};color:${C.error}}
   .lt-option-text{font-size:13px;color:${C.muted};line-height:1.55;padding-top:3px}
   .lt-option.correct .lt-option-text,.lt-option.incorrect .lt-option-text{color:${C.white}}
 
-  .lt-explanation{
-    margin-top:18px;background:rgba(30,41,59,.7);
-    border:1px solid ${C.border};border-left:3px solid ${C.teal};
-    border-radius:8px;padding:14px 18px;animation:fadeUp .3s ease;
-  }
+  .lt-explanation{margin-top:18px;background:rgba(30,41,59,.7);border:1px solid ${C.border};border-left:3px solid ${C.teal};border-radius:8px;padding:14px 18px;animation:fadeUp .3s ease}
   @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
   .lt-explanation-label{font-size:10px;font-weight:700;color:${C.teal};letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
   .lt-explanation-text{font-size:13px;color:${C.muted};line-height:1.7}
   .lt-explanation-comp{font-size:11px;color:${C.subtle};margin-top:8px;padding-top:8px;border-top:1px solid ${C.border};font-style:italic}
 
-  .lt-next-btn{
-    margin-top:20px;width:100%;background:${C.teal};color:#0F172A;border:none;
-    border-radius:8px;padding:13px;font-family:'Space Grotesk',sans-serif;
-    font-size:13px;font-weight:700;cursor:pointer;transition:background .2s;letter-spacing:.3px;
-  }
+  .lt-next-btn{margin-top:20px;width:100%;background:${C.teal};color:#0F172A;border:none;border-radius:8px;padding:13px;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:background .2s;letter-spacing:.3px}
   .lt-next-btn:hover{background:${C.tealHov}}
 
-  .lt-streak{
-    display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;
-    color:${C.warn};background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);
-    border-radius:20px;padding:3px 10px;animation:popIn .3s cubic-bezier(.34,1.56,.64,1);
-  }
+  .lt-streak{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:${C.warn};background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:20px;padding:3px 10px;animation:popIn .3s cubic-bezier(.34,1.56,.64,1)}
   @keyframes popIn{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
 
-  /* RESULTS */
-  .lt-results{flex:1;padding:48px 24px;max-width:760px;margin:0 auto;width:100%}
-  .lt-results-hero{text-align:center;margin-bottom:40px}
+  /* ── RESULTS ── */
+  .lt-results{flex:1;padding:40px 24px 24px;max-width:760px;margin:0 auto;width:100%}
+  .lt-results-hero{text-align:center;margin-bottom:36px}
   .lt-score-ring{width:120px;height:120px;margin:0 auto 20px;position:relative}
   .lt-score-ring svg{transform:rotate(-90deg)}
   .lt-score-number{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
@@ -349,24 +379,19 @@ const css = `
   .lt-results-title{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:${C.white};margin-bottom:6px;letter-spacing:-.5px}
   .lt-results-sub{font-size:13px;color:${C.subtle}}
 
-  .lt-result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:32px}
+  .lt-result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:28px}
   .lt-result-card{background:${C.surface};border:1px solid ${C.border};border-radius:10px;padding:16px;text-align:center}
   .lt-result-card-num{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;margin-bottom:4px}
   .lt-result-card-label{font-size:10px;color:${C.subtle};text-transform:uppercase;letter-spacing:.6px}
 
-  .lt-level-badge{
-    display:inline-flex;align-items:center;gap:6px;
-    border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;
-    letter-spacing:.5px;text-transform:uppercase;margin-top:8px;
-  }
+  .lt-level-badge{display:inline-flex;align-items:center;gap:6px;border-radius:20px;padding:4px 12px;font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;margin-top:8px}
   .badge-novato{background:rgba(100,116,139,0.15);color:${C.subtle}}
   .badge-básico{background:rgba(245,158,11,0.12);color:${C.warn}}
   .badge-intermedio{background:rgba(20,184,166,0.12);color:${C.teal}}
   .badge-avanzado{background:rgba(34,197,94,0.12);color:${C.success}}
   .badge-experto{background:rgba(139,92,246,0.15);color:#a78bfa}
 
-  /* CATEGORY BREAKDOWN */
-  .lt-breakdown{margin-bottom:28px}
+  .lt-breakdown{margin-bottom:24px}
   .lt-breakdown-title{font-size:11px;color:${C.subtle};font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:12px}
   .lt-breakdown-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
   .lt-breakdown-name{font-size:12px;color:${C.muted};width:180px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -374,8 +399,24 @@ const css = `
   .lt-breakdown-bar{height:100%;border-radius:3px;transition:width 1s ease}
   .lt-breakdown-pct{font-size:11px;color:${C.subtle};width:32px;text-align:right;flex-shrink:0}
 
-  /* REVIEW */
-  .lt-review-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+  /* smart CTA box */
+  .lt-smart-cta{
+    background:rgba(20,184,166,0.05);border:1px solid rgba(20,184,166,0.15);
+    border-radius:12px;padding:20px 24px;margin-bottom:20px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  }
+  .lt-smart-cta-text p:first-child{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:${C.white};margin-bottom:4px}
+  .lt-smart-cta-text p:last-child{font-size:12px;color:${C.subtle}}
+  .lt-smart-cta-btn{
+    background:${C.teal};color:#0F172A;border:none;border-radius:8px;
+    padding:10px 20px;font-family:'Space Grotesk',sans-serif;font-size:12px;
+    font-weight:700;cursor:pointer;transition:background .2s;white-space:nowrap;
+    text-decoration:none;display:inline-block;
+  }
+  .lt-smart-cta-btn:hover{background:${C.tealHov}}
+
+  /* review */
+  .lt-review-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
   .lt-review-item{background:${C.surface};border:1px solid ${C.border};border-radius:10px;padding:16px 18px}
   .lt-review-item.rw-correct{border-left:3px solid ${C.success}}
   .lt-review-item.rw-incorrect{border-left:3px solid ${C.error}}
@@ -385,44 +426,22 @@ const css = `
   .lt-review-ans span{color:${C.muted}}
   .lt-review-exp{font-size:12px;color:${C.subtle};line-height:1.65;margin-top:8px;padding-top:8px;border-top:1px solid ${C.border}}
 
-  /* BUTTONS */
-  .lt-cta-bar{display:flex;gap:10px;flex-wrap:wrap}
-  .lt-btn-outline{
-    flex:1;background:transparent;border:1px solid ${C.border};border-radius:8px;
-    padding:12px;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;
-    color:${C.muted};cursor:pointer;transition:all .2s;text-align:center;
-  }
+  .lt-cta-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+  .lt-btn-outline{flex:1;background:transparent;border:1px solid ${C.border};border-radius:8px;padding:12px;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:600;color:${C.muted};cursor:pointer;transition:all .2s;text-align:center}
   .lt-btn-outline:hover{border-color:rgba(20,184,166,0.4);color:${C.teal}}
-  .lt-btn-teal{
-    flex:1;background:${C.teal};border:none;border-radius:8px;padding:12px;
-    font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;
-    color:#0F172A;cursor:pointer;transition:background .2s;text-align:center;
-  }
+  .lt-btn-teal{flex:1;background:${C.teal};border:none;border-radius:8px;padding:12px;font-family:'Space Grotesk',sans-serif;font-size:12px;font-weight:700;color:#0F172A;cursor:pointer;transition:background .2s;text-align:center}
   .lt-btn-teal:hover{background:${C.tealHov}}
 
-  .lt-iltec-cta{
-    text-align:center;margin-top:28px;padding:20px;
-    background:rgba(20,184,166,0.05);border:1px solid rgba(20,184,166,0.14);border-radius:10px;
-  }
-  .lt-iltec-cta p{font-size:13px;color:${C.subtle};margin-bottom:10px}
-  .lt-iltec-cta a{color:${C.teal};font-weight:600;font-size:14px;text-decoration:none}
-  .lt-iltec-cta a:hover{text-decoration:underline}
-
-  /* BACK BTN */
-  .lt-back{
-    flex:unset;padding:7px 14px;font-size:11px;
-    background:transparent;border:1px solid ${C.border};border-radius:6px;
-    color:${C.subtle};cursor:pointer;transition:all .2s;
-    font-family:'DM Sans',sans-serif;font-weight:500;
-  }
+  .lt-back{flex:unset;padding:7px 14px;font-size:11px;background:transparent;border:1px solid ${C.border};border-radius:6px;color:${C.subtle};cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500}
   .lt-back:hover{border-color:rgba(20,184,166,0.4);color:${C.teal}}
 
   @media(max-width:640px){
     .lt-header{padding:14px 20px}
-    .lt-landing-stats{gap:24px}
+    .lt-landing-stats{gap:20px}
     .lt-result-grid{grid-template-columns:repeat(2,1fr)}
     .lt-cat-grid{grid-template-columns:1fr}
-    .lt-breakdown-name{width:120px}
+    .lt-breakdown-name{width:110px}
+    .lt-smart-cta{flex-direction:column;align-items:flex-start}
   }
 `;
 
@@ -430,16 +449,42 @@ const css = `
 const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
 
 const getLevel = pct => {
-  if (pct < 40) return { label:"Novato",      cls:"badge-novato",      msg:"Nivel inicial — mucho terreno por cubrir." };
-  if (pct < 60) return { label:"Básico",       cls:"badge-básico",      msg:"Nivel básico — buen punto de partida." };
-  if (pct < 75) return { label:"Intermedio",   cls:"badge-intermedio",  msg:"Nivel intermedio — sólido en lo fundamental." };
-  if (pct < 90) return { label:"Avanzado",     cls:"badge-avanzado",    msg:"Nivel avanzado — dominio técnico real." };
-  return          { label:"Experto",       cls:"badge-experto",     msg:"Nivel experto — dominio excepcional." };
+  if (pct < 40) return { label:"Novato",     cls:"badge-novato",     msg:"Nivel inicial — mucho terreno por cubrir." };
+  if (pct < 60) return { label:"Básico",      cls:"badge-básico",     msg:"Nivel básico — buen punto de partida." };
+  if (pct < 75) return { label:"Intermedio",  cls:"badge-intermedio", msg:"Nivel intermedio — sólido en lo fundamental." };
+  if (pct < 90) return { label:"Avanzado",    cls:"badge-avanzado",   msg:"Nivel avanzado — dominio técnico real." };
+  return          { label:"Experto",      cls:"badge-experto",    msg:"Nivel experto — dominio excepcional." };
 };
 
 const catColor = pct => pct >= 75 ? C.success : pct >= 50 ? C.warn : C.error;
 
-// ─── TIMER RING ───────────────────────────────────────────────────────────────
+// worst category from results
+const getWeakestCat = (results) => {
+  const stats = {};
+  results.forEach(r => {
+    const cat = r.q.category || "";
+    if (!stats[cat]) stats[cat] = { correct:0, total:0 };
+    stats[cat].total++;
+    if (r.correct) stats[cat].correct++;
+  });
+  let worst = null, worstPct = 101;
+  Object.entries(stats).forEach(([cat, s]) => {
+    const p = (s.correct / s.total) * 100;
+    if (p < worstPct) { worstPct = p; worst = cat; }
+  });
+  return worst;
+};
+
+// save lead to localStorage
+const saveLead = (name, email, score, level, cats) => {
+  try {
+    const leads = JSON.parse(localStorage.getItem("lt_leads") || "[]");
+    leads.push({ name, email, score, level, cats, date: new Date().toISOString() });
+    localStorage.setItem("lt_leads", JSON.stringify(leads));
+  } catch(e) {}
+};
+
+// ─── SUB-COMPONENTS ───────────────────────────────────────────────────────────
 function TimerRing({ seconds, total }) {
   const r = 16, circ = 2 * Math.PI * r;
   const color = seconds > 10 ? C.teal : seconds > 5 ? C.warn : C.error;
@@ -448,17 +493,14 @@ function TimerRing({ seconds, total }) {
       <svg width="42" height="42" viewBox="0 0 42 42">
         <circle cx="21" cy="21" r={r} fill="none" stroke={C.surface} strokeWidth="3"/>
         <circle cx="21" cy="21" r={r} fill="none" stroke={color} strokeWidth="3"
-          strokeDasharray={circ}
-          strokeDashoffset={circ * (1 - seconds / total)}
-          strokeLinecap="round"
-          style={{ transition:"stroke-dashoffset 1s linear,stroke .5s" }}/>
+          strokeDasharray={circ} strokeDashoffset={circ * (1 - seconds/total)}
+          strokeLinecap="round" style={{transition:"stroke-dashoffset 1s linear,stroke .5s"}}/>
       </svg>
-      <div className="lt-timer-text" style={{ color }}>{seconds}</div>
+      <div className="lt-timer-text" style={{color}}>{seconds}</div>
     </div>
   );
 }
 
-// ─── SCORE RING ───────────────────────────────────────────────────────────────
 function ScoreRing({ pct }) {
   const r = 46, circ = 2 * Math.PI * r;
   const color = pct < 60 ? C.error : pct < 75 ? C.warn : C.teal;
@@ -467,10 +509,8 @@ function ScoreRing({ pct }) {
       <svg width="120" height="120" viewBox="0 0 120 120">
         <circle cx="60" cy="60" r={r} fill="none" stroke={C.surface} strokeWidth="6"/>
         <circle cx="60" cy="60" r={r} fill="none" stroke={color} strokeWidth="6"
-          strokeDasharray={circ}
-          strokeDashoffset={circ * (1 - pct / 100)}
-          strokeLinecap="round"
-          style={{ transition:"stroke-dashoffset 1.2s ease" }}/>
+          strokeDasharray={circ} strokeDashoffset={circ*(1-pct/100)}
+          strokeLinecap="round" style={{transition:"stroke-dashoffset 1.2s ease"}}/>
       </svg>
       <div className="lt-score-number">
         <div className="lt-score-pct">{pct}%</div>
@@ -480,15 +520,33 @@ function ScoreRing({ pct }) {
   );
 }
 
-// ─── HEADER ───────────────────────────────────────────────────────────────────
-function Header({ onBack, rightSlot }) {
+function Footer() {
+  return (
+    <footer className="lt-footer">
+      <span>Powered by <a href="https://iltec.lat" target="_blank" rel="noopener noreferrer">ILTEC</a></span>
+      <div className="lt-footer-dot"/>
+      <span>Ingeniería aplicada real</span>
+      <div className="lt-footer-dot"/>
+      <a href="https://iltec.lat" target="_blank" rel="noopener noreferrer">Cursos técnicos</a>
+      <div className="lt-footer-dot"/>
+      <a href="https://iltec.lat" target="_blank" rel="noopener noreferrer">Membresías ILTEC</a>
+    </footer>
+  );
+}
+
+function Header({ onBack, rightSlot, onLogoClick }) {
   return (
     <header className="lt-header">
-      <div className="lt-logo">
-        <div className="lt-logo-main">LEVELTEST<span>+</span></div>
-        <div className="lt-logo-by">by ILTEC</div>
+      <div className="lt-logo" onClick={onLogoClick} role="button" tabIndex={0}>
+        <div className="lt-logo-main">
+          LEVELTEST<span>+</span>
+        </div>
+        <a href="https://iltec.lat" target="_blank" rel="noopener noreferrer"
+          className="lt-logo-by" onClick={e => e.stopPropagation()}>
+          by ILTEC
+        </a>
       </div>
-      <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+      <div style={{display:"flex",alignItems:"center",gap:10}}>
         {rightSlot}
         {onBack && <button className="lt-back" onClick={onBack}>← Volver</button>}
       </div>
@@ -496,54 +554,111 @@ function Header({ onBack, rightSlot }) {
   );
 }
 
+// ─── EMAIL CAPTURE MODAL ──────────────────────────────────────────────────────
+function EmailModal({ onSubmit, onSkip, score, level }) {
+  const [name,  setName]  = useState("");
+  const [email, setEmail] = useState("");
+  const [busy,  setBusy]  = useState(false);
+
+  const valid = email.includes("@") && email.includes(".");
+
+  const handleSubmit = async () => {
+    if (!valid) return;
+    setBusy(true);
+    await new Promise(r => setTimeout(r, 600)); // simulated save
+    onSubmit(name.trim(), email.trim());
+  };
+
+  return (
+    <div className="lt-modal-overlay">
+      <div className="lt-modal">
+        <div className="lt-modal-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke={C.teal} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+        </div>
+        <div className="lt-modal-title">¡Evaluación completada!</div>
+        <div className="lt-modal-sub">
+          Ingresa tu email para recibir tu <strong>diagnóstico completo</strong> con recomendaciones personalizadas de cursos ILTEC.
+        </div>
+
+        <div className="lt-modal-benefits">
+          <div className="lt-modal-benefit">Reporte de nivel con desglose por área</div>
+          <div className="lt-modal-benefit">Recomendación de ruta de aprendizaje personalizada</div>
+          <div className="lt-modal-benefit">Acceso a recursos técnicos gratuitos ILTEC</div>
+          <div className="lt-modal-benefit">Información sobre membresías y cursos</div>
+        </div>
+
+        <div className="lt-modal-form">
+          <input className="lt-modal-input" type="text" placeholder="Tu nombre (opcional)"
+            value={name} onChange={e => setName(e.target.value)}/>
+          <input className="lt-modal-input" type="email" placeholder="tu@email.com *"
+            value={email} onChange={e => setEmail(e.target.value)}
+            onKeyDown={e => e.key === "Enter" && valid && handleSubmit()}/>
+          <button className="lt-modal-submit" onClick={handleSubmit} disabled={!valid || busy}>
+            {busy ? "Guardando…" : "Recibir mi diagnóstico completo →"}
+          </button>
+        </div>
+        <div className="lt-modal-privacy">🔒 Tu información es privada. Sin spam.</div>
+        <div className="lt-modal-skip" onClick={onSkip}>Continuar sin registrarme</div>
+      </div>
+    </div>
+  );
+}
+
 // ─── MAIN APP ─────────────────────────────────────────────────────────────────
 export default function LevelTestApp() {
-  // ── state ──
-  const [screen, setScreen]         = useState("loading"); // loading | landing | config | quiz | results
-  const [bank, setBank]             = useState({});        // { catId: [questions] }
-  const [bankError, setBankError]   = useState(null);
+  const [screen,       setScreen]       = useState("loading");
+  const [bank,         setBank]         = useState({});
+  const [bankError,    setBankError]    = useState(null);
+  const [liveCount,    setLiveCount]    = useState(COUNTER_BASE);
 
   const [selectedCats, setSelectedCats] = useState([]);
-  const [difficulty, setDifficulty]     = useState("todos");
-  const [numQ, setNumQ]                 = useState(10);
+  const [difficulty,   setDifficulty]   = useState("todos");
+  const [numQ,         setNumQ]         = useState(10);
 
-  const [questions, setQuestions]   = useState([]);
-  const [qIndex, setQIndex]         = useState(0);
-  const [answered, setAnswered]     = useState(null);
-  const [results, setResults]       = useState([]);
-  const [streak, setStreak]         = useState(0);
-  const [timer, setTimer]           = useState(TIMER_TOTAL);
-  const [showReview, setShowReview] = useState(false);
+  const [questions,    setQuestions]    = useState([]);
+  const [qIndex,       setQIndex]       = useState(0);
+  const [answered,     setAnswered]     = useState(null);
+  const [results,      setResults]      = useState([]);
+  const [streak,       setStreak]       = useState(0);
+  const [timer,        setTimer]        = useState(TIMER_TOTAL);
+  const [showReview,   setShowReview]   = useState(false);
+  const [showModal,    setShowModal]    = useState(false);
+  const [leadSaved,    setLeadSaved]    = useState(false);
+
+  // hero slide
+  const [slideIdx,     setSlideIdx]     = useState(0);
+  const slideRef = useRef(null);
 
   const timerRef = useRef(null);
 
-  // ── load bank from JSON ──
+  // ── load bank ──
   useEffect(() => {
-    const url = "./questions-v3.json";
-    fetch(url)
-      .then(r => {
-        if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.json();
-      })
+    // init counter
+    setLiveCount(COUNTER_BASE + getCounter());
+
+    fetch("./questions-v3.json")
+      .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(flat => {
-        // flat array → object keyed by category
         const obj = {};
-        flat.forEach(q => {
-          const cat = q.category || "sin_categoria";
-          if (!obj[cat]) obj[cat] = [];
-          obj[cat].push(q);
-        });
+        flat.forEach(q => { const c = q.category||"otros"; if(!obj[c]) obj[c]=[]; obj[c].push(q); });
         setBank(obj);
         setScreen("landing");
       })
-      .catch(err => {
-        // Fallback: use embedded minimal bank so the app is never broken
-        console.warn("No se pudo cargar el banco externo, usando banco local.", err);
-        setBankError("No se pudo cargar el banco de preguntas externo. Usando banco de demostración.");
+      .catch(() => {
+        setBankError("Usando banco de demostración.");
         setBank(buildFallbackBank());
         setScreen("landing");
       });
   }, []);
+
+  // ── hero auto-rotate ──
+  useEffect(() => {
+    if (screen !== "landing") return;
+    slideRef.current = setInterval(() => setSlideIdx(i => (i + 1) % SLIDES.length), SLIDE_INTERVAL);
+    return () => clearInterval(slideRef.current);
+  }, [screen]);
 
   // ── build quiz ──
   const startQuiz = useCallback(() => {
@@ -556,13 +671,9 @@ export default function LevelTestApp() {
     });
     if (!pool.length) return;
     const picked = shuffle(pool).slice(0, numQ);
-    setQuestions(picked);
-    setQIndex(0);
-    setAnswered(null);
-    setResults([]);
-    setStreak(0);
-    setTimer(TIMER_TOTAL);
-    setShowReview(false);
+    setQuestions(picked); setQIndex(0); setAnswered(null);
+    setResults([]); setStreak(0); setTimer(TIMER_TOTAL);
+    setShowReview(false); setShowModal(false); setLeadSaved(false);
     setScreen("quiz");
   }, [selectedCats, difficulty, numQ, bank]);
 
@@ -572,15 +683,11 @@ export default function LevelTestApp() {
     if (answered !== null) { clearInterval(timerRef.current); return; }
     clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
-      setTimer(t => {
-        if (t <= 1) { clearInterval(timerRef.current); handleAnswer(-1); return 0; }
-        return t - 1;
-      });
+      setTimer(t => { if (t <= 1) { clearInterval(timerRef.current); handleAnswer(-1); return 0; } return t - 1; });
     }, 1000);
     return () => clearInterval(timerRef.current);
   }, [screen, qIndex, answered]); // eslint-disable-line
 
-  // ── answer ──
   const handleAnswer = useCallback((idx) => {
     if (answered !== null) return;
     const q = questions[qIndex];
@@ -590,77 +697,114 @@ export default function LevelTestApp() {
     setResults(r => [...r, { q, chosen: idx, correct, time: TIMER_TOTAL - timer }]);
   }, [answered, questions, qIndex, timer]);
 
-  // ── next ──
   const handleNext = () => {
-    if (qIndex + 1 >= questions.length) { setScreen("results"); return; }
-    setQIndex(i => i + 1);
-    setAnswered(null);
-    setTimer(TIMER_TOTAL);
+    if (qIndex + 1 >= questions.length) {
+      // increment real counter
+      const newCount = incrementCounter();
+      setLiveCount(COUNTER_BASE + newCount);
+      setScreen("results");
+      setShowModal(true);
+    } else {
+      setQIndex(i => i + 1); setAnswered(null); setTimer(TIMER_TOTAL);
+    }
+  };
+
+  const handleModalSubmit = (name, email) => {
+    const correct = results.filter(r => r.correct).length;
+    const pct = Math.round((correct / results.length) * 100);
+    const level = getLevel(pct).label;
+    const cats = [...new Set(results.map(r => r.q.category))];
+    saveLead(name, email, pct, level, cats);
+    setLeadSaved(true);
+    setShowModal(false);
   };
 
   const toggleCat = id => setSelectedCats(s => s.includes(id) ? s.filter(x => x !== id) : [...s, id]);
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // LOADING
-  // ─────────────────────────────────────────────────────────────────────────────
+  // ─── LOADING ────────────────────────────────────────────────────────────────
   if (screen === "loading") return (
     <div className="lt-app">
       <style>{css}</style>
       <Header/>
-      <div className="lt-loading">
-        <div className="lt-spinner"/>
-        <p>Cargando banco de preguntas…</p>
-      </div>
+      <div className="lt-loading"><div className="lt-spinner"/><p>Cargando banco de preguntas…</p></div>
+      <Footer/>
     </div>
   );
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // LANDING
-  // ─────────────────────────────────────────────────────────────────────────────
+  // ─── LANDING ────────────────────────────────────────────────────────────────
   if (screen === "landing") {
-    const totalQ = Object.values(bank).reduce((a, qs) => a + qs.length, 0);
+    const slide = SLIDES[slideIdx];
+    const totalQ = Object.values(bank).reduce((a,qs) => a + qs.length, 0);
     return (
       <div className="lt-app">
         <style>{css}</style>
-        <Header rightSlot={<div className="lt-header-tag">Evaluación Técnica · Ingeniería Civil</div>}/>
+        <Header
+          onLogoClick={() => {}}
+          rightSlot={
+            <div className="lt-header-tag">
+              Ingeniería Civil · Geotecnia · Laboratorio
+            </div>
+          }
+        />
         <main className="lt-landing">
           {bankError && (
-            <div style={{ background:"rgba(245,158,11,0.08)", border:`1px solid rgba(245,158,11,0.2)`, borderRadius:8, padding:"10px 16px", fontSize:12, color:C.warn, marginBottom:20, maxWidth:480, textAlign:"center" }}>
+            <div style={{background:"rgba(245,158,11,0.08)",border:"1px solid rgba(245,158,11,0.2)",borderRadius:8,padding:"10px 16px",fontSize:12,color:C.warn,marginBottom:20,maxWidth:480,textAlign:"center"}}>
               ⚠️ {bankError}
             </div>
           )}
-          <div className="lt-landing-badge">Plataforma EdTech · LATAM</div>
-          <h1 className="lt-landing-title">
-            No es un test.<br/>
-            Es tu <span className="accent">diagnóstico técnico</span>.
-          </h1>
-          <p className="lt-landing-sub">
-            Evalúate como profesional en Mecánica de Suelos, Concreto, Asfalto, Geotecnia, Laboratorio y Geomecánica. Descubre tu nivel real.
-          </p>
-          <button className="lt-cta-primary" onClick={() => setScreen("config")}>
-            Iniciar evaluación →
-          </button>
+
+          {/* hero slide */}
+          <div className="lt-hero-slide" key={slideIdx}>
+            <div className="lt-landing-badge">
+              {slideIdx === 1
+                ? `+${liveCount.toLocaleString()} profesionales evaluados`
+                : slide.badge}
+            </div>
+            <h1 className="lt-landing-title">{slide.title}</h1>
+            <p className="lt-landing-sub">{slide.sub}</p>
+            <button className="lt-cta-primary" onClick={() => setScreen("config")}>
+              {slide.cta}
+            </button>
+          </div>
+
+          {/* slide dots */}
+          <div className="lt-slide-dots">
+            {SLIDES.map((_, i) => (
+              <div key={i}
+                className={`lt-slide-dot ${i === slideIdx ? "active" : ""}`}
+                onClick={() => { setSlideIdx(i); clearInterval(slideRef.current); }}
+              />
+            ))}
+          </div>
+
+          {/* stats */}
           <div className="lt-landing-stats">
-            <div className="lt-stat"><div className="lt-stat-num">{totalQ}</div><div className="lt-stat-label">Preguntas técnicas</div></div>
-            <div className="lt-stat"><div className="lt-stat-num">6</div><div className="lt-stat-label">Áreas de ingeniería</div></div>
-            <div className="lt-stat"><div className="lt-stat-num">3</div><div className="lt-stat-label">Niveles de dificultad</div></div>
-            <div className="lt-stat"><div className="lt-stat-num">LATAM</div><div className="lt-stat-label">Cobertura regional</div></div>
+            <div className="lt-stat">
+              <div className="lt-stat-num">+{liveCount.toLocaleString()}</div>
+              <div className="lt-stat-label">Profesionales evaluados</div>
+            </div>
+            <div className="lt-stat">
+              <div className="lt-stat-num">6</div>
+              <div className="lt-stat-label">Áreas de ingeniería</div>
+            </div>
+            <div className="lt-stat">
+              <div className="lt-stat-num">{totalQ}+</div>
+              <div className="lt-stat-label">Preguntas técnicas</div>
+            </div>
+            <div className="lt-stat">
+              <div className="lt-stat-num">LATAM</div>
+              <div className="lt-stat-label">Cobertura regional</div>
+            </div>
           </div>
         </main>
+        <Footer/>
       </div>
     );
   }
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // CONFIG
-  // ─────────────────────────────────────────────────────────────────────────────
+  // ─── CONFIG ─────────────────────────────────────────────────────────────────
   if (screen === "config") {
-    const catsWithCount = CATEGORIES.map(cat => ({
-      ...cat,
-      count: bank[cat.id] ? bank[cat.id].length : 0,
-    }));
-
-    // calculate available questions for preview
+    const catsWithCount = CATEGORIES.map(cat => ({ ...cat, count: bank[cat.id]?.length || 0 }));
     const activeCats = selectedCats.length ? selectedCats : CATEGORIES.map(c => c.id);
     let available = 0;
     activeCats.forEach(cat => {
@@ -696,8 +840,7 @@ export default function LevelTestApp() {
               <span className="lt-config-label">Nivel de dificultad</span>
               <div className="lt-pills">
                 {["todos","básico","intermedio","avanzado"].map(d => (
-                  <button key={d} className={`lt-pill ${difficulty === d ? "active" : ""}`}
-                    onClick={() => setDifficulty(d)}>
+                  <button key={d} className={`lt-pill ${difficulty === d ? "active" : ""}`} onClick={() => setDifficulty(d)}>
                     {d.charAt(0).toUpperCase() + d.slice(1)}
                   </button>
                 ))}
@@ -708,29 +851,23 @@ export default function LevelTestApp() {
               <div className="lt-pills">
                 {[5,10,15,20,25].filter(n => n <= maxQ || n === 5).map(n => (
                   <button key={n} className={`lt-pill ${numQ === n ? "active" : ""}`}
-                    onClick={() => setNumQ(Math.min(n, maxQ))}>
-                    {n}
-                  </button>
+                    onClick={() => setNumQ(Math.min(n, maxQ))}>{n}</button>
                 ))}
               </div>
             </div>
           </div>
 
           <button className="lt-cta-primary" onClick={startQuiz}
-            style={{ width:"100%", justifyContent:"center" }}
-            disabled={available === 0}>
-            {available === 0
-              ? "Sin preguntas disponibles para esta combinación"
-              : `Iniciar evaluación → ${Math.min(numQ, maxQ)} preguntas`}
+            style={{width:"100%",justifyContent:"center"}} disabled={available === 0}>
+            {available === 0 ? "Sin preguntas para esta combinación" : `Iniciar evaluación → ${Math.min(numQ,maxQ)} preguntas`}
           </button>
         </main>
+        <Footer/>
       </div>
     );
   }
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // QUIZ
-  // ─────────────────────────────────────────────────────────────────────────────
+  // ─── QUIZ ───────────────────────────────────────────────────────────────────
   if (screen === "quiz") {
     const q = questions[qIndex];
     if (!q) return null;
@@ -741,26 +878,25 @@ export default function LevelTestApp() {
       <div className="lt-app">
         <style>{css}</style>
         <Header
+          onLogoClick={() => setScreen("landing")}
           rightSlot={
-            <div style={{ display:"flex", alignItems:"center", gap:10 }}>
+            <div style={{display:"flex",alignItems:"center",gap:10}}>
               {streak >= 2 && <div className="lt-streak">🔥 {streak} racha</div>}
               <div className="lt-header-tag" style={{display:"flex",alignItems:"center",gap:6}}>
-                <CatIcon id={q.category} size={14} color={C.subtle}/> {catInfo?.label}
+                <CatIcon id={q.category} size={13} color={C.subtle}/> {catInfo?.label}
               </div>
             </div>
           }
         />
         <main className="lt-quiz">
-          {/* progress bar */}
           <div className="lt-quiz-topbar">
             <div className="lt-progress-wrap">
-              <div className="lt-progress-bar" style={{ width:`${progress}%` }}/>
+              <div className="lt-progress-bar" style={{width:`${progress}%`}}/>
             </div>
             <div className="lt-q-counter">{qIndex + 1}/{questions.length}</div>
             <TimerRing seconds={timer} total={TIMER_TOTAL}/>
           </div>
 
-          {/* meta tags */}
           <div className="lt-quiz-meta">
             <span className="lt-norm-tag">{q.norm}</span>
             <span className={`lt-diff-tag lt-diff-${q.difficulty}`}>{q.difficulty}</span>
@@ -773,14 +909,12 @@ export default function LevelTestApp() {
             {q.options.map((opt, i) => {
               let cls = "lt-option";
               if (answered !== null) {
-                if (i === q.correct)                           cls += " correct";
-                else if (i === answered && i !== q.correct)   cls += " incorrect";
-                else                                           cls += " dimmed";
+                if (i === q.correct) cls += " correct";
+                else if (i === answered) cls += " incorrect";
+                else cls += " dimmed";
               }
               return (
-                <button key={i} className={cls}
-                  onClick={() => handleAnswer(i)}
-                  disabled={answered !== null}>
+                <button key={i} className={cls} onClick={() => handleAnswer(i)} disabled={answered !== null}>
                   <div className="lt-option-letter">{LETTERS[i]}</div>
                   <div className="lt-option-text">{opt}</div>
                 </button>
@@ -792,16 +926,10 @@ export default function LevelTestApp() {
             <>
               <div className="lt-explanation">
                 <div className="lt-explanation-label">
-                  {answered === q.correct ? "✓ Correcto"
-                    : answered === -1     ? "⏱ Tiempo agotado"
-                    :                       "✗ Incorrecto"}
+                  {answered === q.correct ? "✓ Correcto" : answered === -1 ? "⏱ Tiempo agotado" : "✗ Incorrecto"}
                 </div>
                 <div className="lt-explanation-text">{q.explanation}</div>
-                {q.competency && (
-                  <div className="lt-explanation-comp">
-                    Competencia evaluada: {q.competency}
-                  </div>
-                )}
+                {q.competency && <div className="lt-explanation-comp">Competencia evaluada: {q.competency}</div>}
               </div>
               <button className="lt-next-btn" onClick={handleNext}>
                 {qIndex + 1 >= questions.length ? "Ver resultados →" : "Siguiente pregunta →"}
@@ -809,48 +937,66 @@ export default function LevelTestApp() {
             </>
           )}
         </main>
+        <Footer/>
       </div>
     );
   }
 
-  // ─────────────────────────────────────────────────────────────────────────────
-  // RESULTS
-  // ─────────────────────────────────────────────────────────────────────────────
+  // ─── RESULTS ────────────────────────────────────────────────────────────────
   if (screen === "results") {
     const correct  = results.filter(r => r.correct).length;
     const pct      = Math.round((correct / results.length) * 100);
     const level    = getLevel(pct);
-    const avgTime  = Math.round(results.reduce((a, r) => a + r.time, 0) / results.length);
+    const avgTime  = Math.round(results.reduce((a,r) => a + r.time, 0) / results.length);
     const maxStrk  = results.reduce((max, _, i, arr) => {
-      let s = 0, best = 0;
-      arr.slice(0, i+1).forEach(r => { s = r.correct ? s+1 : 0; best = Math.max(best,s); });
+      let s=0, best=0;
+      arr.slice(0,i+1).forEach(r => { s = r.correct ? s+1 : 0; best = Math.max(best,s); });
       return Math.max(max, best);
     }, 0);
 
-    // per-category breakdown
     const catStats = {};
     results.forEach(r => {
       const cat = r.q.category || "otros";
-      if (!catStats[cat]) catStats[cat] = { correct:0, total:0 };
+      if (!catStats[cat]) catStats[cat] = {correct:0,total:0};
       catStats[cat].total++;
       if (r.correct) catStats[cat].correct++;
     });
-    const catBreakdown = Object.entries(catStats).map(([cat, s]) => ({
-      cat,
-      label: CATEGORIES.find(c => c.id === cat)?.label || cat,
-      pct: Math.round((s.correct / s.total) * 100),
-      correct: s.correct,
-      total: s.total,
-    })).sort((a, b) => b.pct - a.pct);
+    const catBreakdown = Object.entries(catStats).map(([cat,s]) => ({
+      cat, label: CATEGORIES.find(c=>c.id===cat)?.label || cat,
+      pct: Math.round((s.correct/s.total)*100), correct:s.correct, total:s.total,
+    })).sort((a,b) => b.pct - a.pct);
+
+    // smart CTA: worst category
+    const weakestCat = getWeakestCat(results);
+    const courseLink = COURSE_LINKS[weakestCat];
+    const weakestLabel = CATEGORIES.find(c => c.id === weakestCat)?.label || "";
+    const weakestPct = catStats[weakestCat] ? Math.round((catStats[weakestCat].correct / catStats[weakestCat].total) * 100) : 0;
 
     return (
       <div className="lt-app">
         <style>{css}</style>
+
+        {/* email modal */}
+        {showModal && !leadSaved && (
+          <EmailModal
+            score={pct}
+            level={level.label}
+            onSubmit={handleModalSubmit}
+            onSkip={() => setShowModal(false)}
+          />
+        )}
+
         <Header
+          onLogoClick={() => setScreen("landing")}
           rightSlot={<div className="lt-header-tag">Resultado de evaluación</div>}
         />
         <main className="lt-results">
-          {/* hero */}
+          {leadSaved && (
+            <div style={{background:"rgba(34,197,94,0.08)",border:"1px solid rgba(34,197,94,0.2)",borderRadius:8,padding:"10px 16px",fontSize:12,color:C.success,marginBottom:20,textAlign:"center"}}>
+              ✓ Diagnóstico guardado — te contactaremos con tus recomendaciones personalizadas.
+            </div>
+          )}
+
           <div className="lt-results-hero">
             <ScoreRing pct={pct}/>
             <h2 className="lt-results-title">{level.msg}</h2>
@@ -859,22 +1005,21 @@ export default function LevelTestApp() {
             </p>
           </div>
 
-          {/* stats */}
           <div className="lt-result-grid">
             <div className="lt-result-card">
-              <div className="lt-result-card-num" style={{ color:C.success }}>{correct}</div>
+              <div className="lt-result-card-num" style={{color:C.success}}>{correct}</div>
               <div className="lt-result-card-label">Correctas</div>
             </div>
             <div className="lt-result-card">
-              <div className="lt-result-card-num" style={{ color:C.error }}>{results.length - correct}</div>
+              <div className="lt-result-card-num" style={{color:C.error}}>{results.length - correct}</div>
               <div className="lt-result-card-label">Incorrectas</div>
             </div>
             <div className="lt-result-card">
-              <div className="lt-result-card-num" style={{ color:C.teal }}>{avgTime}s</div>
+              <div className="lt-result-card-num" style={{color:C.teal}}>{avgTime}s</div>
               <div className="lt-result-card-label">Tiempo prom.</div>
             </div>
             <div className="lt-result-card">
-              <div className="lt-result-card-num" style={{ color:C.warn }}>{maxStrk}</div>
+              <div className="lt-result-card-num" style={{color:C.warn}}>{maxStrk}</div>
               <div className="lt-result-card-label">Racha máx.</div>
             </div>
           </div>
@@ -883,12 +1028,11 @@ export default function LevelTestApp() {
           {catBreakdown.length > 1 && (
             <div className="lt-breakdown">
               <div className="lt-breakdown-title">Desempeño por área</div>
-              {catBreakdown.map(({ cat, label, pct: p, correct: c, total: t }) => (
+              {catBreakdown.map(({cat, label, pct:p, correct:c, total:t}) => (
                 <div key={cat} className="lt-breakdown-row">
                   <div className="lt-breakdown-name" title={label}>{label}</div>
                   <div className="lt-breakdown-bar-wrap">
-                    <div className="lt-breakdown-bar"
-                      style={{ width:`${p}%`, background: catColor(p) }}/>
+                    <div className="lt-breakdown-bar" style={{width:`${p}%`,background:catColor(p)}}/>
                   </div>
                   <div className="lt-breakdown-pct">{c}/{t}</div>
                 </div>
@@ -896,59 +1040,50 @@ export default function LevelTestApp() {
             </div>
           )}
 
-          {/* actions */}
-          {!showReview ? (
-            <div className="lt-cta-bar" style={{ marginBottom:16 }}>
-              <button className="lt-btn-outline" onClick={() => setShowReview(true)}>
-                Ver revisión detallada
-              </button>
-              <button className="lt-btn-teal" onClick={() => setScreen("config")}>
-                Nueva evaluación
-              </button>
+          {/* smart CTA — weakest category */}
+          {courseLink && weakestPct < 75 && (
+            <div className="lt-smart-cta">
+              <div className="lt-smart-cta-text">
+                <p>Oportunidad de mejora detectada en {weakestLabel}</p>
+                <p>Tu puntaje en esta área fue {weakestPct}% — ILTEC tiene el curso exacto que necesitas.</p>
+              </div>
+              <a href={courseLink.url} target="_blank" rel="noopener noreferrer" className="lt-smart-cta-btn">
+                {courseLink.label} →
+              </a>
             </div>
-          ) : (
-            <>
-              <div className="lt-review-list">
-                {results.map((r, i) => (
-                  <div key={i} className={`lt-review-item rw-${r.correct ? "correct" : r.chosen === -1 ? "timeout" : "incorrect"}`}>
-                    <div className="lt-review-q">{i+1}. {r.q.question}</div>
-                    <div className="lt-review-ans">
-                      Tu respuesta: <span style={{ color: r.correct ? C.success : C.error }}>
-                        {r.chosen === -1 ? "Sin respuesta (tiempo agotado)" : r.q.options[r.chosen]}
-                      </span>
-                    </div>
-                    {!r.correct && r.chosen !== -1 && (
-                      <div className="lt-review-ans">
-                        Respuesta correcta: <span style={{ color:C.success }}>{r.q.options[r.q.correct]}</span>
-                      </div>
-                    )}
-                    {!r.correct && r.chosen === -1 && (
-                      <div className="lt-review-ans">
-                        Respuesta correcta: <span style={{ color:C.success }}>{r.q.options[r.q.correct]}</span>
-                      </div>
-                    )}
-                    <div className="lt-review-exp">{r.q.explanation}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="lt-cta-bar" style={{ marginBottom:16 }}>
-                <button className="lt-btn-outline" onClick={() => setShowReview(false)}>
-                  Ocultar revisión
-                </button>
-                <button className="lt-btn-teal" onClick={() => setScreen("config")}>
-                  Nueva evaluación
-                </button>
-              </div>
-            </>
           )}
 
-          <div className="lt-iltec-cta">
-            <p>¿Quieres profundizar en los temas donde fallaste?</p>
-            <a href="https://iltec.lat" target="_blank" rel="noopener noreferrer">
-              Explorar cursos técnicos en ILTEC →
-            </a>
+          <div className="lt-cta-bar">
+            <button className="lt-btn-outline" onClick={() => setShowReview(!showReview)}>
+              {showReview ? "Ocultar revisión" : "Ver revisión detallada"}
+            </button>
+            <button className="lt-btn-teal" onClick={() => setScreen("config")}>
+              Nueva evaluación
+            </button>
           </div>
+
+          {showReview && (
+            <div className="lt-review-list">
+              {results.map((r,i) => (
+                <div key={i} className={`lt-review-item rw-${r.correct ? "correct" : r.chosen===-1 ? "timeout" : "incorrect"}`}>
+                  <div className="lt-review-q">{i+1}. {r.q.question}</div>
+                  <div className="lt-review-ans">
+                    Tu respuesta: <span style={{color:r.correct ? C.success : C.error}}>
+                      {r.chosen===-1 ? "Sin respuesta (tiempo agotado)" : r.q.options[r.chosen]}
+                    </span>
+                  </div>
+                  {!r.correct && (
+                    <div className="lt-review-ans">
+                      Correcta: <span style={{color:C.success}}>{r.q.options[r.q.correct]}</span>
+                    </div>
+                  )}
+                  <div className="lt-review-exp">{r.q.explanation}</div>
+                </div>
+              ))}
+            </div>
+          )}
         </main>
+        <Footer/>
       </div>
     );
   }
@@ -956,67 +1091,29 @@ export default function LevelTestApp() {
   return null;
 }
 
-// ─── FALLBACK BANK (minimal, only used if fetch fails) ────────────────────────
+// ─── FALLBACK BANK ────────────────────────────────────────────────────────────
 function buildFallbackBank() {
-  const q = (question, options, correct, norm, explanation, difficulty, category) =>
-    ({ question, options, correct, norm, explanation, difficulty, category,
-       tags:[], subtopic:"general", competency:"Conocimiento técnico fundamental",
-       course_hint:"Ingeniería Civil", region:"LATAM" });
-
+  const q = (question,options,correct,norm,explanation,difficulty,category) =>
+    ({question,options,correct,norm,explanation,difficulty,category,tags:[],subtopic:"general",competency:"Conocimiento técnico fundamental",course_hint:"Ingeniería Civil",region:"LATAM"});
   return {
-    mecanica_suelos: [
-      q("¿Qué norma ASTM regula el análisis granulométrico por tamizado de suelos?",
-        ["ASTM D422","ASTM D1557","ASTM D4318","ASTM D2216"], 0,
-        "ASTM D422", "ASTM D422 (NTP 339.128 Perú): tamizado para suelos gruesos e hidrómetro para finos.", "básico", "mecanica_suelos"),
-      q("¿A cuántos golpes se define el límite líquido en la copa de Casagrande?",
-        ["15 golpes","20 golpes","25 golpes","30 golpes"], 2,
-        "ASTM D4318", "ASTM D4318: el LL corresponde a la humedad con la que la ranura cierra 13 mm en exactamente 25 golpes.", "básico", "mecanica_suelos"),
-      q("¿Qué parámetros obtiene el ensayo edométrico (ASTM D2435)?",
-        ["φ' y c'","Cv, Cc y σ'p","Cu no drenado","E y ν"], 1,
-        "ASTM D2435", "El edómetro proporciona Cv (velocidad de consolidación), Cc (compresibilidad virgen) y σ'p (preconsolidación).", "intermedio", "mecanica_suelos"),
+    mecanica_suelos:[
+      q("¿Qué norma regula el análisis granulométrico por tamizado?",["ASTM D422","ASTM D1557","ASTM D4318","ASTM D2216"],0,"ASTM D422","ASTM D422 (NTP 339.128 Perú): tamizado para suelos gruesos e hidrómetro para finos.","básico","mecanica_suelos"),
+      q("¿A cuántos golpes se define el límite líquido?",["15","20","25","30"],2,"ASTM D4318","El LL corresponde a la humedad con la que la ranura cierra 13 mm en 25 golpes.","básico","mecanica_suelos"),
     ],
-    concreto: [
-      q("¿A cuántos días se evalúa la resistencia de diseño f'c según ASTM C39?",
-        ["7 días","14 días","28 días","56 días"], 2,
-        "ASTM C39", "ASTM C39 (NTP 339.034 Perú): f'c se verifica a 28 días de curado estándar.", "básico", "concreto"),
-      q("¿Qué norma rige el ensayo de asentamiento (slump) con el cono de Abrams?",
-        ["ASTM C143","ASTM C138","ASTM C231","ASTM C403"], 0,
-        "ASTM C143", "ASTM C143 (NTP 339.035 Perú): cono de Abrams para medir la consistencia del concreto fresco.", "básico", "concreto"),
-      q("¿Cuál es el criterio de aceptación de ACI 318 para el concreto en obra?",
-        ["Todo cilindro debe superar f'c","Promedio de 3 consecutivos ≥ f'c Y ningún individual < f'c−3.5 MPa","Solo 5% puede estar bajo f'c","Promedio general > 1.10 f'c"], 1,
-        "ACI 318-14", "ACI 318-14 §26.12.3: Cond.1 verifica tendencia central; Cond.2 protege contra resultados muy bajos.", "intermedio", "concreto"),
+    concreto:[
+      q("¿A cuántos días se evalúa f'c?",["7","14","28","56"],2,"ASTM C39","ASTM C39: f'c se verifica a 28 días de curado estándar.","básico","concreto"),
     ],
-    asfalto_pavimentos: [
-      q("¿Qué determina el ensayo Marshall (ASTM D6927)?",
-        ["Solo la densidad de la briqueta","Estabilidad y flujo","El contenido de vacíos únicamente","La temperatura de compactación"], 1,
-        "ASTM D6927", "Marshall determina estabilidad (carga máxima) y flujo (deformación), los parámetros de diseño principales.", "básico", "asfalto_pavimentos"),
-      q("¿Cuál es el rango de vacíos de diseño (Va) para mezclas asfálticas en caliente?",
-        ["1% a 3%","3% a 5%","5% a 8%","8% a 12%"], 1,
-        "Manual de Carreteras MTC", "Va diseño = 3–5% (óptimo ≈4%). Va<3%: ahuellamiento. Va>5%: permeabilidad excesiva.", "intermedio", "asfalto_pavimentos"),
+    asfalto_pavimentos:[
+      q("¿Qué determina el ensayo Marshall?",["Solo densidad","Estabilidad y flujo","Solo vacíos","Temperatura"],1,"ASTM D6927","Marshall determina estabilidad y flujo, parámetros principales de diseño.","básico","asfalto_pavimentos"),
     ],
-    geotecnia_cimentaciones: [
-      q("¿Cuál es el factor de seguridad mínimo para taludes permanentes en análisis estático?",
-        ["FS ≥ 1.0","FS ≥ 1.2","FS ≥ 1.5","FS ≥ 2.0"], 2,
-        "Geotecnia general", "FS ≥ 1.5 para taludes permanentes estáticos. FS ≥ 1.3 en condición pseudoestática sísmica.", "básico", "geotecnia_cimentaciones"),
-      q("¿Cuál es la diferencia entre capacidad portante última (qu) y admisible (qa)?",
-        ["Son iguales con FS=1","qa = qu/FS (FS≥2.5–3.0); además deben verificarse los asentamientos","qa = qu − peso propio","qu en arcillas y qa en arenas"], 1,
-        "ASTM D1143", "qa = qu/FS. La capacidad admisible también debe garantizar asentamientos tolerables para la estructura.", "básico", "geotecnia_cimentaciones"),
+    geotecnia_cimentaciones:[
+      q("¿FS mínimo para taludes permanentes?",["1.0","1.2","1.5","2.0"],2,"Geotecnia","FS ≥ 1.5 para taludes permanentes en condición estática.","básico","geotecnia_cimentaciones"),
     ],
-    laboratorio_materiales: [
-      q("¿Qué mide el ensayo de abrasión Los Ángeles (ASTM C131)?",
-        ["Resistencia a compresión del árido","Porcentaje de desgaste por fricción e impacto","Absorción de agua del árido","Módulo de fineza de la arena"], 1,
-        "ASTM C131", "Desgaste = (masa inicial − masa retenida #12)/masa inicial × 100. Máximo 40% para concreto estructural.", "básico", "laboratorio_materiales"),
-      q("¿Qué norma ISO es específica para la acreditación de laboratorios de ensayo?",
-        ["ISO 9001","ISO 14001","ISO/IEC 17025","ISO 45001"], 2,
-        "ISO/IEC 17025", "ISO 17025 acredita la competencia técnica de laboratorios. ISO 9001 certifica el sistema de gestión general.", "básico", "laboratorio_materiales"),
+    laboratorio_materiales:[
+      q("¿Qué mide el ensayo Los Ángeles?",["Compresión","Desgaste por fricción e impacto","Absorción","Módulo de fineza"],1,"ASTM C131","Desgaste = (masa inicial − masa retenida #12)/masa inicial × 100.","básico","laboratorio_materiales"),
     ],
-    rocas_mineria: [
-      q("¿Qué ensayo mide la resistencia a la compresión uniaxial (UCS) de roca intacta?",
-        ["PLT (ASTM D5731)","UCS (ASTM D7012 Método A)","Ensayo brasileño (ASTM D3967)","Triaxial de roca"], 1,
-        "ASTM D7012", "ASTM D7012 Método A: probeta cilíndrica H/D=2–2.5, carga axial hasta rotura. Ensayo fundamental en geomecánica.", "básico", "rocas_mineria"),
-      q("¿Qué clasificación RMR corresponde a roca de 'Buena Calidad' (Clase II)?",
-        ["RMR = 20–40","RMR = 41–60","RMR = 61–80","RMR = 81–100"], 2,
-        "Bieniawski 1989", "Clase II=61–80 (Buena). Clase I=81–100 (Muy buena). Clase III=41–60 (Regular). Sistema de referencia en LATAM.", "básico", "rocas_mineria"),
+    rocas_mineria:[
+      q("¿Qué ensayo mide la UCS de roca?",["PLT","UCS (ASTM D7012)","Ensayo brasileño","Triaxial"],1,"ASTM D7012","ASTM D7012 Método A: probeta cilíndrica H/D=2-2.5, carga axial hasta rotura.","básico","rocas_mineria"),
     ],
   };
 }
