@@ -1,0 +1,3452 @@
+[
+  {
+    "question": "¿Qué norma regula el análisis granulométrico por tamizado de suelos?",
+    "options": [
+      "ASTM D422",
+      "ASTM D1557",
+      "ASTM D4318",
+      "ASTM D2216"
+    ],
+    "correct": 0,
+    "norm": "ASTM D422",
+    "explanation": "ASTM D422 (NTP 339.128 Perú / NMX-C-073 México / ICONTEC 1522 Colombia): tamizado para suelos gruesos e hidrómetro para finos menores al tamiz N°200. Base del análisis de gradación en LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "granulometría",
+      "tamizado",
+      "clasificación"
+    ],
+    "subtopic": "propiedades índice",
+    "competency": "Identifica la norma del análisis granulométrico",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿A cuántos golpes se define el límite líquido en la copa de Casagrande?",
+    "options": [
+      "15 golpes",
+      "20 golpes",
+      "25 golpes",
+      "30 golpes"
+    ],
+    "correct": 2,
+    "norm": "ASTM D4318",
+    "explanation": "ASTM D4318 (NTP 339.129 Perú / NMX-C-028 México): el LL es la humedad con la que la ranura cierra 13 mm en exactamente 25 golpes. Universalmente adoptado en LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "límites Atterberg",
+      "límite líquido",
+      "plasticidad"
+    ],
+    "subtopic": "propiedades índice",
+    "competency": "Reconoce el procedimiento del ensayo de límite líquido",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "Según SUCS (ASTM D2487), ¿qué símbolo representa una arcilla de alta plasticidad?",
+    "options": [
+      "CL",
+      "CH",
+      "MH",
+      "ML"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2487",
+    "explanation": "CH = Clay High plasticity: LL ≥ 50% y el punto cae sobre la línea A en la carta de Casagrande. Sistema adoptado como referencia en toda LATAM para clasificar suelos cohesivos.",
+    "difficulty": "básico",
+    "tags": [
+      "clasificación SUCS",
+      "arcilla",
+      "plasticidad"
+    ],
+    "subtopic": "clasificación",
+    "competency": "Clasifica suelos cohesivos usando el sistema SUCS",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué norma ASTM determina la gravedad específica de sólidos del suelo (Gs)?",
+    "options": [
+      "ASTM D2216",
+      "ASTM D854",
+      "ASTM D4318",
+      "ASTM D698"
+    ],
+    "correct": 1,
+    "norm": "ASTM D854",
+    "explanation": "ASTM D854 (NTP 339.131 Perú): picnómetro con agua destilada deaireada a 20°C. Gs típico de minerales comunes: 2.60–2.80. Parámetro clave para calcular relación de vacíos y porosidad.",
+    "difficulty": "básico",
+    "tags": [
+      "gravedad específica",
+      "propiedades índice",
+      "Gs"
+    ],
+    "subtopic": "propiedades índice",
+    "competency": "Identifica la norma y el procedimiento para determinar Gs",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué indica el coeficiente de uniformidad Cu = D60/D10 en una curva granulométrica?",
+    "options": [
+      "Resistencia al corte del suelo",
+      "Grado de distribución del tamaño de partículas",
+      "Plasticidad del suelo fino",
+      "Densidad relativa del suelo"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2487",
+    "explanation": "Cu > 6 = gravas bien gradadas (GW); Cu > 4 = arenas bien gradadas (SW). Cu ≤ 4 en arenas indica suelo uniforme o mal gradado (UP). Criterio SUCS universal en LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "granulometría",
+      "coeficiente uniformidad",
+      "Cu"
+    ],
+    "subtopic": "clasificación",
+    "competency": "Interpreta parámetros de la curva granulométrica",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué representa el N-SPT y cuáles son sus principales usos geotécnicos?",
+    "options": [
+      "Total de golpes en los 45 cm de avance",
+      "Golpes del 2° y 3° tramo de 15 cm c/u; correlaciona con Dr, Cu y capacidad portante",
+      "Golpes solo del primer tramo; indica consistencia",
+      "Promedio de los tres tramos; indica compresibilidad"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1586",
+    "explanation": "N = golpes 2°+3° tramo (30 cm). El 1° tramo se descarta. Correlaciones: Dr en arenas, Cu en arcillas, capacidad portante de zapatas y análisis de licuefacción (método NCEER). Estándar en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "SPT",
+      "N-SPT",
+      "exploración"
+    ],
+    "subtopic": "exploración",
+    "competency": "Aplica el N-SPT en correlaciones geotécnicas prácticas",
+    "course_hint": "Exploración Geotécnica",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Cuántas capas, golpes por capa y masa del martillo usa el Proctor estándar (ASTM D698)?",
+    "options": [
+      "3 capas, 25 golpes, martillo 2.5 kg",
+      "5 capas, 25 golpes, martillo 4.54 kg",
+      "3 capas, 56 golpes, martillo 2.5 kg",
+      "5 capas, 56 golpes, martillo 4.54 kg"
+    ],
+    "correct": 0,
+    "norm": "ASTM D698",
+    "explanation": "Proctor estándar: 3 capas × 25 golpes, martillo 2.5 kg, caída 30.5 cm (600 kJ/m³). Proctor modificado (D1557): 5 capas × 25 golpes, martillo 4.54 kg, caída 45.7 cm (2700 kJ/m³). Ambos usados en LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "Proctor",
+      "compactación",
+      "densidad máxima"
+    ],
+    "subtopic": "compactación",
+    "competency": "Distingue los parámetros del Proctor estándar vs modificado",
+    "course_hint": "Compactación de Suelos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué suelo clasifica la AASHTO M 145 como A-7-6 y qué implica para la subrasante?",
+    "options": [
+      "Arena bien gradada; excelente subrasante",
+      "Arcilla expansiva de alta plasticidad (LL>41, IP>11); subrasante pobre a muy pobre",
+      "Grava limosa; subrasante buena",
+      "Limo de baja plasticidad; subrasante regular"
+    ],
+    "correct": 1,
+    "norm": "AASHTO M 145",
+    "explanation": "A-7-6: arcilla con alta expansibilidad, CBR generalmente < 3%. Requiere estabilización con cal o cemento, o reemplazo. Situación común en altiplanos andinos y cuencas sedimentarias de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "clasificación AASHTO",
+      "subrasante",
+      "arcilla expansiva"
+    ],
+    "subtopic": "clasificación",
+    "competency": "Relaciona la clasificación AASHTO con el desempeño como subrasante",
+    "course_hint": "Diseño de Pavimentos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "Un suelo tiene LL=45% y LP=20%. ¿Cuáles son el IP y la clasificación SUCS?",
+    "options": [
+      "IP=25%, CH",
+      "IP=65%, CH",
+      "IP=25%, CL",
+      "IP=20%, ML"
+    ],
+    "correct": 2,
+    "norm": "ASTM D2487",
+    "explanation": "IP = LL−LP = 25%. Con LL=45% (<50%) y punto sobre la Línea A (IP > 0.73×(LL−20)=18.2%), clasifica como CL. Cálculo idéntico en toda LATAM. Verificar siempre con la carta de Casagrande.",
+    "difficulty": "intermedio",
+    "tags": [
+      "límites Atterberg",
+      "IP",
+      "clasificación SUCS"
+    ],
+    "subtopic": "clasificación",
+    "competency": "Calcula IP y clasifica suelos cohesivos usando SUCS",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué parámetros obtiene directamente el ensayo de consolidación edométrico (ASTM D2435)?",
+    "options": [
+      "Ángulo de fricción φ' y cohesión c'",
+      "Coeficiente de consolidación Cv, índice de compresión Cc y presión de preconsolidación σ'p",
+      "Resistencia al corte no drenado Cu",
+      "Módulo de elasticidad E y coeficiente de Poisson ν"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2435",
+    "explanation": "El edómetro proporciona: Cv (velocidad de consolidación), Cc (compresibilidad virgen), Cs (recompresión) y σ'p (preconsolidación). Base del cálculo de asentamientos en todas las normas LATAM (RNE E.050, NSR-10).",
+    "difficulty": "intermedio",
+    "tags": [
+      "consolidación",
+      "edómetro",
+      "parámetros"
+    ],
+    "subtopic": "consolidación",
+    "competency": "Identifica los parámetros del edómetro y su uso en cálculo de asentamientos",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Cómo se define la densidad relativa Dr y qué indica Dr = 85%?",
+    "options": [
+      "Dr=γd/γd_max×100%; arena suelta",
+      "Dr=(e_max−e)/(e_max−e_min)×100%; arena densa a muy densa",
+      "Dr=(e−e_min)/(e_max−e_min)×100%; arena media",
+      "Dr=w/wmax×100%; arena saturada"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4253/D4254",
+    "explanation": "Dr=(e_max−e)/(e_max−e_min)×100%. Dr=85%: arena muy densa. Alto Dr → baja susceptibilidad a licuefacción. Parámetro crítico en zonas sísmicas de LATAM (Costa del Pacífico, Andes).",
+    "difficulty": "intermedio",
+    "tags": [
+      "densidad relativa",
+      "arena",
+      "compacidad"
+    ],
+    "subtopic": "propiedades índice",
+    "competency": "Calcula e interpreta la densidad relativa de suelos granulares",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué ensayo ASTM obtiene el ángulo de fricción φ' y cohesión c' en condición drenada?",
+    "options": [
+      "ASTM D2850 (triaxial UU)",
+      "ASTM D3080 (corte directo)",
+      "ASTM D2573 (veleta de campo)",
+      "ASTM D4318 (Atterberg)"
+    ],
+    "correct": 1,
+    "norm": "ASTM D3080",
+    "explanation": "Corte directo (ASTM D3080 / NTP 339.171 Perú): carga normal constante, se mide τ en la falla. Graficando τ vs σ'n de 3 especímenes se obtiene c' y φ' drenados. Ensayo estándar en laboratorios de toda LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "corte directo",
+      "resistencia drenada",
+      "φ'"
+    ],
+    "subtopic": "resistencia al corte",
+    "competency": "Selecciona el ensayo correcto para obtener parámetros de resistencia drenada",
+    "course_hint": "Resistencia al Corte",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Cuál es el procedimiento correcto para determinar la humedad natural del suelo (ASTM D2216)?",
+    "options": [
+      "Secar muestra a 60°C por 48 horas",
+      "Secar en horno a 105±5°C hasta masa constante; W% = (Mw/Ms)×100",
+      "Usar higrómetro de capacitancia directamente en campo",
+      "Calcular con relación de vacíos y gravedad específica"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2216",
+    "explanation": "ASTM D2216 (NTP 339.127 Perú / ICONTEC 1534 Colombia): W% = (masa agua/masa sólidos secos)×100. Masa constante: diferencia <0.1% entre pesadas separadas 1 h. Ensayo más frecuente en laboratorios LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "humedad natural",
+      "secado horno",
+      "ASTM D2216"
+    ],
+    "subtopic": "propiedades índice",
+    "competency": "Aplica el procedimiento correcto del ensayo de humedad ASTM D2216",
+    "course_hint": "Ensayos Básicos de Suelos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué diferencia conceptual existe entre el Proctor estándar (D698) y el modificado (D1557)?",
+    "options": [
+      "Solo difiere el molde; son intercambiables",
+      "D1557 aplica 4.5× más energía (5 capas, martillo 4.54 kg, caída 45.7 cm); se usa bajo tráfico pesado",
+      "D698 usa más energía; se usa para rellenos de alta compactación",
+      "Solo difiere el número de capas; mismo γd_max"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1557",
+    "explanation": "D698=600 kJ/m³; D1557=2700 kJ/m³ (4.5×). El MTC Perú, INVIAS Colombia y SCT México exigen D1557 para bases y subrasantes bajo tráfico pesado. El estándar depende del país y tipo de obra.",
+    "difficulty": "intermedio",
+    "tags": [
+      "Proctor",
+      "energía de compactación",
+      "MTC"
+    ],
+    "subtopic": "compactación",
+    "competency": "Selecciona el ensayo de compactación apropiado según condiciones del proyecto",
+    "course_hint": "Compactación de Suelos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué ensayo in situ proporciona un perfil continuo de resistencia sin extraer muestras?",
+    "options": [
+      "SPT (ASTM D1586)",
+      "CPT — Cono de Penetración (ASTM D3441)",
+      "Presiómetro PMT (ASTM D4719)",
+      "Veleta de campo (ASTM D2573)"
+    ],
+    "correct": 1,
+    "norm": "ASTM D3441",
+    "explanation": "El CPT empuja a 2 cm/s registrando qc (punta) y fs (fricción) de forma continua. Mayor resolución estratigráfica que el SPT. Muy usado en suelos blandos de deltas y llanuras costeras de LATAM (Lima, Guayaquil, Cartagena).",
+    "difficulty": "intermedio",
+    "tags": [
+      "CPT",
+      "exploración continua",
+      "estratigrafía"
+    ],
+    "subtopic": "exploración",
+    "competency": "Selecciona el ensayo de exploración según el nivel de detalle requerido",
+    "course_hint": "Exploración Geotécnica",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué parámetro mide directamente la veleta de campo (Vane Shear, ASTM D2573)?",
+    "options": [
+      "Ángulo de fricción efectivo φ'",
+      "Resistencia al corte no drenado Cu in situ",
+      "Módulo de deformación Es",
+      "Coeficiente de permeabilidad k"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2573",
+    "explanation": "Cu = T/(K·D³) donde T = torque de rotura y K depende de la geometría. Aplicable a arcillas blandas Cu < 50 kPa. Muy usado en estudios de cimentaciones en llanuras costeras y valles aluviales de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "veleta campo",
+      "Cu",
+      "arcillas blandas"
+    ],
+    "subtopic": "exploración",
+    "competency": "Interpreta el resultado de la veleta de campo y su aplicabilidad",
+    "course_hint": "Exploración Geotécnica",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué indica el índice de liquidez IL = (w−LP)/IP y qué estado representa IL = 1.2?",
+    "options": [
+      "Estado semisólido rígido; IL > 1 es imposible",
+      "Humedad mayor que el LL: arcilla en estado casi fluido con Cu muy baja (<12 kPa) — obra en riesgo",
+      "Estado plástico normal; sin implicaciones",
+      "Arcilla sobreconsolidada de alta resistencia"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4318",
+    "explanation": "IL > 1 → w > LL → arcilla casi líquida: Cu muy baja, sin capacidad portante, riesgo de flujo. Crítico en obras marinas, lacustres y depósitos costeros de LATAM (Lima, Guayaquil, costa Caribe).",
+    "difficulty": "intermedio",
+    "tags": [
+      "índice liquidez",
+      "consistencia",
+      "arcilla blanda"
+    ],
+    "subtopic": "propiedades índice",
+    "competency": "Evalúa el estado de consistencia de arcillas usando el índice de liquidez",
+    "course_hint": "Mecánica de Suelos I",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué parámetros y fundamento teórico tiene el ensayo triaxial UU en arcillas saturadas?",
+    "options": [
+      "c' y φ' efectivos porque hay drenaje",
+      "Cu con φu=0 porque sin drenaje la presión de poros absorbe todo incremento de confinamiento",
+      "Cv y permeabilidad k",
+      "Solo E y ν (parámetros elásticos)"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2850",
+    "explanation": "En UU saturado: Δσ3 es completamente absorbido por Δu → círculos de Mohr del mismo diámetro → envolvente horizontal: φu=0, τ=Cu. Fundamento del análisis de estabilidad a corto plazo en proyectos LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "triaxial UU",
+      "presión poros",
+      "Cu"
+    ],
+    "subtopic": "resistencia al corte",
+    "competency": "Interpreta el comportamiento tensión-deformación en triaxial UU y su fundamento",
+    "course_hint": "Resistencia al Corte",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Por qué el corte directo (D3080) tiende a sobreestimar φ' respecto al triaxial (D4767)?",
+    "options": [
+      "Porque usa mayor velocidad de corte",
+      "El plano de falla está predeterminado (no es el más débil) y hay rotación de esfuerzos principales",
+      "No mide presión de poros intersticial",
+      "Usa probetas de mayor tamaño"
+    ],
+    "correct": 1,
+    "norm": "ASTM D3080 / D4767",
+    "explanation": "En corte directo la falla ocurre en el plano horizontal impuesto, generando φ' 2–4° mayores que el triaxial donde la falla ocurre en el plano más crítico. Limitación reconocida en todos los códigos geotécnicos de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "corte directo",
+      "triaxial",
+      "limitaciones ensayo"
+    ],
+    "subtopic": "resistencia al corte",
+    "competency": "Evalúa críticamente las limitaciones del ensayo de corte directo vs triaxial",
+    "course_hint": "Resistencia al Corte",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "En la teoría de consolidación 1D de Terzaghi, ¿qué implica U = 50%?",
+    "options": [
+      "Solo que el asentamiento ocurrido es la mitad del total",
+      "Solo que la presión de poros se redujo a la mitad",
+      "Solo que el esfuerzo efectivo aumentó en 50%",
+      "Las tres anteriores son equivalentes y simultáneas en la teoría 1D"
+    ],
+    "correct": 3,
+    "norm": "ASTM D2435",
+    "explanation": "En consolidación 1D lineal: U = Δσ'v/Δσ'v_final = u_disipada/u_inicial = S_ocurrido/S_total. Las tres expresiones son equivalentes y simultáneas. Fundamento del cálculo de asentamientos diferidos en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "consolidación",
+      "Terzaghi",
+      "grado de consolidación"
+    ],
+    "subtopic": "consolidación",
+    "competency": "Aplica la teoría de consolidación para interpretar el progreso de asentamientos en el tiempo",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué es el sifonamiento y cuándo ocurre en suelos granulares?",
+    "options": [
+      "Consolidación acelerada por incremento de carga",
+      "Cuando el gradiente hidráulico ascendente alcanza icrit=(Gs−1)/(1+e): σ'v=0 y el suelo pierde toda resistencia al corte",
+      "Tixotropía: el suelo se endurece al remoldear",
+      "Expansión volumétrica del suelo al saturarse"
+    ],
+    "correct": 1,
+    "norm": "Mecánica de Suelos",
+    "explanation": "icrit ≈ 1.0 para arena típica (Gs≈2.68, e≈0.7). Cuando i = icrit → σ'v = 0 → el suelo granular fluye como líquido. Causa fallas en presas y excavaciones con agua freática. Fenómeno documentado en múltiples proyectos LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "sifonamiento",
+      "gradiente crítico",
+      "piping"
+    ],
+    "subtopic": "permeabilidad y flujo",
+    "competency": "Identifica condiciones de sifonamiento y calcula el gradiente crítico",
+    "course_hint": "Permeabilidad y Flujo en Suelos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre los ensayos triaxiales CU (con medición de Δu) y CD?",
+    "options": [
+      "Son equivalentes; ambos dan c' y φ' iguales",
+      "CU con Δu da c' y φ' efectivos Y Cu. CD da c' y φ' efectivos pero requiere días o semanas en arcillas por drenaje completo.",
+      "CU da solo Cu y CD da solo φ'",
+      "CU es para arcillas y CD exclusivamente para arenas"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4767",
+    "explanation": "CU con Δu: construye envolvente efectiva (largo plazo) Y total (corto plazo) con un solo ensayo. CD requiere drenaje completo → impráctico en arcillas. Enfoque preferido en proyectos geotécnicos de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "triaxial CU",
+      "triaxial CD",
+      "selección de ensayo"
+    ],
+    "subtopic": "resistencia al corte",
+    "competency": "Selecciona el ensayo triaxial apropiado según la etapa de análisis de estabilidad",
+    "course_hint": "Resistencia al Corte",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre suelo normalmente consolidado (NC) y sobreconsolidado (OC)?",
+    "options": [
+      "NC tiene mayor resistencia en todos los casos",
+      "NC: OCR=1 (σ'p=σ'v0); OC: OCR>1 (fue precomprimido). OC es más resistente, más rígido y menos compresible.",
+      "OC siempre tiene mayor humedad que NC",
+      "NC es solo para arenas; OC solo para arcillas"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2435",
+    "explanation": "OCR = σ'p/σ'v0. OCR > 1: mayor densidad, mayor c', menor Cc. La historia de esfuerzos determina la compresibilidad y resistencia. Frecuente encontrar arcillas OC bajo ciudades LATAM con largas historias de carga.",
+    "difficulty": "avanzado",
+    "tags": [
+      "OCR",
+      "sobreconsolidación",
+      "historia de esfuerzos"
+    ],
+    "subtopic": "consolidación",
+    "competency": "Determina el estado de consolidación del suelo y sus implicaciones en diseño",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué método se usa para evaluar el potencial de licuefacción a partir de N-SPT en campo?",
+    "options": [
+      "Solo el ensayo triaxial cíclico en laboratorio",
+      "Método simplificado de Seed & Idriss (NCEER 1997): CSR vs CRR obtenida de correlaciones N-SPT o CPT",
+      "Solo el método de Bishop simplificado",
+      "Clasificación SUCS del suelo por sí sola"
+    ],
+    "correct": 1,
+    "norm": "NCEER 1997 / Youd et al. 2001",
+    "explanation": "CSR = 0.65×(amax/g)×(σv0/σ'v0)×rd. CRR de (N1)60 o qc1N. FS = CRR/CSR < 1.0 → suelo susceptible. Método estándar en zonificaciones sísmicas de Lima, Santiago, Bogotá y Ciudad de México.",
+    "difficulty": "avanzado",
+    "tags": [
+      "licuefacción",
+      "Seed & Idriss",
+      "CSR/CRR"
+    ],
+    "subtopic": "dinámica de suelos",
+    "competency": "Aplica el método simplificado NCEER para evaluar potencial de licuefacción",
+    "course_hint": "Dinámica de Suelos y Licuefacción",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿Qué es la presión de preconsolidación σ'p y cómo se determina en el edómetro?",
+    "options": [
+      "Es la presión actual en campo; se lee directamente en el gráfico",
+      "Máxima presión efectiva que el suelo ha soportado históricamente; determinada por el método de Casagrande en la curva e vs log σ'v",
+      "Es la presión de rotura del suelo; se obtiene del triaxial",
+      "Es la presión hidrostática del agua subterránea"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2435",
+    "explanation": "Método de Casagrande: se bisecta el ángulo en el punto de máxima curvatura; la intersección con la línea virgen da σ'p. Determina si el suelo es NC u OC → clave para estimar asentamientos correctamente en toda LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "preconsolidación",
+      "método Casagrande",
+      "edómetro"
+    ],
+    "subtopic": "consolidación",
+    "competency": "Determina σ'p por el método de Casagrande e interpreta su significado geotécnico",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "mecanica_suelos"
+  },
+  {
+    "question": "¿A cuántos días se evalúa la resistencia de diseño f'c según ASTM C39?",
+    "options": [
+      "7 días",
+      "14 días",
+      "28 días",
+      "56 días"
+    ],
+    "correct": 2,
+    "norm": "ASTM C39",
+    "explanation": "ASTM C39 (NTP 339.034 Perú / NMX-C-083 México / ICONTEC 673 Colombia): f'c se verifica a 28 días. A 7 días se obtiene ≈65–70% de f'c con cemento Tipo I. Estándar en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "resistencia",
+      "28 días",
+      "cilindros"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Reconoce la edad estándar de ensayo de resistencia del concreto",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué norma rige el ensayo de asentamiento (slump) con el cono de Abrams?",
+    "options": [
+      "ASTM C143",
+      "ASTM C138",
+      "ASTM C231",
+      "ASTM C403"
+    ],
+    "correct": 0,
+    "norm": "ASTM C143",
+    "explanation": "ASTM C143 (NTP 339.035 Perú / ICONTEC 396 Colombia): el cono de Abrams mide la consistencia del concreto fresco. Ensayo de trabajabilidad más usado en obra en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "slump",
+      "trabajabilidad",
+      "concreto fresco"
+    ],
+    "subtopic": "concreto fresco",
+    "competency": "Identifica la norma y el propósito del ensayo de asentamiento",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Cuáles son las dimensiones del cilindro estándar para ensayo de compresión de concreto?",
+    "options": [
+      "10 cm × 20 cm",
+      "15 cm × 30 cm (Ø6\"×12\")",
+      "10 cm × 30 cm",
+      "15 cm × 20 cm"
+    ],
+    "correct": 1,
+    "norm": "ASTM C39",
+    "explanation": "Cilindro estándar: Ø6\"×12\" (15×30 cm), relación H/D=2. El cilindro Ø4\"×8\" (10×20 cm) también se acepta en LATAM pero requiere factor corrector ≥ 0.95 según ASTM C39.",
+    "difficulty": "básico",
+    "tags": [
+      "cilindros",
+      "geometría",
+      "ensayo"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Conoce las dimensiones estándar de especímenes de concreto",
+    "course_hint": "Tecnología del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Cuál es el curado estándar de cilindros de concreto según ASTM C31?",
+    "options": [
+      "Al aire libre durante 28 días",
+      "Sumergidos en agua a 23±2°C desde el desmolde hasta el ensayo",
+      "En cámara húmeda a 95% HR a temperatura ambiente",
+      "Al aire libre con riego periódico de agua"
+    ],
+    "correct": 1,
+    "norm": "ASTM C31",
+    "explanation": "ASTM C31 (NTP 339.183 Perú): curado en agua a 23±2°C. Desmolde entre 16 y 32 h después del vaciado. Condición de referencia para obtener la resistencia de diseño f'c en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "curado",
+      "cilindros",
+      "ASTM C31"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Aplica el procedimiento correcto de curado de especímenes",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué ensayo mide el contenido de aire en concreto fresco con áridos densos?",
+    "options": [
+      "ASTM C138 (densidad)",
+      "ASTM C173 (volumétrico)",
+      "ASTM C231 (presión)",
+      "ASTM C1064 (temperatura)"
+    ],
+    "correct": 2,
+    "norm": "ASTM C231",
+    "explanation": "ASTM C231 para áridos densos (mayoría de LATAM). ASTM C173 (volumétrico) aplica a áridos ligeros o porosos. La selección incorrecta puede generar errores de ±2% en el contenido de aire.",
+    "difficulty": "básico",
+    "tags": [
+      "contenido de aire",
+      "concreto fresco",
+      "ASTM C231"
+    ],
+    "subtopic": "concreto fresco",
+    "competency": "Selecciona el ensayo correcto de contenido de aire según el tipo de agregado",
+    "course_hint": "Tecnología del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Temperatura máxima del concreto fresco en la entrega según ASTM C94?",
+    "options": [
+      "30°C",
+      "35°C",
+      "38°C",
+      "40°C"
+    ],
+    "correct": 2,
+    "norm": "ASTM C94",
+    "explanation": "ASTM C94 (NTP 339.114 Perú): temperatura máxima de entrega 38°C (100°F). En climas tropicales y costeros de LATAM (Lima, Bogotá, Guayaquil, Ciudad de México) el control de temperatura es crítico para evitar fraguado prematuro.",
+    "difficulty": "básico",
+    "tags": [
+      "temperatura",
+      "concreto premezclado",
+      "ASTM C94"
+    ],
+    "subtopic": "concreto fresco",
+    "competency": "Conoce los límites de temperatura del concreto premezclado en obra",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué norma establece los requisitos físicos y químicos del cemento Portland Tipo I?",
+    "options": [
+      "ASTM C150",
+      "ASTM C595",
+      "ASTM C1157",
+      "ASTM C94"
+    ],
+    "correct": 0,
+    "norm": "ASTM C150",
+    "explanation": "ASTM C150 (NTP 334.009 Perú / ICONTEC 30 Colombia / NMX-C-414 México): define 8 tipos de cemento Portland. Tipo I: uso general. Tipo V: resistente a sulfatos. Incluye resistencia mínima y composición química máxima de C3A.",
+    "difficulty": "básico",
+    "tags": [
+      "cemento Portland",
+      "ASTM C150",
+      "tipos de cemento"
+    ],
+    "subtopic": "materiales",
+    "competency": "Identifica los tipos de cemento Portland según ASTM C150 y sus aplicaciones",
+    "course_hint": "Materiales Cementantes",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué establece ASTM C94 sobre la frecuencia mínima de muestreo de concreto premezclado?",
+    "options": [
+      "1 muestra cada 500 m³",
+      "1 muestra cada 100 yd³ (≈76 m³) o 1 por día de vaciado, lo que ocurra primero",
+      "1 muestra por cada camión mezclador",
+      "1 muestra por tipo de elemento estructural"
+    ],
+    "correct": 1,
+    "norm": "ASTM C94 / ACI 318",
+    "explanation": "ACI 301/318: mínimo 1 muestra/100 yd³ (≈76 m³) o 1 por día. Cada muestra = 2 cilindros a 28 días + 1 de reserva. Requisito mínimo adoptado en RNE E.060 Perú, NSR-10 Colombia y RCDF México.",
+    "difficulty": "básico",
+    "tags": [
+      "muestreo",
+      "frecuencia",
+      "ACI 318"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Establece la frecuencia mínima de muestreo de concreto en obra",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Por qué la relación agua/cemento (a/c) es el parámetro más determinante en la resistencia del concreto?",
+    "options": [
+      "Controla el contenido de aire de la mezcla",
+      "Ley de Abrams: a mayor a/c → mayor porosidad capilar → menor resistencia y durabilidad",
+      "Determina el módulo elástico directamente",
+      "Controla únicamente el tiempo de fraguado"
+    ],
+    "correct": 1,
+    "norm": "ACI 211.1",
+    "explanation": "Ley de Abrams (f'c = A/B^(a/c)): principio central del diseño de mezclas ACI 211.1. Mayor a/c → mayor volumen de poros capilares → menor resistencia y durabilidad. Adoptado como referencia en toda LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "relación a/c",
+      "Ley de Abrams",
+      "diseño de mezclas"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Aplica la Ley de Abrams en diseño y evaluación de mezclas de concreto",
+    "course_hint": "Diseño de Mezclas ACI 211",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Cuál es el módulo de elasticidad Ec del concreto con f'c = 210 kg/cm²?",
+    "options": [
+      "15,100 kg/cm²",
+      "≈218,800 kg/cm² (usando Ec = 15100√f'c)",
+      "196,000 kg/cm²",
+      "280,000 kg/cm²"
+    ],
+    "correct": 1,
+    "norm": "ACI 318",
+    "explanation": "ACI 318 (RNE E.060 Perú / NSR-10 Colombia): Ec = 4700√f'c [MPa] = 15100√f'c [kg/cm²]. Con f'c=210: Ec ≈ 218,800 kg/cm² (≈21,470 MPa). Fórmula estándar en toda LATAM para concreto de densidad normal.",
+    "difficulty": "intermedio",
+    "tags": [
+      "módulo elástico",
+      "ACI 318",
+      "propiedades mecánicas"
+    ],
+    "subtopic": "propiedades mecánicas",
+    "competency": "Calcula el módulo de elasticidad del concreto según ACI 318",
+    "course_hint": "Tecnología del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué porcentaje de f'c a 28 días alcanza el concreto con cemento Tipo I a los 7 días?",
+    "options": [
+      "40 a 50%",
+      "65 a 70%",
+      "80 a 85%",
+      "90 a 95%"
+    ],
+    "correct": 1,
+    "norm": "ACI 209",
+    "explanation": "Cemento Tipo I a 7 días: ≈65–70% de f'c. ACI 209 modela el desarrollo: fc(t) = t/(a+b·t) × f'c_28. Clave para decidir fechas de desencofrado. Referencia en todos los países LATAM que usan cementos de la norma ASTM C150.",
+    "difficulty": "intermedio",
+    "tags": [
+      "desarrollo de resistencia",
+      "cemento Tipo I",
+      "7 días"
+    ],
+    "subtopic": "propiedades mecánicas",
+    "competency": "Estima el desarrollo de resistencia del concreto en el tiempo",
+    "course_hint": "Tecnología del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué es la resistencia requerida f'cr y cómo difiere del f'c de diseño?",
+    "options": [
+      "Son equivalentes; solo cambia la notación",
+      "f'cr = f'c + margen estadístico para garantizar probabilidad de fallo ≤ 1 en 100 muestras",
+      "f'cr es la resistencia medida a 7 días",
+      "f'cr solo aplica para f'c > 420 kg/cm²"
+    ],
+    "correct": 1,
+    "norm": "ACI 318 / ACI 214",
+    "explanation": "f'cr incorpora el margen estadístico: f'cr = mayor de {f'c+1.34s} y {f'c+2.33s−35 [kg/cm²]}. Asegura que <10% de muestras esté bajo f'c. Requerido en RNE E.060 Perú, NSR-10 Colombia y RCDF México.",
+    "difficulty": "intermedio",
+    "tags": [
+      "f'cr",
+      "control estadístico",
+      "margen estadístico"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Calcula f'cr a partir de f'c y la desviación estándar del concreto en obra",
+    "course_hint": "Diseño de Mezclas ACI 211",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Para qué se usa el ensayo de extracción de núcleos diamantinos (ASTM C42)?",
+    "options": [
+      "Verificar el slump original del concreto",
+      "Determinar la resistencia real in situ y verificar espesores en zonas con resultados sospechosos",
+      "Medir la carbonatación del concreto en servicio",
+      "Evaluar la trabajabilidad del concreto fresco"
+    ],
+    "correct": 1,
+    "norm": "ASTM C42",
+    "explanation": "ASTM C42 (NTP 339.059 Perú): núcleos con corona diamantina, H/D=2, ensayo a compresión según C39. Evidencia técnica y legal definitiva de la calidad del concreto colocado. Requerido por RNE E.060 y NSR-10 cuando falla el criterio de aceptación.",
+    "difficulty": "intermedio",
+    "tags": [
+      "núcleos diamantinos",
+      "evaluación estructural",
+      "in situ"
+    ],
+    "subtopic": "evaluación de estructuras",
+    "competency": "Aplica el ensayo de extracción de núcleos para evaluar estructuras en servicio",
+    "course_hint": "Evaluación de Estructuras",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué norma ASTM cubre la ceniza volante como adición mineral en concreto y qué clases define?",
+    "options": [
+      "ASTM C150",
+      "ASTM C595",
+      "ASTM C618 — Clases N, F y C",
+      "ASTM C989"
+    ],
+    "correct": 2,
+    "norm": "ASTM C618",
+    "explanation": "ASTM C618 (NTP 334.090 Perú / ICONTEC 294 Colombia): Clase N = puzolana natural; Clase F = ceniza de carbón bituminoso (baja CaO, puzolana); Clase C = ceniza de lignito (alta CaO, cementante+puzolana). Amplio uso en LATAM para reducir costos y mejorar durabilidad.",
+    "difficulty": "intermedio",
+    "tags": [
+      "ceniza volante",
+      "ASTM C618",
+      "adiciones minerales"
+    ],
+    "subtopic": "materiales",
+    "competency": "Selecciona el tipo de adición mineral según ASTM C618 y sus propiedades reactivas",
+    "course_hint": "Adiciones para Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué norma ASTM regula los aditivos químicos para concreto y qué tipos define ASTM C494?",
+    "options": [
+      "ASTM C150 (cemento)",
+      "ASTM C494 — Tipos A, B, C, D, E, F y G",
+      "ASTM C618 (puzolanas)",
+      "ASTM C989 (escoria de alto horno)"
+    ],
+    "correct": 1,
+    "norm": "ASTM C494",
+    "explanation": "ASTM C494 (NTP 334.088 Perú / ICONTEC 1299 Colombia): Tipo A (reductor agua), B (retardador), C (acelerador), D (reductor+retardador), E (reductor+acelerador), F (superplastificante), G (superplastificante+retardador). Adoptado en toda LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "aditivos",
+      "ASTM C494",
+      "tipos de aditivos"
+    ],
+    "subtopic": "materiales",
+    "competency": "Selecciona el tipo de aditivo correcto según ASTM C494 para las necesidades de obra",
+    "course_hint": "Aditivos para Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué establece ASTM C1602 sobre el agua de mezcla para concreto?",
+    "options": [
+      "El agua de grifo siempre es aceptable sin ensayos",
+      "Establece límites máximos de impurezas (sulfatos, cloruros, pH) para proteger la durabilidad del concreto",
+      "Solo aplica para agua de mar o desalinizada",
+      "El agua debe ser destilada o desmineralizada"
+    ],
+    "correct": 1,
+    "norm": "ASTM C1602",
+    "explanation": "ASTM C1602 (NTP 339.088 Perú): cloruros <500 ppm (pretensado), sulfatos <3000 ppm, pH 6–8. El agua no potable requiere ensayos de comparación de resistencia. Relevante en obras costeras y mineras de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "agua de mezcla",
+      "ASTM C1602",
+      "durabilidad"
+    ],
+    "subtopic": "materiales",
+    "competency": "Evalúa la aptitud del agua de mezcla según los límites de ASTM C1602",
+    "course_hint": "Materiales para Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Cuál es el criterio de aceptación estadístico de ACI 318 para el concreto en obra?",
+    "options": [
+      "Todo cilindro individual debe superar f'c",
+      "Promedio de 3 resultados consecutivos ≥ f'c Y ningún resultado individual < f'c−3.5 MPa. Ambas condiciones simultáneas.",
+      "Solo el 5% de resultados puede estar bajo f'c",
+      "El promedio general de la obra debe superar 1.10 f'c"
+    ],
+    "correct": 1,
+    "norm": "ACI 318-14",
+    "explanation": "ACI 318-14 §26.12.3: Cond.1 verifica tendencia central; Cond.2 protege contra resultados muy bajos. Si falla alguna → protocolo de investigación con núcleos C42. Adoptado en RNE E.060 Perú y NSR-10 Colombia.",
+    "difficulty": "intermedio",
+    "tags": [
+      "criterio aceptación",
+      "ACI 318",
+      "control estadístico"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Aplica el criterio de aceptación de ACI 318 para evaluar conformidad del concreto",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué a/c máxima exige ACI 318 para concreto expuesto a sulfatos severos (Clase S2)?",
+    "options": [
+      "a/c ≤ 0.60, cemento Tipo I",
+      "a/c ≤ 0.50, cemento Tipo II",
+      "a/c ≤ 0.45, cemento Tipo III",
+      "a/c ≤ 0.40, cemento Tipo V o equivalente con baja C3A"
+    ],
+    "correct": 3,
+    "norm": "ACI 318",
+    "explanation": "Clase S2 (0.20% < SO4 < 2.00% en suelo): a/c ≤ 0.40, cemento Tipo V (<5% C3A), f'c mín=31 MPa. Crítico en suelos costeros, volcánicos y mineros de LATAM (costas del Pacífico, altiplano andino).",
+    "difficulty": "avanzado",
+    "tags": [
+      "durabilidad",
+      "sulfatos",
+      "cemento Tipo V"
+    ],
+    "subtopic": "durabilidad",
+    "competency": "Diseña concreto durable para exposición a sulfatos según ACI 318",
+    "course_hint": "Durabilidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "Según ACI 214, ¿qué coeficiente de variación (CV) clasifica el control de producción de concreto como 'Excelente'?",
+    "options": [
+      "CV > 15%",
+      "CV entre 10–15%",
+      "CV entre 5–10%",
+      "CV < 5%"
+    ],
+    "correct": 3,
+    "norm": "ACI 214",
+    "explanation": "ACI 214: Excelente <5%, Muy bueno 5–8%, Bueno 8–10%, Regular 10–15%, Malo >15%. CV<5% refleja dosificación precisa, áridos uniformes y operarios capacitados. Meta alcanzable en laboratorios certificados de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "ACI 214",
+      "coeficiente de variación",
+      "control calidad"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Evalúa el nivel de control de calidad del concreto usando los criterios de ACI 214",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "Con s = 40 kg/cm² y f'c = 210 kg/cm², ¿cuál es el f'cr correcto?",
+    "options": [
+      "f'cr = 250 kg/cm²",
+      "f'cr = máx(f'c+1.34s; f'c+2.33s−35) = 272 kg/cm²",
+      "f'cr = f'c × 1.15 = 241.5 kg/cm²",
+      "f'cr = f'c + 3s = 330 kg/cm²"
+    ],
+    "correct": 1,
+    "norm": "ACI 318 / ACI 214",
+    "explanation": "Cond.1: 210+1.34×40=264. Cond.2: 210+2.33×40−35=272. f'cr=272 kg/cm². La mezcla debe dosificarse para esa resistencia superior al f'c de diseño. Cálculo aplicable en cualquier laboratorio LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "f'cr",
+      "desviación estándar",
+      "cálculo"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Calcula f'cr con datos reales de desviación estándar para proporcionar mezclas",
+    "course_hint": "Diseño de Mezclas ACI 211",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Por qué el cemento Tipo V tiene mayor resistencia a los sulfatos que el Tipo I?",
+    "options": [
+      "Porque el Tipo V tiene mayor contenido de C3S",
+      "Porque el Tipo V limita C3A ≤ 5%; C3A reacciona con sulfatos formando etringita expansiva que fisura el concreto",
+      "Porque el Tipo V fragua más lento y es menos poroso",
+      "Porque el Tipo V tiene mayor contenido de yeso regulador"
+    ],
+    "correct": 1,
+    "norm": "ASTM C150",
+    "explanation": "ASTM C150: C3A + sulfatos → etringita (3CaO·Al2O3·3CaSO4·32H2O): reacción expansiva. Tipo V limita C3A ≤ 5%. Crítico en costas, minas y suelos volcánicos de LATAM. Alternativa: cemento con puzolanas (ASTM C595).",
+    "difficulty": "avanzado",
+    "tags": [
+      "cemento Tipo V",
+      "sulfatos",
+      "durabilidad"
+    ],
+    "subtopic": "durabilidad",
+    "competency": "Explica la química de la reacción sulfato-cemento y cómo prevenirla",
+    "course_hint": "Durabilidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Cuál es el protocolo completo de ACI 318 cuando un lote de concreto presenta resistencia baja?",
+    "options": [
+      "Demolición automática si un cilindro está bajo f'c",
+      "Si falla el criterio de aceptación: solicitar 3 núcleos C42; si promedio ≥ 0.85 f'c y ninguno < 0.75 f'c → aceptable. Si no: análisis estructural detallado.",
+      "Se acepta si el esclerómetro confirma resistencia adecuada",
+      "Se reprueba si más de 1 cilindro está bajo f'c"
+    ],
+    "correct": 1,
+    "norm": "ACI 318-14 §26.12.4",
+    "explanation": "Protocolo: cilindros → si falla: núcleos (promedio ≥ 0.85f'c, ninguno <0.75f'c) → si falla: análisis estructural (ACI 318/369) → refuerzo o demolición como último recurso. Proceso adoptado en RNE E.060 y NSR-10.",
+    "difficulty": "avanzado",
+    "tags": [
+      "protocolo investigación",
+      "núcleos",
+      "concreto bajo"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Aplica el protocolo completo de investigación ante resultados bajos de resistencia",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre ASTM A615 y ASTM A706 para acero de refuerzo y cuándo se prefiere A706?",
+    "options": [
+      "Son idénticas; solo difieren en el fabricante",
+      "A615: alta resistencia (fy=420 MPa). A706: fu/fy ≥ 1.25 y mayor ductilidad — requerida en zonas sísmicas para garantizar disipación de energía por fluencia del acero.",
+      "A706 tiene siempre mayor resistencia que A615",
+      "A615 para clima frío; A706 para clima cálido"
+    ],
+    "correct": 1,
+    "norm": "ASTM A615 / A706",
+    "explanation": "ASTM A706: fu/fy ≥ 1.25, fy real ≤ fy_nom+120 MPa, mayor elongación mínima. ACI 318 en zonas sísmicas especiales exige A706. Crítico en países andinos: Perú, Chile, Colombia, México, Ecuador.",
+    "difficulty": "avanzado",
+    "tags": [
+      "acero de refuerzo",
+      "A615",
+      "A706"
+    ],
+    "subtopic": "materiales",
+    "competency": "Selecciona el grado de acero apropiado según las exigencias sísmicas del proyecto",
+    "course_hint": "Materiales Estructurales",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué diferencia existe entre el ensayo de compresión (ASTM C39) y la tracción indirecta brasileño (ASTM C496)?",
+    "options": [
+      "C39 para cilindros y C496 para cubos",
+      "C39 mide f'c directamente; C496 mide ft ≈ 0.1 f'c mediante carga diametral que genera tracción indirecta en el cilindro",
+      "C39 a 7 días y C496 a 28 días",
+      "Son equivalentes; no hay diferencia práctica"
+    ],
+    "correct": 1,
+    "norm": "ASTM C39 / C496",
+    "explanation": "ASTM C496: carga compresiva lineal diametral genera tensiones de tracción. ft = 2P/(π·L·D). Típicamente ft ≈ 8–12% de f'c. Importante para diseño de pavimentos de concreto y losas postensadas en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "tracción indirecta",
+      "C496",
+      "resistencia a tracción"
+    ],
+    "subtopic": "propiedades mecánicas",
+    "competency": "Diferencia los ensayos C39 y C496 y sus aplicaciones en diseño de pavimentos",
+    "course_hint": "Tecnología del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué implica en la práctica un coeficiente de variación del 12% en el concreto de una obra según ACI 214?",
+    "options": [
+      "Excelente calidad; no requiere acción",
+      "CV=12% es control 'Regular' (10–15%): f'cr aumenta significativamente, elevando el costo de mezcla 10–20% vs CV<5%. Revisar prácticas de muestreo, curado y ensayo.",
+      "CV=12% es aceptable para cualquier obra",
+      "El concreto debe demolerse por baja calidad de control"
+    ],
+    "correct": 1,
+    "norm": "ACI 214",
+    "explanation": "ACI 214: Regular = 10–15%. Con CV=12% y f'c=210: s≈25 kg/cm², f'cr≈262 kg/cm². Causas típicas: muestreo no estándar, curado deficiente, balanza mal calibrada. Impacto económico directo en proyectos LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "CV",
+      "ACI 214",
+      "impacto económico"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Evalúa las implicaciones técnicas y económicas del CV del concreto en obra",
+    "course_hint": "Control de Calidad del Concreto",
+    "region": "LATAM",
+    "category": "concreto"
+  },
+  {
+    "question": "¿Qué determina el ensayo Marshall (ASTM D6927) en mezclas asfálticas?",
+    "options": [
+      "Solo la densidad de la briqueta compactada",
+      "Estabilidad (carga máxima) y flujo (deformación en la carga máxima)",
+      "El contenido de vacíos únicamente",
+      "La temperatura de compactación óptima"
+    ],
+    "correct": 1,
+    "norm": "ASTM D6927",
+    "explanation": "Marshall: estabilidad (N o lb) y flujo (×0.25 mm). Método oficial de diseño en el MTC Perú, INVIAS Colombia, SCT México y la mayoría de entidades viales de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "Marshall",
+      "estabilidad",
+      "flujo"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Identifica los parámetros que mide el ensayo Marshall",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿A qué temperatura se sumergen las briquetas Marshall antes del ensayo?",
+    "options": [
+      "45°C por 60 minutos",
+      "55°C por 45 minutos",
+      "60°C (140°F) por 30–40 minutos",
+      "75°C por 30 minutos"
+    ],
+    "correct": 2,
+    "norm": "ASTM D6927",
+    "explanation": "ASTM D6927: baño de agua a 60°C (140°F) durante 30–40 min. Simula condiciones de servicio del pavimento en clima cálido, como ocurre en costas y llanuras tropicales de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "Marshall",
+      "temperatura",
+      "acondicionamiento"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Aplica el procedimiento correcto de acondicionamiento de briquetas Marshall",
+    "course_hint": "Ensayos de Asfalto",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cuántos golpes por cara se aplican en la compactación Marshall para tráfico pesado?",
+    "options": [
+      "35 golpes",
+      "50 golpes",
+      "75 golpes",
+      "100 golpes"
+    ],
+    "correct": 2,
+    "norm": "ASTM D6927",
+    "explanation": "75 golpes/cara para tráfico pesado (>10⁶ ESAL). 50 golpes tráfico medio. 35 golpes tráfico liviano. Criterio del Manual de Carreteras MTC Perú y manuales equivalentes de Colombia, Chile y México.",
+    "difficulty": "básico",
+    "tags": [
+      "Marshall",
+      "compactación",
+      "nivel de tráfico"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Selecciona el nivel de compactación Marshall según el nivel de tráfico",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué norma ASTM determina la penetración del cemento asfáltico?",
+    "options": [
+      "ASTM D5",
+      "ASTM D36",
+      "ASTM D92",
+      "ASTM D113"
+    ],
+    "correct": 0,
+    "norm": "ASTM D5",
+    "explanation": "ASTM D5 (NTP 321.003 Perú): aguja normalizada de 100 g penetra en asfalto 5 s a 25°C. Resultado en dmm. PEN 60/70 es el más usado en LATAM por ser el grado adecuado para clima templado/cálido.",
+    "difficulty": "básico",
+    "tags": [
+      "penetración",
+      "cemento asfáltico",
+      "ASTM D5"
+    ],
+    "subtopic": "caracterización del ligante",
+    "competency": "Conoce el procedimiento del ensayo de penetración del asfalto",
+    "course_hint": "Caracterización del Cemento Asfáltico",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué mide el punto de ablandamiento Anillo y Bola (ASTM D36)?",
+    "options": [
+      "La temperatura de inflamación del asfalto",
+      "La temperatura a la que una esfera de 3.5 g cae 25.4 mm a través del asfalto ablandado",
+      "La ductilidad a baja temperatura",
+      "La viscosidad a alta temperatura"
+    ],
+    "correct": 1,
+    "norm": "ASTM D36",
+    "explanation": "ASTM D36 (NTP 321.003 Perú): temperatura a la cual el asfalto cede 25.4 mm bajo la esfera de acero. Indica la susceptibilidad térmica del ligante. PEN 60/70 típico: punto de ablandamiento 46–54°C.",
+    "difficulty": "básico",
+    "tags": [
+      "punto ablandamiento",
+      "anillo y bola",
+      "susceptibilidad térmica"
+    ],
+    "subtopic": "caracterización del ligante",
+    "competency": "Interpreta el punto de ablandamiento como indicador de susceptibilidad térmica",
+    "course_hint": "Caracterización del Cemento Asfáltico",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué determina el ensayo de ductilidad (ASTM D113) del cemento asfáltico?",
+    "options": [
+      "La viscosidad del asfalto a 60°C",
+      "La longitud máxima de estiramiento antes de la rotura a 25°C y 5 cm/min",
+      "El punto de inflamación del asfalto",
+      "La penetración a baja temperatura"
+    ],
+    "correct": 1,
+    "norm": "ASTM D113",
+    "explanation": "ASTM D113 (NTP 321.003 Perú): briqueta de asfalto se estira en agua a 25°C a 5 cm/min. Ductilidad mínima = 100 cm en la mayoría de especificaciones LATAM. Indica la capacidad de deformación sin fractura del ligante.",
+    "difficulty": "básico",
+    "tags": [
+      "ductilidad",
+      "cemento asfáltico",
+      "deformación"
+    ],
+    "subtopic": "caracterización del ligante",
+    "competency": "Relaciona la ductilidad del asfalto con su comportamiento en servicio",
+    "course_hint": "Caracterización del Cemento Asfáltico",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué norma ASTM determina el contenido de asfalto en mezclas por el método de ignición?",
+    "options": [
+      "ASTM D2172 (extracción con solvente)",
+      "ASTM D6307 (horno de ignición)",
+      "ASTM D4402 (viscosidad)",
+      "ASTM D1188 (densidad bulk)"
+    ],
+    "correct": 1,
+    "norm": "ASTM D6307",
+    "explanation": "ASTM D6307: mezcla calcinada a ≈538°C; el asfalto se quema y la diferencia de masas da el contenido. Más limpio, rápido y sin solventes peligrosos que el método D2172. Creciente adopción en laboratorios LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "contenido de asfalto",
+      "ignición",
+      "ASTM D6307"
+    ],
+    "subtopic": "ensayos de mezcla",
+    "competency": "Selecciona el método correcto para determinar el contenido de asfalto en mezclas",
+    "course_hint": "Ensayos de Asfalto",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué tamiz define el Tamaño Máximo Nominal (TMN) de un árido para mezclas asfálticas?",
+    "options": [
+      "El primer tamiz que retiene más del 50% del árido",
+      "El primer tamiz que retiene partículas de la gradación — el inmediatamente superior al tamiz con más del 10% retenido acumulado",
+      "El tamiz 3/4\" siempre",
+      "El tamiz que retiene el 100% del árido"
+    ],
+    "correct": 1,
+    "norm": "ASTM D3515 / Superpave",
+    "explanation": "TMN: el primer tamiz por encima del primero que retiene más del 10% acumulado. En LATAM los TMN más comunes en carpetas son 19 mm (3/4\") y 12.5 mm (1/2\"). Controla el VMA mínimo requerido.",
+    "difficulty": "básico",
+    "tags": [
+      "TMN",
+      "áridos",
+      "gradación"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Identifica el TMN de un árido y su influencia en el diseño de mezclas",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cuál es la estabilidad Marshall mínima para carpeta asfáltica de tráfico pesado (>10⁶ ESAL)?",
+    "options": [
+      "500 kg (1100 lb)",
+      "816 kg (1800 lb)",
+      "907 kg (2000 lb)",
+      "1200 kg (2650 lb)"
+    ],
+    "correct": 2,
+    "norm": "ASTM D6927",
+    "explanation": "Tráfico pesado: estabilidad ≥ 2000 lb (907 kg) y flujo entre 8–14 (×0.25 mm). Criterio del Manual de Carreteras MTC Perú y manuales homólogos de Colombia, Chile y México.",
+    "difficulty": "intermedio",
+    "tags": [
+      "estabilidad Marshall",
+      "tráfico pesado",
+      "criterios"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Evalúa si una mezcla cumple los criterios Marshall para tráfico pesado",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cómo se calcula el porcentaje de vacíos de aire (Va) en una mezcla asfáltica compactada?",
+    "options": [
+      "Va = Gmb/Gmm × 100%",
+      "Va = (1 − Gmb/Gmm) × 100%",
+      "Va = (Gmm − Gmb) × 100%",
+      "Va = asfalto absorbido/Gmb × 100%"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2041/D2726",
+    "explanation": "Va=(1−Gmb/Gmm)×100%. Gmb=densidad bulk compactada (ASTM D2726); Gmm=densidad máxima teórica por método Rice (ASTM D2041). Método estándar en todos los laboratorios de pavimentos de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "vacíos de aire",
+      "Gmb",
+      "Gmm"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Calcula el porcentaje de vacíos de aire en mezclas asfálticas compactadas",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cuál es el rango de vacíos de diseño (Va) para mezclas asfálticas en caliente?",
+    "options": [
+      "1% a 3%",
+      "3% a 5%",
+      "5% a 8%",
+      "8% a 12%"
+    ],
+    "correct": 1,
+    "norm": "Manual de Carreteras MTC / Superpave",
+    "explanation": "Va diseño = 3–5% (óptimo ≈4%). Va<3%: ahuellamiento plástico. Va>5%: exceso de permeabilidad y oxidación del asfalto. Rango universal en especificaciones viales de LATAM (MTC Perú, INVIAS, SCT México).",
+    "difficulty": "intermedio",
+    "tags": [
+      "vacíos de diseño",
+      "MAC",
+      "criterios Va"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Interpreta el rango de vacíos de diseño y sus consecuencias en el desempeño",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué indica el VMA (Vacíos en el Agregado Mineral) y cuál es su valor mínimo para TMN 19 mm?",
+    "options": [
+      "% total de vacíos de la mezcla; mínimo 10%",
+      "Espacio en el esqueleto granular para alojar asfalto efectivo y vacíos; mínimo 14% para TMN 19 mm",
+      "Contenido de asfalto absorbido; mínimo 8%",
+      "Relación filler/asfalto; mínimo 12%"
+    ],
+    "correct": 1,
+    "norm": "ASTM D6927 / Superpave",
+    "explanation": "VMA mín para TMN 19 mm = 14%; TMN 12.5 mm = 15%; TMN 25 mm = 13%. VMA insuficiente → no hay espacio para asfalto → mezcla frágil. Criterio universal en manuales de diseño de toda LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "VMA",
+      "esqueleto granular",
+      "TMN"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Interpreta el VMA y aplica el requisito mínimo según el TMN del árido",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué es el sistema PG (Performance Grade) de Superpave y qué significa PG 64-22?",
+    "options": [
+      "Clasificación por penetración en dmm",
+      "PG 64 = temperatura máxima del pavimento de resistencia al ahuellamiento (°C); -22 = temperatura mínima de resistencia a la fisura térmica (°C)",
+      "Clasificación por viscosidad a 60°C",
+      "Solo aplica en climas con nieve"
+    ],
+    "correct": 1,
+    "norm": "AASHTO M 320",
+    "explanation": "AASHTO M 320: el grado PG se selecciona según isotermas climáticas del sitio (LTPPBind). En costas tropicales de LATAM: PG 64-16 a PG 76-16. En altiplanos andinos puede requerirse PG 58-22. Creciente adopción en la región.",
+    "difficulty": "intermedio",
+    "tags": [
+      "PG",
+      "Superpave",
+      "clasificación del ligante"
+    ],
+    "subtopic": "especificaciones Superpave",
+    "competency": "Interpreta la nomenclatura PG y selecciona el grado según condiciones climáticas y tráfico",
+    "course_hint": "Especificaciones Superpave",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué mide el TSR (AASHTO T 283) y cuál es el valor mínimo aceptable?",
+    "options": [
+      "Resistencia al ahuellamiento por carga repetida; mín 75%",
+      "Susceptibilidad al stripping: TSR = ITS condicionada/ITS sin condicionar × 100%; mín TSR ≥ 80%",
+      "Rigidez dinámica a alta temperatura; mín 60%",
+      "Deformación permanente acumulada; mín 85%"
+    ],
+    "correct": 1,
+    "norm": "AASHTO T 283",
+    "explanation": "TSR ≥ 80% exigido por MTC Perú y manuales LATAM. El stripping (pérdida de adherencia árido-asfalto por agua) es un problema frecuente en zonas húmedas tropicales y de alta precipitación en los Andes.",
+    "difficulty": "intermedio",
+    "tags": [
+      "TSR",
+      "stripping",
+      "daño por humedad"
+    ],
+    "subtopic": "durabilidad",
+    "competency": "Evalúa la susceptibilidad al stripping mediante el ensayo TSR",
+    "course_hint": "Durabilidad de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cómo se determina el contenido óptimo de asfalto (CA_opt) en el método Marshall?",
+    "options": [
+      "CA a máxima estabilidad, CA a máximo flujo, CA a densidad mínima",
+      "CA a máxima estabilidad + CA a máxima densidad Gmb + CA al centro del rango Va (4%). Promedio de los tres.",
+      "CA a mínimos vacíos, CA a máximo VMA, CA a temperatura de mezclado óptima",
+      "CA a TSR máximo, CA a mínima penetración, CA a mayor ductilidad"
+    ],
+    "correct": 1,
+    "norm": "Manual del Asfalto MS-2",
+    "explanation": "Marshall: se grafican todas las propiedades vs CA%. CA_opt = promedio de los tres CAs. Luego se verifica que VMA, VFA y flujo estén en rango. Procedimiento estándar en laboratorios viales de toda LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "CA óptimo",
+      "método Marshall",
+      "procedimiento"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Aplica el procedimiento completo del método Marshall para determinar el CA óptimo",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué representa el VFA (Vacíos Llenos de Asfalto) y cuál es su rango de diseño para tráfico pesado?",
+    "options": [
+      "% de asfalto total sobre masa de la mezcla; rango 4–6%",
+      "VFA = [(VMA−Va)/VMA]×100%; rango 65–75% para tráfico pesado",
+      "Diferencia entre VMA y Va sin rango específico",
+      "% de asfalto absorbido; rango 0.5–2%"
+    ],
+    "correct": 1,
+    "norm": "ASTM D6927",
+    "explanation": "VFA<65%: durabilidad reducida (insuficiente asfalto). VFA>75%: riesgo de ahuellamiento (exceso de asfalto). Rango 65–75% adoptado en los manuales de diseño de toda LATAM para garantizar desempeño duradero.",
+    "difficulty": "intermedio",
+    "tags": [
+      "VFA",
+      "vacíos llenos",
+      "criterio de diseño"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Calcula e interpreta el VFA y su relación con la durabilidad y estabilidad",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cuál es la frecuencia mínima de extracción de muestras en planta para control de carpeta asfáltica?",
+    "options": [
+      "1 muestra por jornada de trabajo únicamente",
+      "1 muestra cada 500 t producidas como mínimo, con ensayos de contenido de asfalto y granulometría",
+      "1 muestra por semana",
+      "Solo cuando el inspector lo requiera"
+    ],
+    "correct": 1,
+    "norm": "Manual de Carreteras MTC / INVIAS",
+    "explanation": "El MTC Perú y el INVIAS Colombia establecen mínimo 1 muestra cada 500 t para verificar contenido de asfalto (D6307) y granulometría (D5444) en planta. El control en planta es la primera defensa de calidad del pavimento.",
+    "difficulty": "intermedio",
+    "tags": [
+      "control en planta",
+      "frecuencia de muestreo",
+      "pavimento"
+    ],
+    "subtopic": "control de calidad",
+    "competency": "Establece la frecuencia de muestreo para control de calidad de mezcla asfáltica en planta",
+    "course_hint": "Control de Calidad de Pavimentos",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Por qué el flujo Marshall fuera del rango 8–14 (×0.25 mm) indica un problema en la mezcla?",
+    "options": [
+      "Flujo<8: mezcla blanda y propensa al ahuellamiento; Flujo>14: mezcla frágil",
+      "Flujo<8: mezcla rígida con riesgo de fisuras por fatiga y temperatura; Flujo>14: mezcla plástica con riesgo de ahuellamiento",
+      "No importa el flujo si la estabilidad es alta",
+      "Solo el flujo>20 representa un problema real"
+    ],
+    "correct": 1,
+    "norm": "ASTM D6927",
+    "explanation": "Flujo bajo (<8): rigidez excesiva → fisuras por fatiga y termales. Flujo alto (>14): mezcla muy deformable → ahuellamiento bajo tráfico repetido. Diagnóstico fundamental en laboratorios viales de toda LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "flujo Marshall",
+      "ahuellamiento",
+      "fisuras"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Interpreta el flujo Marshall y diagnostica problemas potenciales de desempeño",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué evalúa la Rueda Cargada de Hamburgo (AASHTO T 324) y por qué supera al Marshall para predecir ahuellamiento?",
+    "options": [
+      "Evalúa el contenido de asfalto; más rápido que el Marshall",
+      "Evalúa deformación bajo carga de rueda repetida en agua a 50°C, combinando ahuellamiento y stripping simultáneamente",
+      "Evalúa solo la temperatura de ablandamiento del asfalto",
+      "Evalúa la resistencia a la fatiga por flexión repetida"
+    ],
+    "correct": 1,
+    "norm": "AASHTO T 324",
+    "explanation": "Hamburgo: 20,000 pasadas de rueda de 70 kg en agua a 50°C. Detecta ahuellamiento plástico Y stripping simultáneamente. El Marshall no evalúa carga cíclica ni humedad. Creciente adopción en proyectos viales de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "Hamburgo",
+      "ahuellamiento",
+      "ensayo avanzado"
+    ],
+    "subtopic": "ensayos de desempeño",
+    "competency": "Compara metodologías de evaluación de resistencia al ahuellamiento en mezclas asfálticas",
+    "course_hint": "Ensayos Avanzados de Pavimento",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué mejoras aporta el asfalto modificado con polímero SBS respecto al convencional PEN 60/70?",
+    "options": [
+      "Solo mayor contenido de betún; sin ventajas técnicas significativas",
+      "Amplía el rango de temperatura de servicio: mayor resistencia al ahuellamiento (alta T) y a la fisura térmica (baja T); mayor elasticidad y recuperación",
+      "Es asfalto con ceniza volante; reduce costos de producción",
+      "Es asfalto emulsificado para mezclas en frío"
+    ],
+    "correct": 1,
+    "norm": "AASHTO M 320",
+    "explanation": "SBS (Estireno-Butadieno-Estireno): red polimérica reduce susceptibilidad térmica, aumenta elasticidad y recuperación. Usado en PG de alto rendimiento (PG 76-XX). En LATAM se emplea en carreteras de alta montaña y vías urbanas de alto tráfico.",
+    "difficulty": "avanzado",
+    "tags": [
+      "asfalto modificado",
+      "SBS",
+      "polímero"
+    ],
+    "subtopic": "materiales bituminosos",
+    "competency": "Evalúa las ventajas técnicas del asfalto modificado con SBS para condiciones exigentes",
+    "course_hint": "Materiales Bituminosos Avanzados",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué indica la 'inflexión de stripping' en la curva del ensayo de Hamburgo (AASHTO T 324)?",
+    "options": [
+      "El número de ciclos a la falla completa del espécimen",
+      "El punto donde la tasa de deformación aumenta bruscamente: inicio del daño por pérdida de adherencia árido-asfalto (stripping)",
+      "El contenido óptimo de asfalto de la mezcla",
+      "La temperatura máxima de servicio admisible del pavimento"
+    ],
+    "correct": 1,
+    "norm": "AASHTO T 324",
+    "explanation": "En la curva deformación vs pasadas: zona lineal (ahuellamiento plástico) → luego inflexión donde la pendiente aumenta abruptamente = inicio del stripping. Se reporta el número de pasadas a la inflexión. Diagnóstico del modo de falla dominante.",
+    "difficulty": "avanzado",
+    "tags": [
+      "Hamburgo",
+      "stripping inflection",
+      "modo de falla"
+    ],
+    "subtopic": "ensayos de desempeño",
+    "competency": "Interpreta la curva del ensayo de Hamburgo para diagnosticar el modo de falla de la mezcla",
+    "course_hint": "Ensayos Avanzados de Pavimento",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué mide el Deflectómetro de Impacto FWD (ASTM D4695) y para qué se usa en gestión vial?",
+    "options": [
+      "La rugosidad superficial del pavimento (IRI)",
+      "La deflexión bajo carga de impacto normalizada; por retroanálisis se obtienen módulos de cada capa para diseño de refuerzo",
+      "El desgaste superficial por tráfico",
+      "La temperatura de la carpeta en servicio"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4695",
+    "explanation": "El FWD aplica carga de 40–80 kN y mide la cuenca de deflexión con geófonos. Retroanálisis → módulos de cada capa. Fundamental para diseño de refuerzo de pavimentos. Ampliamente usado en gestión vial de LATAM (MTC, INVIAS, SCT).",
+    "difficulty": "avanzado",
+    "tags": [
+      "FWD",
+      "deflexión",
+      "evaluación estructural"
+    ],
+    "subtopic": "evaluación de pavimentos",
+    "competency": "Interpreta los resultados del FWD en la evaluación estructural de pavimentos existentes",
+    "course_hint": "Gestión y Evaluación de Pavimentos",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cuál es el número estructural (SN) en el método AASHTO 1993 para diseño de pavimentos flexibles?",
+    "options": [
+      "La suma de espesores de las capas del pavimento",
+      "SN = Σ(ai × Di × mi): combinación de coeficientes estructurales (ai), espesores (Di) y coeficientes de drenaje (mi) de cada capa",
+      "El CBR de la subrasante multiplicado por 10",
+      "El módulo resiliente Mr de la subbase"
+    ],
+    "correct": 1,
+    "norm": "AASHTO 1993",
+    "explanation": "SN = a1D1 + a2D2m2 + a3D3m3. El SN requerido se calcula con la ecuación de diseño AASHTO en función de los ESAL, confiabilidad, serviciabilidad y Mr de la subrasante. Método oficial en toda LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "SN",
+      "AASHTO 1993",
+      "diseño pavimentos"
+    ],
+    "subtopic": "diseño de pavimentos",
+    "competency": "Aplica el concepto de número estructural SN en el diseño de pavimentos flexibles AASHTO 1993",
+    "course_hint": "Diseño de Pavimentos",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Qué parámetro indica la capacidad estructural residual de un pavimento en gestión vial?",
+    "options": [
+      "El Índice de Rugosidad Internacional (IRI)",
+      "El Número Estructural Efectivo SNeff obtenido por retroanálisis de deflexiones FWD",
+      "El Porcentaje de Área Fisurada (PCI)",
+      "La vida útil de diseño original del pavimento"
+    ],
+    "correct": 1,
+    "norm": "AASHTO 1993 / ASTM D4695",
+    "explanation": "SNeff: obtenido del retroanálisis de la cuenca de deflexión FWD. SNef < SNrequerido → el pavimento ha agotado capacidad estructural → se diseña la sobrecapa. Parámetro clave en los sistemas de gestión vial de toda LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "SNeff",
+      "gestión vial",
+      "capacidad residual"
+    ],
+    "subtopic": "gestión de pavimentos",
+    "competency": "Aplica el concepto de SNeff para determinar la necesidad de refuerzo de pavimentos",
+    "course_hint": "Gestión y Evaluación de Pavimentos",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Por qué las mezclas asfálticas en zonas de alta altitud (>3000 msnm) en LATAM requieren ajustes en el diseño?",
+    "options": [
+      "No requieren ajustes; el método Marshall es universal",
+      "Menor presión atmosférica → menor temperatura de ebullición del agua → ensayos de baño maría a 60°C no representan condiciones reales; además la radiación UV degrada más rápido el asfalto.",
+      "La altitud solo afecta la compactación en campo",
+      "El asfalto se vuelve más rígido solo por la altitud"
+    ],
+    "correct": 1,
+    "norm": "Manual de Carreteras MTC / INVIAS",
+    "explanation": "En altiplanos andinos (Puno, Cusco, Bogotá, La Paz): menor temperatura ambiente → asfaltos más rígidos → se prefieren grados de penetración más blandos (PEN 80/100 o 120/150) o PG con temperatura baja más alta (-10). Ajuste crítico para carreteras de sierra en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "altitud",
+      "zonas andinas",
+      "ajuste de diseño"
+    ],
+    "subtopic": "diseño de mezclas",
+    "competency": "Evalúa las consideraciones especiales de diseño de mezclas asfálticas para zonas de alta altitud",
+    "course_hint": "Diseño de Mezclas Asfálticas",
+    "region": "LATAM",
+    "category": "asfalto_pavimentos"
+  },
+  {
+    "question": "¿Cuándo se recomienda el uso de pilotes como sistema de cimentación?",
+    "options": [
+      "Solo cuando el suelo superficial es arcilloso",
+      "Cuando el suelo competente está a gran profundidad y cimentaciones superficiales no son viables",
+      "Para cualquier edificación de más de 3 pisos",
+      "Solo en suelos granulares saturados"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1143",
+    "explanation": "Pilotes transfieren carga por punta (estrato firme) o por fricción lateral (suelos blandos profundos). Situación común en llanuras aluviales y costas de LATAM (Lima, Guayaquil, Cartagena, Buenos Aires).",
+    "difficulty": "básico",
+    "tags": [
+      "pilotes",
+      "cimentación profunda",
+      "selección"
+    ],
+    "subtopic": "cimentaciones profundas",
+    "competency": "Selecciona el tipo de cimentación adecuado según las condiciones del subsuelo",
+    "course_hint": "Cimentaciones Profundas",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué ensayo in situ proporciona un perfil continuo de resistencia sin extraer muestras?",
+    "options": [
+      "SPT (ASTM D1586)",
+      "CPT — Cono de Penetración (ASTM D3441)",
+      "Presiómetro PMT (ASTM D4719)",
+      "Veleta de campo (ASTM D2573)"
+    ],
+    "correct": 1,
+    "norm": "ASTM D3441",
+    "explanation": "El CPT empuja a 2 cm/s registrando qc (punta) y fs (fricción) de forma continua. Mayor resolución estratigráfica que el SPT. Muy usado en suelos blandos de deltas y llanuras costeras de LATAM (Lima, Guayaquil, Cartagena).",
+    "difficulty": "básico",
+    "tags": [
+      "CPT",
+      "exploración continua",
+      "estratigrafía"
+    ],
+    "subtopic": "exploración geotécnica",
+    "competency": "Selecciona el ensayo de exploración adecuado según el nivel de detalle requerido",
+    "course_hint": "Exploración Geotécnica",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuál es el factor de seguridad mínimo para taludes permanentes en análisis estático?",
+    "options": [
+      "FS ≥ 1.0",
+      "FS ≥ 1.2",
+      "FS ≥ 1.5",
+      "FS ≥ 2.0"
+    ],
+    "correct": 2,
+    "norm": "Geotecnia general",
+    "explanation": "FS ≥ 1.5 taludes permanentes estáticos. FS ≥ 1.3 condición pseudoestática sísmica. FS ≥ 1.2 solo constructiva temporal. Criterios adoptados en RNE E.050 Perú, NSR-10 Colombia y normas geotécnicas de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "estabilidad de taludes",
+      "factor de seguridad",
+      "diseño"
+    ],
+    "subtopic": "estabilidad de taludes",
+    "competency": "Aplica los criterios mínimos de FS en el diseño de taludes",
+    "course_hint": "Estabilidad de Taludes",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué parámetro geotécnico obtiene directamente la veleta de campo (Vane Shear, ASTM D2573)?",
+    "options": [
+      "Ángulo de fricción efectivo φ'",
+      "Resistencia al corte no drenado Cu in situ",
+      "Módulo de deformación Es",
+      "Coeficiente de permeabilidad k"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2573",
+    "explanation": "Cu = T/(K·D³) donde T = torque de rotura. Aplicable a arcillas blandas Cu < 50 kPa. Usado en estudios de cimentaciones en llanuras costeras y valles aluviales de LATAM. No requiere extracción de muestras inalteradas.",
+    "difficulty": "básico",
+    "tags": [
+      "veleta de campo",
+      "Cu",
+      "arcillas blandas"
+    ],
+    "subtopic": "exploración geotécnica",
+    "competency": "Interpreta el resultado de la veleta de campo y su aplicabilidad geotécnica",
+    "course_hint": "Exploración Geotécnica",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuáles son los tres componentes del asentamiento total de una cimentación sobre suelo arcilloso?",
+    "options": [
+      "Solo consolidación primaria y secundaria",
+      "Asentamiento inmediato (Si) + consolidación primaria (Sc) + consolidación secundaria (Ss, fluencia)",
+      "Solo consolidación primaria y diferencial",
+      "Solo asentamiento por carga y por excavación adyacente"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2435",
+    "explanation": "S_total = Si (elástico, rápido) + Sc (expulsión de agua, tiempo-dependiente) + Ss (fluencia del esqueleto sólido, muy lento). En arcillas blandas costeras de LATAM (depósitos del Holoceno) Sc puede dominar durante décadas.",
+    "difficulty": "básico",
+    "tags": [
+      "asentamiento total",
+      "consolidación",
+      "componentes"
+    ],
+    "subtopic": "cimentaciones superficiales",
+    "competency": "Descompone el asentamiento total e identifica cuál componente domina en arcillas blandas",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre la capacidad portante última (qu) y la admisible (qa)?",
+    "options": [
+      "Son iguales cuando FS = 1",
+      "qa = qu / FS donde FS ≥ 2.5 a 3.0; además debe verificarse que los asentamientos sean tolerables",
+      "qa = qu − peso propio de la cimentación",
+      "qu se usa en arcillas y qa en arenas"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1143",
+    "explanation": "qa = qu/FS (FS=2.5–3.0). La capacidad admisible debe también garantizar que los asentamientos sean tolerables. Doble verificación exigida en RNE E.050 Perú, NSR-10 Colombia, NTCDF México.",
+    "difficulty": "básico",
+    "tags": [
+      "capacidad portante",
+      "factor de seguridad",
+      "cimentaciones"
+    ],
+    "subtopic": "cimentaciones superficiales",
+    "competency": "Aplica el FS apropiado al pasar de capacidad portante última a admisible",
+    "course_hint": "Diseño de Cimentaciones",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué instrumento mide la presión de poros in situ durante la construcción o en condición natural?",
+    "options": [
+      "Inclinómetro",
+      "Piezómetro (ASTM D4750)",
+      "Extensómetro multibase",
+      "Célula de presión total"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4750",
+    "explanation": "El piezómetro mide la presión de poros u. Tipos: tubo abierto (Casagrande), eléctrico (vibrating wire), neumático. Fundamental para controlar la estabilidad durante la construcción en proyectos geotécnicos de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "piezómetro",
+      "presión de poros",
+      "monitoreo"
+    ],
+    "subtopic": "instrumentación",
+    "competency": "Selecciona el instrumento adecuado para monitorear presiones de poros en obra",
+    "course_hint": "Instrumentación Geotécnica",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué evalúa el ensayo CBR de laboratorio (ASTM D1883) y cuál es su aplicación principal?",
+    "options": [
+      "Resistencia al corte del suelo a diferentes humedades",
+      "Resistencia relativa del suelo compactado; es el parámetro de entrada del método AASHTO 1993 para diseño de espesores de pavimento",
+      "Módulo de elasticidad del suelo bajo carga cíclica",
+      "Permeabilidad del suelo compactado a la densidad de obra"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1883",
+    "explanation": "ASTM D1883 (NTP 339.145 Perú): CBR = (carga en probeta / carga patrón) × 100%. Es el parámetro de subrasante del método AASHTO 1993. Estándar en el diseño de espesores de pavimento en toda LATAM (MTC, INVIAS, SCT).",
+    "difficulty": "básico",
+    "tags": [
+      "CBR",
+      "subrasante",
+      "diseño pavimentos"
+    ],
+    "subtopic": "propiedades de soporte",
+    "competency": "Aplica el CBR en el diseño de estructuras de pavimento flexible",
+    "course_hint": "Diseño de Pavimentos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué es la licuefacción del suelo, en qué tipo de suelo ocurre y cómo se evalúa?",
+    "options": [
+      "Pérdida de resistencia en arcillas saturadas; ensayo de veleta",
+      "Pérdida de resistencia en arenas finas sueltas saturadas bajo carga cíclica sísmica; evaluada con triaxial cíclico o correlaciones SPT/CPT (NCEER)",
+      "Asentamiento diferencial en suelos expansivos; ensayo de hinchamiento",
+      "Colapso de suelos loéssicos al saturarse; ensayo de colapso"
+    ],
+    "correct": 1,
+    "norm": "ASTM D5311 / NCEER 1997",
+    "explanation": "La licuefacción es el principal riesgo sísmico en zonas costeras y aluviales de LATAM. Ejemplos: Lima (1970, 2007), Valparaíso (1985), Ciudad de México (1985), Manta Ecuador (2016). Evaluada por el método NCEER.",
+    "difficulty": "intermedio",
+    "tags": [
+      "licuefacción",
+      "arenas",
+      "carga cíclica"
+    ],
+    "subtopic": "dinámica de suelos",
+    "competency": "Identifica las condiciones de licuefacción y los métodos de evaluación disponibles",
+    "course_hint": "Dinámica de Suelos y Licuefacción",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué es el índice de compresión Cc y cómo se usa para calcular asentamiento por consolidación?",
+    "options": [
+      "Pendiente e vs σ'v en escala natural; S = Cc×H×Δσ",
+      "Pendiente e vs log σ'v en zona virgen; S = [Cc/(1+e0)]×H×log[(σ'v0+Δσ'v)/σ'v0]",
+      "Relación de esfuerzos efectivos; S = Cc×γ×H",
+      "Módulo de compresibilidad mv; S = mv×Δσ×H"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2435",
+    "explanation": "Cc = Δe/Δlog(σ'v) en la curva de consolidación virgen. Para suelos OC con σ'v0+Δσ < σ'p se usa Cs. Base del cálculo de asentamientos exigido en RNE E.050 Perú, NSR-10 Colombia y normas LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "índice de compresión Cc",
+      "asentamiento",
+      "consolidación"
+    ],
+    "subtopic": "cimentaciones superficiales",
+    "competency": "Calcula el asentamiento por consolidación primaria usando el índice Cc",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué tipo de falla es más común en taludes con suelo φ > 0 y qué métodos analíticos se usan?",
+    "options": [
+      "Falla de base; solo método de Bishop",
+      "Falla de pie (toe failure): métodos de dovelas — Fellenius, Bishop simplificado, Spencer, Janbu",
+      "Falla traslacional; solo cuña plana",
+      "Falla por erosión superficial; solo ensayos de campo"
+    ],
+    "correct": 1,
+    "norm": "Geotecnia general",
+    "explanation": "La falla de pie ocurre cuando la superficie circular emerge en el pie del talud. Métodos de dovelas analizan equilibrio de fuerzas y momentos. Programas Slide, GeoSlope y SLOPE/W son estándar en proyectos de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "falla de pie",
+      "dovelas",
+      "métodos de análisis"
+    ],
+    "subtopic": "estabilidad de taludes",
+    "competency": "Identifica el tipo de falla de talud y selecciona el método de análisis apropiado",
+    "course_hint": "Estabilidad de Taludes",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué establece la norma RNE E.050 sobre el número mínimo de puntos de investigación?",
+    "options": [
+      "Siempre 1 calicata por edificación sin importar el área",
+      "Para <500 m²: mínimo 3 puntos; profundidad mínima 1.5×ancho de cimentación o hasta roca competente",
+      "Solo 1 sondeo SPT si el terreno es arenoso",
+      "El ingeniero geotécnico decide libremente"
+    ],
+    "correct": 1,
+    "norm": "RNE E.050",
+    "explanation": "RNE E.050: <500 m² → 3 puntos mínimo; 500–1000 m² → 4 puntos. Profundidad: 1.5 veces el ancho de la cimentación o hasta roca sana. Normativas similares en NSR-10 Colombia y NTCDF México.",
+    "difficulty": "intermedio",
+    "tags": [
+      "RNE E.050",
+      "exploración mínima",
+      "edificaciones"
+    ],
+    "subtopic": "exploración geotécnica",
+    "competency": "Aplica los requisitos mínimos de investigación de la norma E.050 en proyectos de edificación",
+    "course_hint": "Normativa Peruana de Suelos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué establece la norma RNE E.030 que impacta directamente en el diseño geotécnico?",
+    "options": [
+      "Solo regula cargas gravitacionales permanentes",
+      "Define zonas sísmicas, factores de amplificación del suelo (S, Tp, TL) y condiciones que requieren estudios especiales de sismicidad (licuefacción, amplificación dinámica)",
+      "Solo aplica a edificios de concreto armado de más de 5 pisos",
+      "Define los ensayos de laboratorio para suelos sísmicos"
+    ],
+    "correct": 1,
+    "norm": "RNE E.030",
+    "explanation": "E.030 'Diseño Sismorresistente': clasifica suelos S0–S4 según Vs30 y NSPT. Suelos S3 y S4 requieren estudios especiales. NSR-10 Colombia, NTC-CCDFE México y NCh433 Chile tienen clasificaciones equivalentes de amplificación sísmica.",
+    "difficulty": "intermedio",
+    "tags": [
+      "RNE E.030",
+      "sísmica",
+      "amplificación del suelo"
+    ],
+    "subtopic": "normativa sísmica",
+    "competency": "Aplica los parámetros sísmicos de la norma E.030 en el diseño geotécnico",
+    "course_hint": "Normativa Sísmica Peruana",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Por qué el método de Bishop simplificado es más exacto que Fellenius pero menos riguroso que Spencer?",
+    "options": [
+      "Bishop no considera fuerzas entre dovelas; Fellenius sí las considera todas",
+      "Bishop asume Eh=0 entre dovelas: satisface equilibrio de momentos pero no de fuerzas horizontales. Spencer satisface ambos equilibrios simultáneamente.",
+      "Bishop usa superficies planas; Spencer usa superficies curvas",
+      "No hay diferencia práctica significativa entre los tres métodos"
+    ],
+    "correct": 1,
+    "norm": "Geotecnia general",
+    "explanation": "Fellenius: subestima FS 10–15%. Bishop simplificado: FS intermedio, ±5%. Spencer: equilibrio completo, más riguroso. Bishop es el equilibrio entre precisión y esfuerzo de cálculo. Los tres se usan en Slide/GeoSlope de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "Bishop",
+      "Spencer",
+      "Fellenius"
+    ],
+    "subtopic": "estabilidad de taludes",
+    "competency": "Evalúa las hipótesis y precisión de los métodos de análisis de estabilidad de taludes",
+    "course_hint": "Estabilidad de Taludes",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué es la presión de preconsolidación σ'p y cómo se determina gráficamente en el edómetro?",
+    "options": [
+      "Es la presión efectiva actual en campo; se lee directamente",
+      "Máxima presión efectiva que el suelo ha soportado históricamente; determinada por el método de Casagrande en la curva e vs log σ'v",
+      "Es la presión de rotura del suelo; del triaxial",
+      "Es la presión hidrostática del agua subterránea"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2435",
+    "explanation": "Método de Casagrande: en la curva e vs log σ'v se traza horizontal y tangente en el punto de máxima curvatura, se bisecta el ángulo, y la intersección con la línea virgen da σ'p. Determina OCR → clave para asentamientos en LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "preconsolidación",
+      "método Casagrande",
+      "OCR"
+    ],
+    "subtopic": "consolidación",
+    "competency": "Determina σ'p por el método de Casagrande e interpreta el historial de esfuerzos del suelo",
+    "course_hint": "Consolidación y Asentamientos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué es la presión lateral de tierras en reposo K0 y de qué depende?",
+    "options": [
+      "Es igual a 1.0 para todos los suelos",
+      "K0 = σ'h/σ'v en condición sin deformación lateral; para suelos NC: K0≈1−sin φ' (Jaky). Para suelos OC: K0 aumenta con el OCR.",
+      "Es la presión de tierras activa mínima",
+      "Es siempre mayor que la presión pasiva"
+    ],
+    "correct": 1,
+    "norm": "Geotecnia general",
+    "explanation": "K0 controla el diseño de muros de sótano, pantallas y estructuras de contención sin movimiento. En suelos OC: K0 = (1−sin φ')×OCR^(sin φ'). Parámetro clave en el diseño de estructuras de contención en LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "presión lateral K0",
+      "muros de contención",
+      "suelos NC y OC"
+    ],
+    "subtopic": "presión lateral de tierras",
+    "competency": "Calcula la presión lateral en reposo K0 y aplica el concepto en diseño de estructuras de contención",
+    "course_hint": "Muros de Contención",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuándo ocurre el sifonamiento y cómo se calcula el gradiente hidráulico crítico?",
+    "options": [
+      "Siempre que haya flujo ascendente de agua en el suelo",
+      "Cuando i = icrit = (Gs−1)/(1+e): σ'v=0 y el suelo pierde toda resistencia al corte y fluye",
+      "Cuando el suelo se satura completamente por lluvia",
+      "Cuando la permeabilidad del suelo supera 10⁻² cm/s"
+    ],
+    "correct": 1,
+    "norm": "Mecánica de Suelos",
+    "explanation": "icrit ≈ 1.0 para arena típica (Gs≈2.68, e≈0.7). Cuando i = icrit → σ'v = 0 → falla hidráulica. Diseño de presas y excavaciones en LATAM debe mantener i < icrit con FS ≥ 1.5. Causa de fallas históricas en la región.",
+    "difficulty": "intermedio",
+    "tags": [
+      "sifonamiento",
+      "gradiente crítico",
+      "piping"
+    ],
+    "subtopic": "permeabilidad y flujo",
+    "competency": "Calcula el gradiente crítico y evalúa el riesgo de sifonamiento en obras hidráulicas",
+    "course_hint": "Permeabilidad y Flujo en Suelos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuáles son los tres métodos de transferencia de carga en pilotes y cuándo se aplica cada uno?",
+    "options": [
+      "Solo por punta y solo por fricción; no existe combinación",
+      "Por punta (end bearing) en roca/suelo firme; por fricción lateral (skin friction) en suelos blandos; combinado en la mayoría de situaciones reales. La distribución depende de las condiciones estratigráficas.",
+      "Solo por fricción en todos los casos",
+      "Solo por punta en suelos granulares"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1143",
+    "explanation": "En LATAM, los pilotes en depósitos lacustres y costeros (Lima, Ciudad de México, Bogotá) frecuentemente trabajan por fricción en arcillas blandas. En la roca andina y gravas aluviales, predomina la carga por punta. El diseño requiere análisis de la estratigrafía completa.",
+    "difficulty": "avanzado",
+    "tags": [
+      "pilotes",
+      "transferencia de carga",
+      "fricción lateral"
+    ],
+    "subtopic": "cimentaciones profundas",
+    "competency": "Determina el mecanismo de transferencia de carga en pilotes según las condiciones estratigráficas",
+    "course_hint": "Cimentaciones Profundas",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué método se usa para evaluar el potencial de licuefacción a partir de datos SPT?",
+    "options": [
+      "Solo el ensayo triaxial cíclico en laboratorio (ASTM D5311)",
+      "Método simplificado de Seed & Idriss (NCEER 1997): CSR vs CRR obtenida de correlaciones (N1)60",
+      "Solo el método de Bishop para taludes saturados",
+      "Clasificación SUCS del suelo por sí sola"
+    ],
+    "correct": 1,
+    "norm": "NCEER 1997 / Youd et al. 2001",
+    "explanation": "CSR = 0.65×(amax/g)×(σv0/σ'v0)×rd. CRR de correlaciones (N1)60. FS = CRR/CSR < 1.0 → susceptible. Método estándar en zonificaciones sísmicas de Lima, Santiago, Bogotá, Ciudad de México y zonas costeras de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "licuefacción",
+      "NCEER",
+      "CSR/CRR"
+    ],
+    "subtopic": "dinámica de suelos",
+    "competency": "Aplica el método simplificado NCEER para evaluar el potencial de licuefacción",
+    "course_hint": "Dinámica de Suelos y Licuefacción",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre los ensayos triaxiales CU (con Δu medida) y CD para análisis de estabilidad?",
+    "options": [
+      "Son equivalentes; ambos dan los mismos c' y φ'",
+      "CU con Δu da c', φ' efectivos (largo plazo) Y Cu (corto plazo). CD da c', φ' efectivos pero requiere días/semanas por drenaje completo en arcillas.",
+      "CU da solo Cu y CD da solo φ'",
+      "CU es para arcillas y CD exclusivamente para arenas"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4767",
+    "explanation": "CU con Δu: permite construir envolvente efectiva Y total con un solo tipo de ensayo. Más práctico que CD para arcillas. En presas y terraplenes de LATAM se usa CU para analizar la construcción rápida (Cu) y la operación a largo plazo (c', φ').",
+    "difficulty": "avanzado",
+    "tags": [
+      "triaxial CU",
+      "triaxial CD",
+      "análisis de estabilidad"
+    ],
+    "subtopic": "resistencia al corte",
+    "competency": "Selecciona el ensayo triaxial apropiado según la etapa de análisis de estabilidad",
+    "course_hint": "Resistencia al Corte",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué es la presión lateral activa de Rankine y cuándo es válida esta teoría?",
+    "options": [
+      "Ka = (1+sin φ')/(1−sin φ'); siempre válida",
+      "Ka = (1−sin φ')/(1+sin φ'); válida para muros de gravedad con backfill granular, relleno horizontal, sin fricción muro-suelo y movimiento suficiente del muro",
+      "Ka = K0 = 1−sin φ'; siempre la misma",
+      "Ka = 0.5 para todos los suelos"
+    ],
+    "correct": 1,
+    "norm": "Mecánica de Suelos / AASHTO",
+    "explanation": "Rankine activo: muro se mueve lo suficiente para movilizar la resistencia del suelo. Suposición de no fricción muro-suelo es conservadora. En LATAM, los códigos de estructuras de contención (RNE E.060, NSR-10) permiten usar Coulomb para considerar la fricción.",
+    "difficulty": "avanzado",
+    "tags": [
+      "presión activa",
+      "Rankine",
+      "muros de contención"
+    ],
+    "subtopic": "presión lateral de tierras",
+    "competency": "Calcula la presión lateral activa de Rankine y reconoce sus limitaciones de aplicabilidad",
+    "course_hint": "Muros de Contención",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Por qué la Ciudad de México presenta asentamientos diferenciales tan severos respecto a otras ciudades de LATAM?",
+    "options": [
+      "Por el peso de los edificios exclusivamente",
+      "Por la combinación de arcillas lacustres blandas de altísima compresibilidad (Cc>3, e0>7), extracción de agua subterránea que aumenta las cargas efectivas, y historial sísmico que altera la estructura del suelo.",
+      "Solo por la extracción de agua subterránea",
+      "Solo por efecto sísmico del subsuelo blando"
+    ],
+    "correct": 1,
+    "norm": "Mecánica de Suelos",
+    "explanation": "El lago de Texcoco generó arcillas con Cc hasta 10 y e0 hasta 14 — las más compresibles del mundo. La extracción de agua causa hundimiento regional de hasta 40 cm/año en algunas zonas. Caso de estudio fundamental en geotecnia de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "Ciudad de México",
+      "arcillas lacustres",
+      "asentamiento diferencial"
+    ],
+    "subtopic": "casos geotécnicos LATAM",
+    "competency": "Analiza los factores geotécnicos que causan los asentamientos severos en la Ciudad de México",
+    "course_hint": "Casos Geotécnicos Especiales",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cómo se evalúa la estabilidad de un talud en condición sísmica pseudoestática?",
+    "options": [
+      "No se considera la sísmica en taludes",
+      "Se agrega una fuerza horizontal Fh = kh × W al análisis estático donde kh es el coeficiente sísmico horizontal (≈0.1–0.2 según la zona). FS ≥ 1.3 en condición pseudoestática.",
+      "Se duplica la carga vertical",
+      "Solo se aplica a taludes de más de 20 m de altura"
+    ],
+    "correct": 1,
+    "norm": "RNE E.030 / Geotecnia sísmica",
+    "explanation": "Método pseudoestático: kh = 0.5×(amax/g) o el valor definido por la norma sísmica local. FS ≥ 1.3 requerido. En zonas sísmicas de LATAM (Perú, Chile, Colombia, México, Ecuador), la condición sísmica suele ser la crítica en taludes.",
+    "difficulty": "avanzado",
+    "tags": [
+      "pseudoestático",
+      "sismo",
+      "estabilidad de taludes"
+    ],
+    "subtopic": "estabilidad de taludes",
+    "competency": "Aplica el método pseudoestático para evaluar la estabilidad de taludes en zonas sísmicas de LATAM",
+    "course_hint": "Estabilidad de Taludes",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué es el módulo de reacción de la subrasante (ks) y cómo se obtiene para el diseño de losas?",
+    "options": [
+      "Es equivalente al CBR × 10",
+      "ks = presión/deflexión bajo placa de carga (ASTM D1196); relacionado al CBR por correlaciones empíricas. Se usa en diseño de pavimentos rígidos y losas de cimentación (método PCA, AASHTO).",
+      "Es el módulo de Young del suelo",
+      "Es la resistencia al corte del suelo bajo la losa"
+    ],
+    "correct": 1,
+    "norm": "ASTM D1196 / AASHTO",
+    "explanation": "ASTM D1196 (ensayo de placa de carga): ks = q/δ (presión/deflexión). Correlación común: ks ≈ (CBR/30)^0.5 × 54 [MPa/m]. Parámetro clave en diseño de pavimentos rígidos (PCA, AASHTO) y losas en toda LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "módulo de reacción",
+      "ks",
+      "losas"
+    ],
+    "subtopic": "propiedades de soporte",
+    "competency": "Determina el módulo de reacción ks y aplica el concepto en diseño de pavimentos rígidos",
+    "course_hint": "Diseño de Pavimentos Rígidos",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre los métodos de cálculo de pilotes por análisis de capacidad estática y por prueba de carga dinámica?",
+    "options": [
+      "Son equivalentes; los resultados son siempre iguales",
+      "Estático: calcula Qs (fricción) y Qp (punta) con parámetros de resistencia del suelo — teórico. Dinámico (ASTM D4945): mide la respuesta del pilote a un golpe de martinete; CAPWAP retroanaliza la capacidad. El dinámico verifica la integridad y capacidad real.",
+      "El estático es siempre más conservador",
+      "El dinámico no es válido para pilotes en arcillas"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4945 / D1143",
+    "explanation": "La prueba de carga dinámica (PDA + CAPWAP) es ampliamente usada en proyectos de LATAM para verificar la capacidad de pilotes a bajo costo respecto a la prueba estática (ASTM D1143). Se recomienda al menos 1 prueba estática por proyecto para calibrar las correlaciones dinámicas.",
+    "difficulty": "avanzado",
+    "tags": [
+      "pilotes",
+      "PDA",
+      "CAPWAP"
+    ],
+    "subtopic": "cimentaciones profundas",
+    "competency": "Distingue los métodos de verificación de capacidad de pilotes y selecciona el apropiado según el proyecto",
+    "course_hint": "Cimentaciones Profundas",
+    "region": "LATAM",
+    "category": "geotecnia_cimentaciones"
+  },
+  {
+    "question": "¿Qué mide el ensayo de abrasión Los Ángeles (ASTM C131/C535)?",
+    "options": [
+      "Resistencia a la compresión del árido pétreo",
+      "Porcentaje de desgaste por fricción e impacto en tambor con bolas de acero",
+      "Absorción de agua del árido grueso",
+      "Módulo de fineza de la arena"
+    ],
+    "correct": 1,
+    "norm": "ASTM C131/C535",
+    "explanation": "ASTM C131 (árido ≤37.5 mm) y C535 (árido >19 mm): desgaste = (masa inicial − masa retenida #12)/masa inicial × 100. Máximo 40% para concreto estructural según ASTM C33. NTP 400.019 Perú / ICONTEC 98 Colombia.",
+    "difficulty": "básico",
+    "tags": [
+      "Los Ángeles",
+      "desgaste",
+      "durabilidad de áridos"
+    ],
+    "subtopic": "áridos",
+    "competency": "Interpreta el resultado del ensayo Los Ángeles y su límite para concreto estructural",
+    "course_hint": "Caracterización de Agregados",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué norma ASTM determina la gravedad específica y absorción del árido grueso?",
+    "options": [
+      "ASTM C127 (grueso)",
+      "ASTM C128 (fino)",
+      "ASTM C136 (granulometría)",
+      "ASTM C29 (peso unitario)"
+    ],
+    "correct": 0,
+    "norm": "ASTM C127",
+    "explanation": "ASTM C127 (NTP 400.021 Perú) para árido grueso; ASTM C128 para árido fino. La absorción se usa para corregir el agua libre en la mezcla de concreto. Ensayo fundamental en laboratorios de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "Gs",
+      "absorción",
+      "árido grueso"
+    ],
+    "subtopic": "áridos",
+    "competency": "Distingue las normas de gravedad específica para árido fino y grueso",
+    "course_hint": "Caracterización de Agregados",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Cuál es el rango óptimo del módulo de fineza (MF) para arena usada en concreto?",
+    "options": [
+      "1.5 a 2.0 (muy fina)",
+      "2.3 a 3.1 (adecuada para concreto)",
+      "3.2 a 4.0 (muy gruesa)",
+      "1.0 a 1.5 (ultrafina)"
+    ],
+    "correct": 1,
+    "norm": "ASTM C136 / NTP 400.037",
+    "explanation": "MF = Σ(% retenidos acumulados en tamices N°4, 8, 16, 30, 50, 100)/100. MF < 2.3: alta demanda de agua. MF > 3.1: mezcla áspera. Criterio ASTM C33 adoptado en Perú, Colombia, México y Chile.",
+    "difficulty": "básico",
+    "tags": [
+      "módulo de fineza",
+      "arena",
+      "granulometría"
+    ],
+    "subtopic": "áridos",
+    "competency": "Calcula el módulo de fineza e interpreta su efecto en la mezcla de concreto",
+    "course_hint": "Caracterización de Agregados",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué significa el estado SSS (Saturado Superficialmente Seco) del árido?",
+    "options": [
+      "Árido completamente seco al horno a 105°C",
+      "Poros internos saturados pero superficie externamente seca — condición de referencia para Gs y correcciones de humedad en la mezcla",
+      "Superficie húmeda y poros completamente secos",
+      "Humedad natural del árido en el depósito sin procesar"
+    ],
+    "correct": 1,
+    "norm": "ASTM C127/C128",
+    "explanation": "SSS (SSD en inglés): el árido no aporta ni absorbe agua a la mezcla. Gs y absorción se definen en esta condición. Clave para las correcciones de agua en el diseño de mezclas ACI 211.1 aplicado en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "SSS",
+      "SSD",
+      "condición de humedad"
+    ],
+    "subtopic": "áridos",
+    "competency": "Aplica el concepto SSS en correcciones de humedad para diseño de mezclas",
+    "course_hint": "Diseño de Mezclas de Concreto",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué norma ASTM establece los requisitos de los áridos para concreto estructural?",
+    "options": [
+      "ASTM C33",
+      "ASTM C136",
+      "ASTM C127",
+      "ASTM C29"
+    ],
+    "correct": 0,
+    "norm": "ASTM C33",
+    "explanation": "ASTM C33 (NTP 400.037 Perú / ICONTEC 174 Colombia): límites granulométricos, durabilidad, contenido de materia orgánica y otros requisitos de calidad para áridos en concreto estructural. Estándar en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "ASTM C33",
+      "áridos",
+      "requisitos"
+    ],
+    "subtopic": "áridos",
+    "competency": "Identifica la norma de requisitos de áridos para concreto estructural según ASTM C33",
+    "course_hint": "Caracterización de Agregados",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué norma ISO es específica para la acreditación de laboratorios de ensayo y calibración?",
+    "options": [
+      "ISO 9001 (Gestión de calidad)",
+      "ISO 14001 (Gestión ambiental)",
+      "ISO/IEC 17025 (Laboratorios de ensayo)",
+      "ISO 45001 (Seguridad y salud laboral)"
+    ],
+    "correct": 2,
+    "norm": "ISO/IEC 17025",
+    "explanation": "ISO/IEC 17025 es la norma de competencia técnica para laboratorios. ISO 9001 certifica el sistema de gestión general. Son complementarias pero 17025 es obligatoria para acreditación. INACAL Perú, ONAC Colombia, EMA México son los organismos acreditadores nacionales.",
+    "difficulty": "básico",
+    "tags": [
+      "ISO 17025",
+      "acreditación",
+      "laboratorios"
+    ],
+    "subtopic": "gestión de laboratorios",
+    "competency": "Diferencia ISO 9001 e ISO/IEC 17025 en el contexto de laboratorios técnicos",
+    "course_hint": "Gestión de Laboratorios",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué norma ASTM determina la resistencia a la compresión de morteros de cemento Portland?",
+    "options": [
+      "ASTM C109",
+      "ASTM C39",
+      "ASTM C78",
+      "ASTM C496"
+    ],
+    "correct": 0,
+    "norm": "ASTM C109",
+    "explanation": "ASTM C109 (NTP 334.051 Perú / ICONTEC 220 Colombia): cubos de mortero de 50 mm ensayados a 3, 7 y 28 días. Permite evaluar y comparar diferentes tipos de cemento o adiciones minerales (puzolanas, escorias).",
+    "difficulty": "básico",
+    "tags": [
+      "mortero",
+      "cemento",
+      "ASTM C109"
+    ],
+    "subtopic": "cemento y morteros",
+    "competency": "Identifica la norma de resistencia a compresión de morteros de cemento",
+    "course_hint": "Tecnología del Cemento",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué tamiz (abertura) separa el árido fino del grueso según ASTM C33?",
+    "options": [
+      "Tamiz N°8 (2.36 mm)",
+      "Tamiz N°4 (4.75 mm)",
+      "Tamiz 3/8\" (9.5 mm)",
+      "Tamiz N°16 (1.18 mm)"
+    ],
+    "correct": 1,
+    "norm": "ASTM C33",
+    "explanation": "Tamiz N°4 (4.75 mm): material retenido = árido grueso; pasante = árido fino. Esta separación es fundamental para el diseño de mezclas ACI 211.1 y el control de calidad de áridos en toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "tamiz N°4",
+      "áridos",
+      "separación granulométrica"
+    ],
+    "subtopic": "áridos",
+    "competency": "Identifica el límite granulométrico entre árido fino y grueso según ASTM C33",
+    "course_hint": "Caracterización de Agregados",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué diferencia existe entre la acreditación ISO/IEC 17025 y la certificación ISO 9001 para un laboratorio?",
+    "options": [
+      "Son equivalentes; cualquiera es válida para laboratorios de ensayo",
+      "ISO 9001 certifica el sistema de gestión (procesos, documentación). ISO 17025 acredita la competencia técnica (métodos validados, personal competente, trazabilidad metrológica). 17025 requiere demostrar competencia técnica real.",
+      "ISO 9001 es más exigente técnicamente que ISO 17025",
+      "Solo ISO 9001 es reconocida internacionalmente por ILAC/IAAC"
+    ],
+    "correct": 1,
+    "norm": "ISO/IEC 17025 / ISO 9001",
+    "explanation": "Un laboratorio puede tener ISO 9001 sin estar técnicamente acreditado. ISO 17025 requiere validación de métodos, calibración trazable al SI, ensayos de aptitud interlaboratorio y evaluación por pares. Reconocido en toda LATAM (INACAL, ONAC, EMA, INN Chile).",
+    "difficulty": "intermedio",
+    "tags": [
+      "ISO 17025",
+      "ISO 9001",
+      "diferencias"
+    ],
+    "subtopic": "gestión de laboratorios",
+    "competency": "Justifica la necesidad de acreditación ISO 17025 vs certificación ISO 9001",
+    "course_hint": "Gestión de Laboratorios",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué es la trazabilidad metrológica y por qué es obligatoria en laboratorios acreditados?",
+    "options": [
+      "El seguimiento de los materiales de ensayo desde el proveedor",
+      "Cadena ininterrumpida de calibraciones que vincula los resultados al Sistema Internacional (SI) — garantiza que resultados sean comparables y válidos internacionalmente",
+      "El registro histórico de todos los resultados de un cliente",
+      "La certificación de los operarios del laboratorio"
+    ],
+    "correct": 1,
+    "norm": "ISO/IEC 17025 / VIM",
+    "explanation": "Cadena: instrumento → patrón de trabajo → patrón referencia → instituto nacional (INACAL Perú, INM Colombia, CENAM México) → BIPM. Sin trazabilidad, los resultados no son comparables entre laboratorios de diferentes países de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "trazabilidad",
+      "metrología",
+      "calibración"
+    ],
+    "subtopic": "gestión de laboratorios",
+    "competency": "Explica la cadena de trazabilidad metrológica y su importancia en laboratorios acreditados",
+    "course_hint": "Metrología y Acreditación",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué evalúa el ensayo de durabilidad de áridos ante sulfatos (ASTM C88) y cuál es el límite?",
+    "options": [
+      "Resistencia al desgaste por abrasión; límite 40%",
+      "Desintegración por ciclos de cristalización de sulfatos (intemperismo acelerado); pérdida máxima 12% en árido grueso",
+      "Resistencia a la compresión del árido; límite 100 MPa",
+      "Absorción máxima del árido; límite 3%"
+    ],
+    "correct": 1,
+    "norm": "ASTM C88",
+    "explanation": "ASTM C88 (NTP 400.016 Perú / ICONTEC 127 Colombia): ciclos de inmersión en Na2SO4 o MgSO4 y secado simulan intemperismo. Límite 12% con MgSO4 (ASTM C33). Relevante en climas altiplánicos y costeros de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "sulfatos",
+      "durabilidad de áridos",
+      "intemperismo"
+    ],
+    "subtopic": "áridos",
+    "competency": "Evalúa la durabilidad de áridos ante intemperismo usando el ensayo ASTM C88",
+    "course_hint": "Durabilidad de Materiales",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué es la incertidumbre de medición expandida U y cómo se calcula según GUM/ISO 17025?",
+    "options": [
+      "El error sistemático del equipo de ensayo",
+      "U = k × uc, donde uc = √(Σui²) combinando componentes tipo A (estadísticos) y tipo B (calibración, resolución, temperatura). k=2 para ≈95% de confianza.",
+      "La diferencia entre el valor máximo y mínimo de las réplicas",
+      "El coeficiente de variación multiplicado por el valor medio"
+    ],
+    "correct": 1,
+    "norm": "GUM / ISO/IEC 17025",
+    "explanation": "Tipo A: estimadas estadísticamente (repetibilidad). Tipo B: por otros medios (certificados de calibración, especificaciones del fabricante). U = 2uc → intervalo 95% de confianza. Obligatorio en informes de laboratorios acreditados en toda LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "incertidumbre",
+      "GUM",
+      "tipo A y B"
+    ],
+    "subtopic": "metrología",
+    "competency": "Calcula e interpreta la incertidumbre de medición expandida en ensayos de laboratorio",
+    "course_hint": "Metrología y Calidad en Laboratorio",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Cuándo se recomienda la extracción de núcleos (ASTM C42) en una estructura de concreto?",
+    "options": [
+      "Rutinariamente en todas las obras nuevas",
+      "Cuando los cilindros de obra no cumplen el criterio de aceptación de ACI 318 o cuando se sospecha de la calidad de un elemento estructural específico",
+      "Solo en estructuras con más de 30 años de servicio",
+      "Cuando el esclerómetro supera el valor de referencia"
+    ],
+    "correct": 1,
+    "norm": "ACI 318 / ASTM C42",
+    "explanation": "ACI 318-14 §26.12.4: si el criterio de aceptación de cilindros falla → extraer 3 núcleos del área afectada (ASTM C42). Si promedio ≥ 0.85 f'c y ninguno < 0.75 f'c → aceptable. Protocolo adoptado en RNE E.060 y NSR-10.",
+    "difficulty": "intermedio",
+    "tags": [
+      "núcleos C42",
+      "cuándo extraer",
+      "ACI 318"
+    ],
+    "subtopic": "evaluación de estructuras",
+    "competency": "Determina cuándo y cómo aplicar el ensayo de extracción de núcleos según ACI 318",
+    "course_hint": "Evaluación de Estructuras",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué mide el ensayo de velocidad de pulso ultrasónico en concreto (ASTM C597) y qué indica?",
+    "options": [
+      "La resistencia a la compresión superficial del concreto",
+      "La velocidad de ondas P (Vp) a través del elemento; evalúa uniformidad interna, detecta fisuras o zonas de baja calidad",
+      "La resistencia a la tracción del concreto",
+      "Solo aplica a probetas de laboratorio, no a estructuras"
+    ],
+    "correct": 1,
+    "norm": "ASTM C597",
+    "explanation": "Vp > 4500 m/s = concreto excelente; 3500–4500 = bueno; 3000–3500 = dudoso; < 3000 = pobre. Detecta fisuras internas, oquedades y zonas de baja calidad. Complementario al esclerómetro en evaluaciones de estructuras de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "ultrasonido",
+      "C597",
+      "evaluación interna"
+    ],
+    "subtopic": "evaluación de estructuras",
+    "competency": "Interpreta la velocidad Vp del ultrasonido para evaluar la calidad interna del concreto",
+    "course_hint": "Evaluación de Estructuras",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué diferencia existe entre repetibilidad y reproducibilidad en ensayos de laboratorio?",
+    "options": [
+      "Son sinónimos en metrología técnica",
+      "Repetibilidad: variabilidad intra-laboratorio (mismo operario, equipo y condiciones). Reproducibilidad: variabilidad inter-laboratorio. Siempre R > r. Publicadas en cada norma ASTM.",
+      "Repetibilidad para ensayos destructivos; reproducibilidad para no destructivos",
+      "La repetibilidad es siempre mayor que la reproducibilidad"
+    ],
+    "correct": 1,
+    "norm": "ASTM E177 / ISO 5725",
+    "explanation": "ASTM E177: r (repetibilidad) = diferencia máxima entre 2 resultados del mismo lab bajo condiciones iguales. R (reproducibilidad) = diferencia máxima entre labs diferentes. Datos publicados en cada norma ASTM para validar resultados en LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "repetibilidad",
+      "reproducibilidad",
+      "precisión"
+    ],
+    "subtopic": "metrología",
+    "competency": "Interpreta los datos de precisión de normas ASTM para validar resultados de ensayo",
+    "course_hint": "Metrología y Calidad en Laboratorio",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Con qué frecuencia deben calibrarse los equipos de compresión (prensas) en un laboratorio técnico?",
+    "options": [
+      "Cada 5 años o cuando el fabricante lo indique",
+      "Anualmente como mínimo (ASTM E4); también tras reparaciones o impactos; cuando los resultados son sospechosos",
+      "Solo al adquirir equipos nuevos",
+      "Cada vez que se use el equipo en un ensayo de aceptación"
+    ],
+    "correct": 1,
+    "norm": "ASTM E4 / ISO/IEC 17025",
+    "explanation": "ASTM E4: calibración anual de máquinas de ensayo. ISO 17025: programa documentado con trazabilidad al SI. Intervalos se ajustan según historial de deriva. Equipos sin calibración vigente no deben usarse para ensayos de aceptación en LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "calibración",
+      "prensa",
+      "ASTM E4"
+    ],
+    "subtopic": "gestión de equipos",
+    "competency": "Establece un programa de calibración de equipos según ASTM E4 e ISO 17025",
+    "course_hint": "Metrología y Acreditación",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué es un ensayo de aptitud (proficiency testing) y por qué es obligatorio en ISO 17025?",
+    "options": [
+      "Ensayo de capacitación interna del personal del laboratorio",
+      "Evaluación externa: muestras idénticas enviadas a múltiples laboratorios, resultados comparados con valor de referencia (z-score). ISO 17025 requiere participación regular como evidencia de competencia técnica.",
+      "Verificación interna de equipos entre calibraciones programadas",
+      "Evaluación del sistema de gestión del laboratorio"
+    ],
+    "correct": 1,
+    "norm": "ISO/IEC 17025 / ISO 17043",
+    "explanation": "ISO 17043: z-score = (x_lab − x_ref)/σ. |z| < 2 = satisfactorio; 2–3 = cuestionable; > 3 = insatisfactorio → investigación obligatoria. Los administra INACAL Perú, ONAC Colombia, EMA México. Único indicador de desempeño real inter-laboratorio en LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "ensayo de aptitud",
+      "proficiency",
+      "z-score"
+    ],
+    "subtopic": "gestión de laboratorios",
+    "competency": "Interpreta resultados de ensayos de aptitud interlaboratorio y actúa ante resultados insatisfactorios",
+    "course_hint": "Acreditación y Desempeño",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Por qué el esclerómetro (ASTM C805) no puede reemplazar al ensayo de compresión C39 para verificar f'c?",
+    "options": [
+      "Porque el esclerómetro es más costoso",
+      "Solo mide la resistencia superficial del concreto (afectada por carbonatación, humedad y árido expuesto) con variabilidad ±20%; no representa el interior del elemento estructural",
+      "Porque ASTM C805 no está reconocida por ACI 318",
+      "No aplica a concretos con f'c < 200 kg/cm²"
+    ],
+    "correct": 1,
+    "norm": "ASTM C805 / ACI 228",
+    "explanation": "ACI 228.1R: el esclerómetro es solo indicativo. Para aceptación de f'c se requieren cilindros (C39) o núcleos (C42). Limitación reconocida en todos los códigos de construcción de LATAM (RNE E.060, NSR-10, RCDF).",
+    "difficulty": "avanzado",
+    "tags": [
+      "esclerómetro",
+      "limitaciones END",
+      "C39"
+    ],
+    "subtopic": "evaluación de estructuras",
+    "competency": "Evalúa críticamente las limitaciones del esclerómetro vs los ensayos de compresión en concreto",
+    "course_hint": "Evaluación de Estructuras",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Cuál es el criterio de ACI 318 para aceptar núcleos diamantinos con resistencias bajas?",
+    "options": [
+      "Si cualquier núcleo supera el 75% de f'c el concreto es aceptable",
+      "Promedio de 3 núcleos ≥ 0.85 f'c Y ningún núcleo individual < 0.75 f'c → estructuralmente adecuado. Si falla: análisis estructural detallado.",
+      "Si el esclerómetro confirma el resultado del núcleo bajo",
+      "Si la relación H/D del núcleo es mayor a 2.0 sin corrección"
+    ],
+    "correct": 1,
+    "norm": "ACI 318-14 §26.12.4.1",
+    "explanation": "Ambas condiciones deben cumplirse simultáneamente. Si falla: análisis estructural (ACI 318/369). Demolición o refuerzo como último recurso. Protocolo adoptado en RNE E.060 Perú y NSR-10 Colombia.",
+    "difficulty": "avanzado",
+    "tags": [
+      "núcleos C42",
+      "criterio aceptación",
+      "ACI 318"
+    ],
+    "subtopic": "evaluación de estructuras",
+    "competency": "Aplica el criterio de ACI 318 para evaluar resultados de núcleos diamantinos",
+    "course_hint": "Evaluación de Estructuras",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué diferencia conceptual existe entre precisión y exactitud en mediciones de laboratorio?",
+    "options": [
+      "Son sinónimos en metrología moderna",
+      "Precisión = repetibilidad entre réplicas (baja dispersión). Exactitud = cercanía al valor verdadero (bajo sesgo). Un método puede ser preciso pero inexacto (sesgo sistemático).",
+      "Exactitud = repetibilidad y precisión = cercanía al valor verdadero (definiciones invertidas)",
+      "Solo la exactitud importa en ensayos geotécnicos"
+    ],
+    "correct": 1,
+    "norm": "ISO/IEC 17025 / VIM",
+    "explanation": "Ejemplo: {2150, 2152, 2148 kg/m³} son muy precisos (σ=2 kg/m³) pero si el valor verdadero es 2200 kg/m³ son inexactos (sesgo=−50 kg/m³). Ambas propiedades se evalúan en la validación de métodos analíticos en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "precisión",
+      "exactitud",
+      "sesgo"
+    ],
+    "subtopic": "metrología",
+    "competency": "Diferencia precisión y exactitud e identifica sus fuentes de error en ensayos de laboratorio",
+    "course_hint": "Metrología y Calidad en Laboratorio",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué es el ensayo de integridad de pilotes PIT (ASTM D5882) y qué puede detectar?",
+    "options": [
+      "Ensayo de carga axial estática para determinar capacidad portante",
+      "Ensayo de baja deformación: un golpe en la cabeza genera ondas de compresión 1D que reflejan discontinuidades (fisuras, cambios de sección, segregación)",
+      "Extracción del pilote para inspección visual directa",
+      "Ensayo de permeabilidad del suelo junto al pilote"
+    ],
+    "correct": 1,
+    "norm": "ASTM D5882",
+    "explanation": "PIT (Low Strain Impact Test): reflexiones positivas → reducción de sección o material blando; negativas → material más rígido. Limitación: no evalúa capacidad portante. Muy usado en LATAM para verificar la integridad de pilotes antes de cargar la estructura.",
+    "difficulty": "avanzado",
+    "tags": [
+      "PIT",
+      "pilotes",
+      "integridad"
+    ],
+    "subtopic": "ensayos especiales",
+    "competency": "Interpreta los resultados del ensayo PIT para evaluar la integridad estructural de pilotes",
+    "course_hint": "Cimentaciones Profundas",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Cómo se establece la frecuencia óptima de calibración de un instrumento según ISO 17025?",
+    "options": [
+      "Siempre anual para todos los instrumentos sin excepción",
+      "Basándose en el historial de calibraciones previas, la estabilidad demostrada, las consecuencias de resultados erróneos y los requisitos del método. Puede ser trimestral o bienal según el análisis de riesgo.",
+      "Siguiendo solo las recomendaciones del fabricante del instrumento",
+      "Cada vez que se use el instrumento en un ensayo de aceptación oficial"
+    ],
+    "correct": 1,
+    "norm": "ISO/IEC 17025 / ILAC-G24",
+    "explanation": "ILAC-G24: la frecuencia óptima equilibra el costo de calibrar frecuentemente vs. el riesgo de resultados no conformes por deriva del instrumento. El historial de calibraciones es la principal fuente para ajustar los intervalos en laboratorios de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "frecuencia de calibración",
+      "análisis de riesgo",
+      "ILAC-G24"
+    ],
+    "subtopic": "gestión de equipos",
+    "competency": "Establece la frecuencia de calibración basándose en análisis de riesgo e historial del instrumento",
+    "course_hint": "Gestión de Equipos en Laboratorio",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué es un gráfico de control X-R (Shewhart) y para qué se usa en laboratorio de materiales?",
+    "options": [
+      "Gráfico de costos del proyecto vs tiempo de ejecución",
+      "Herramienta SPC: gráfico X̄ monitorea la tendencia central; gráfico R monitorea la variabilidad. Límites de control = X̄ ± 3σ. Detectan procesos fuera de control estadístico.",
+      "Registro fotográfico de muestras con etiqueta de identificación",
+      "Curva granulométrica del árido fino para diseño de mezclas"
+    ],
+    "correct": 1,
+    "norm": "ISO/IEC 17025 / ASTM E2587",
+    "explanation": "ASTM E2587: señales de alarma: 1 punto fuera de LCS/LCI, 8 puntos consecutivos en un lado de X̄, 2 de 3 entre 2σ y 3σ. Aplicado a resultados de resistencia de concreto, densidades de compactación y CBR en laboratorios de LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "gráfico de control",
+      "SPC",
+      "control estadístico"
+    ],
+    "subtopic": "control estadístico",
+    "competency": "Implementa gráficos de control X-R para monitorear la estabilidad de procesos de ensayo",
+    "course_hint": "Estadística y Control de Calidad",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué diferencia existe entre la permeabilidad de carga constante (ASTM D2434) y carga variable (ASTM D5084)?",
+    "options": [
+      "Son el mismo ensayo con diferente nombre y formulario",
+      "Carga constante: k = Q·L/(A·h·t) para suelos permeables k > 10⁻⁴ cm/s (arenas, gravas). Carga variable: k = a·L/A × ln(h1/h2)/(t2−t1) para suelos de baja permeabilidad k < 10⁻⁴ cm/s (arcillas, limos).",
+      "Carga constante siempre da mayor k que carga variable",
+      "Carga variable es más preciso para todos los tipos de suelo"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2434 / D5084",
+    "explanation": "La selección incorrecta puede dar errores de un orden de magnitud en k. Clave en el diseño de sistemas de drenaje y pantallas de impermeabilización en proyectos de LATAM (presas, túneles, sótanos en zonas con nivel freático alto).",
+    "difficulty": "avanzado",
+    "tags": [
+      "permeabilidad",
+      "carga constante",
+      "carga variable"
+    ],
+    "subtopic": "ensayos de suelos",
+    "competency": "Selecciona el ensayo de permeabilidad correcto según el tipo y rango de permeabilidad del suelo",
+    "course_hint": "Permeabilidad y Flujo en Suelos",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre ASTM A615 y ASTM A706 para acero de refuerzo y cuándo se exige A706?",
+    "options": [
+      "Son idénticas; solo difieren en el nombre del fabricante",
+      "A615: alta resistencia (fy=420 MPa), sin control de fu/fy. A706: fu/fy ≥ 1.25 y mayor elongación mínima garantizada — requerida en zonas sísmicas para garantizar disipación de energía.",
+      "A706 tiene siempre mayor resistencia que A615",
+      "A615 para clima frío; A706 para clima cálido y tropical"
+    ],
+    "correct": 1,
+    "norm": "ASTM A615 / A706",
+    "explanation": "ACI 318 en zonas sísmicas especiales (SDC D, E, F) exige A706 para asegurar ductilidad. Crítico en países andinos: Perú (zona 4), Chile, Colombia, México, Ecuador. La relación fu/fy garantiza que el acero fluya antes de fracturarse en un sismo.",
+    "difficulty": "avanzado",
+    "tags": [
+      "acero de refuerzo",
+      "A615",
+      "A706"
+    ],
+    "subtopic": "acero",
+    "competency": "Selecciona el grado de acero de refuerzo apropiado según las exigencias sísmicas del proyecto",
+    "course_hint": "Materiales Estructurales",
+    "region": "LATAM",
+    "category": "laboratorio_materiales"
+  },
+  {
+    "question": "¿Qué ensayo mide la resistencia a la compresión uniaxial (UCS) de roca intacta en laboratorio?",
+    "options": [
+      "Carga puntual PLT (ASTM D5731)",
+      "Compresión uniaxial simple UCS (ASTM D7012 Método A)",
+      "Ensayo brasileño (ASTM D3967)",
+      "Triaxial de roca (ASTM D7012 Método B)"
+    ],
+    "correct": 1,
+    "norm": "ASTM D7012",
+    "explanation": "ASTM D7012 Método A: probeta cilíndrica H/D=2–2.5, carga axial hasta rotura. UCS varía de <1 MPa (rocas muy blandas) a >250 MPa (granitos). Ensayo fundamental en proyectos mineros y de infraestructura de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "UCS",
+      "roca intacta",
+      "resistencia"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Identifica el ensayo estándar para determinar la resistencia a compresión de roca intacta",
+    "course_hint": "Mecánica de Rocas Básica",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el RQD (Rock Quality Designation) y cuál es su fórmula?",
+    "options": [
+      "Resistencia de la roca en MPa dividida entre 100",
+      "RQD = (Σ longitudes de trozos ≥ 10 cm / longitud total perforada) × 100%",
+      "Número de fracturas por metro × 10",
+      "Densidad lineal de discontinuidades medida en el sondaje"
+    ],
+    "correct": 1,
+    "norm": "ASTM D6032",
+    "explanation": "RQD de Deere (1963): solo se cuentan trozos rígidos ≥ 10 cm. RQD > 90% = excelente; < 25% = muy mala calidad. Parámetro base para los sistemas RMR y Q. Usado en toda la minería e ingeniería subterránea de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "RQD",
+      "calidad de roca",
+      "sondaje"
+    ],
+    "subtopic": "clasificaciones geomecánicas",
+    "competency": "Calcula el RQD a partir del registro de sondaje diamantino y lo interpreta",
+    "course_hint": "Exploración en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué clasificación RMR corresponde a roca de 'Buena Calidad' (Clase II)?",
+    "options": [
+      "RMR = 20–40",
+      "RMR = 41–60",
+      "RMR = 61–80",
+      "RMR = 81–100"
+    ],
+    "correct": 2,
+    "norm": "Bieniawski 1989",
+    "explanation": "RMR (Bieniawski 1989): Clase I=81–100 (Muy buena), Clase II=61–80 (Buena), Clase III=41–60 (Regular), Clase IV=21–40 (Mala), Clase V=0–20 (Muy mala). Sistema de referencia en minería y obra civil de toda LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "RMR",
+      "Bieniawski",
+      "clasificación geomecánica"
+    ],
+    "subtopic": "clasificaciones geomecánicas",
+    "competency": "Clasifica macizos rocosos usando el sistema RMR de Bieniawski",
+    "course_hint": "Clasificaciones Geomecánicas",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué mide el ensayo de carga puntual PLT (ASTM D5731) y cómo se usa en campo?",
+    "options": [
+      "La densidad aparente de la roca",
+      "El índice Is50 que se correlaciona con UCS para estimación rápida de resistencia en campo",
+      "La permeabilidad de la roca en discontinuidades",
+      "El módulo de Young dinámico de la roca intacta"
+    ],
+    "correct": 1,
+    "norm": "ASTM D5731",
+    "explanation": "PLT: carga entre dos puntos cónicos hasta rotura. Is50 = P/De². Correlación: UCS ≈ 22 × Is50 (factor varía por litología). Rápido, portátil, aplicable en testigos de sondaje. Muy usado en exploración minera de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "PLT",
+      "Is50",
+      "estimación en campo"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Aplica el PLT para estimar la UCS en campo y en testigos de sondaje",
+    "course_hint": "Exploración en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el GSI (Geological Strength Index) y en qué rango varía?",
+    "options": [
+      "Índice de fracturación de 0 a 50",
+      "Índice de resistencia del macizo rocoso de 0 a 100 basado en la estructura y la condición de las discontinuidades",
+      "Resistencia de la roca intacta expresada en MPa",
+      "Clasificación equivalente a RMR − 5"
+    ],
+    "correct": 1,
+    "norm": "Hoek et al. 1995",
+    "explanation": "GSI: de 0 (macizo muy fracturado y alterado) a 100 (roca masiva sin fracturas). Parámetro clave del criterio de Hoek-Brown para evaluar la resistencia del macizo. Estimado en campo desde los gráficos de Hoek. Amplio uso en LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "GSI",
+      "Hoek",
+      "macizo rocoso"
+    ],
+    "subtopic": "clasificaciones geomecánicas",
+    "competency": "Estima el GSI de un macizo rocoso a partir de observaciones de campo",
+    "course_hint": "Clasificaciones Geomecánicas",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué determina el ensayo brasileño (ASTM D3967) en roca?",
+    "options": [
+      "Resistencia a la compresión uniaxial",
+      "Resistencia a la tracción indirecta sin aplicar tracción directa",
+      "Resistencia al corte de discontinuidades bajo carga normal",
+      "Módulo de elasticidad bajo carga de confinamiento"
+    ],
+    "correct": 1,
+    "norm": "ASTM D3967",
+    "explanation": "ASTM D3967: disco de roca comprimido diametralmente. ft = 2P/(π·D·t). Típicamente ft ≈ 1/10 UCS. Importante para análisis de estallido de roca en minería profunda de LATAM (Codelco Chile, Cerro Verde Perú, Cerrejón Colombia).",
+    "difficulty": "básico",
+    "tags": [
+      "ensayo brasileño",
+      "tracción indirecta",
+      "roca"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Interpreta el ensayo brasileño y su relación con la resistencia a tracción de la roca",
+    "course_hint": "Mecánica de Rocas Básica",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué evalúa el ensayo de durabilidad al desmoronamiento (Slake Durability, ASTM D4644)?",
+    "options": [
+      "Resistencia a la compresión de la roca tras inmersión",
+      "Degradación de rocas blandas por ciclos de inmersión y secado; Id2 ≥ 90% indica alta durabilidad",
+      "Pérdida de masa por abrasión en tambor de Los Ángeles",
+      "Resistencia al punzonamiento del macizo rocoso"
+    ],
+    "correct": 1,
+    "norm": "ASTM D4644",
+    "explanation": "2 ciclos de inmersión y rotación en tambor. Id2 < 60%: roca que degrada rápidamente al exponerse. Crítico en taludes de lutitas, arcillolitas y rocas volcánicas alteradas en carreteras de montaña y tajos de LATAM.",
+    "difficulty": "básico",
+    "tags": [
+      "Slake Durability",
+      "durabilidad",
+      "rocas blandas"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Aplica el ensayo de durabilidad al desmoronamiento en evaluación de taludes en roca",
+    "course_hint": "Durabilidad en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre perforación rotaria y percusiva en minería y obras civiles?",
+    "options": [
+      "Son equivalentes; solo difiere el equipo disponible",
+      "Rotaria: corte continuo con broca, recupera testigos (DDH para exploración). Percusiva: golpes repetidos con trépano o botones, para voladura o pozos sin recuperación de testigos.",
+      "Rotaria solo para rocas blandas; percusiva para concreto y asfalto",
+      "Solo la percusiva es válida para sondajes geotécnicos"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2113 / D5783",
+    "explanation": "DDH (Diamond Drill Hole) rotario: recupera testigos para RQD, ensayos y modelo geológico. Percusiva (DTH, Top Hammer): para tronadura en tajo y obras de infraestructura. Ambas ampliamente usadas en proyectos mineros de LATAM (Chile, Perú, Colombia, México).",
+    "difficulty": "básico",
+    "tags": [
+      "perforación rotaria",
+      "DDH",
+      "perforación percusiva"
+    ],
+    "subtopic": "minería",
+    "competency": "Distingue los métodos de perforación y sus aplicaciones en minería y obras civiles",
+    "course_hint": "Técnicas de Perforación",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué sistema geomecánico es más apropiado para el diseño de sostenimiento de túneles?",
+    "options": [
+      "Solo el RMR de Bieniawski para todos los casos",
+      "El índice Q de Barton, más detallado y específico para excavaciones subterráneas",
+      "El GSI de Hoek, que incluye el factor de perturbación D",
+      "Los tres sistemas son igualmente precisos para el diseño de túneles"
+    ],
+    "correct": 1,
+    "norm": "Barton 1974 / NGI",
+    "explanation": "Q incluye 6 parámetros: RQD/Jn × Jr/Ja × Jw/SRF. El gráfico Q–span permite seleccionar sostenimiento (shotcrete, pernos, TH). Mayor rango y detalle que RMR. Estándar en túneles andinos y minería subterránea de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "sistema Q",
+      "túneles",
+      "sostenimiento"
+    ],
+    "subtopic": "tunelería",
+    "competency": "Selecciona el sistema geomecánico apropiado para el diseño de sostenimiento de túneles",
+    "course_hint": "Diseño de Túneles",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cuáles son los parámetros del criterio de Hoek-Brown generalizado y cómo se calculan desde el GSI?",
+    "options": [
+      "Solo c y φ como en Mohr-Coulomb; no hay diferencia",
+      "mb=mi×exp[(GSI-100)/(28-14D)]; s=exp[(GSI-100)/(9-3D)]; a=0.5+[exp(-GSI/15)−exp(-20/3)]/6. D: factor de perturbación 0–1.",
+      "mb=GSI/100×mi; s=GSI²/10000; a=0.5 siempre",
+      "Los parámetros se obtienen directamente del ensayo PLT"
+    ],
+    "correct": 1,
+    "norm": "Hoek-Brown 2002",
+    "explanation": "Criterio: σ'1=σ'3+σci(mb·σ'3/σci+s)^a. D=0 sin perturbar; D=0.7–1.0 para taludes con voladura no controlada. σci = UCS intacta. Herramienta central del diseño geomecánico en minería y obras civiles de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "Hoek-Brown",
+      "GSI",
+      "parámetros"
+    ],
+    "subtopic": "criterios de rotura",
+    "competency": "Calcula los parámetros del criterio de Hoek-Brown a partir de GSI, mi y D",
+    "course_hint": "Criterios de Rotura en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cómo afecta el factor de perturbación D del criterio de Hoek-Brown al diseño de taludes en roca?",
+    "options": [
+      "D solo aplica para el diseño de túneles, no para taludes",
+      "D=0 sin perturbar; D=0.7–1.0 para taludes con voladura no controlada → resistencia del macizo reducida hasta 50% → taludes más tendidos o con sostenimiento adicional",
+      "D siempre mejora la resistencia del macizo rocoso",
+      "D es solo un factor de seguridad global aplicado al final"
+    ],
+    "correct": 1,
+    "norm": "Hoek-Brown 2002",
+    "explanation": "En tajos mineros con voladura no controlada, D puede llegar a 1.0. Impacta directamente en el ángulo de talud de diseño. Práctica recomendada: voladura controlada (D=0.7) para optimizar taludes en grandes tajos de LATAM (Chuquicamata, Toquepala, Cerro Verde).",
+    "difficulty": "intermedio",
+    "tags": [
+      "factor D",
+      "perturbación",
+      "voladura"
+    ],
+    "subtopic": "taludes en roca",
+    "competency": "Aplica el factor D del criterio de Hoek-Brown en el diseño de taludes de tajos mineros",
+    "course_hint": "Estabilidad de Taludes en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué evalúa el ensayo de permeabilidad Lugeon en estudios de presas y túneles?",
+    "options": [
+      "La resistencia a la compresión del macizo rocoso bajo agua",
+      "La permeabilidad del macizo rocoso (1 Lu ≈ 10⁻⁷ m/s); evalúa la necesidad y diseña inyecciones de lechada para impermeabilización",
+      "La velocidad de onda Vp del macizo bajo presión hidrostática",
+      "La calidad de la roca según la presión de agua aplicada"
+    ],
+    "correct": 1,
+    "norm": "ISRM",
+    "explanation": "1 Lu = 1 litro/min/metro a 1 MPa. <1 Lu: prácticamente impermeable; 1–10 Lu: permeabilidad media; >100 Lu: muy permeable. Diseño de cortinas de inyección en presas de LATAM (Machu Picchu, Itaipú, El Cajón México, Urrá Colombia).",
+    "difficulty": "intermedio",
+    "tags": [
+      "Lugeon",
+      "permeabilidad de roca",
+      "presas"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Interpreta resultados del ensayo Lugeon para diseñar tratamientos de impermeabilización",
+    "course_hint": "Mecánica de Rocas Aplicada",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el índice Q de Barton y cuáles son sus 6 parámetros fundamentales?",
+    "options": [
+      "Q = RQD únicamente; un solo parámetro",
+      "Q = (RQD/Jn) × (Jr/Ja) × (Jw/SRF): calidad del testigo, familias de fracturas, rugosidad, alteración, presencia de agua y estado tensional",
+      "Q = RMR − 5 (correlación directa con Bieniawski)",
+      "Q = Es/UCS (relación módulo-resistencia de la roca)"
+    ],
+    "correct": 1,
+    "norm": "Barton 1974",
+    "explanation": "Q varía de 0.001 a 1000. Q < 0.1 → sostenimiento muy pesado; Q > 40 → sin sostenimiento formal. El ESR considera el uso de la excavación. Sistema de referencia en minería subterránea de LATAM (Chile, Perú, Colombia, México).",
+    "difficulty": "intermedio",
+    "tags": [
+      "Q Barton",
+      "parámetros",
+      "sostenimiento"
+    ],
+    "subtopic": "clasificaciones geomecánicas",
+    "competency": "Calcula el índice Q de Barton y lo aplica en el diseño de sostenimiento",
+    "course_hint": "Diseño de Túneles",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre RMR89 de Bieniawski y el sistema Q de Barton para diseño de túneles?",
+    "options": [
+      "Son idénticos; uno es derivación directa del otro",
+      "RMR da puntuación con recomendaciones de sostenimiento y tiempo de autosoporte por clase. Q tiene mayor rango y flexibilidad. Correlación: RMR ≈ 9 ln Q + 44.",
+      "RMR solo aplica a rocas ígneas; Q solo a rocas sedimentarias",
+      "Q no aplica en túneles de baja cobertura (<50 m)"
+    ],
+    "correct": 1,
+    "norm": "Bieniawski 1989 / Barton 1974",
+    "explanation": "RMR: 5 parámetros + ajuste por orientación. Clase II → 1 semana de autosoporte en vano de 5 m. Q: mayor rango de aplicación. Se usan conjuntamente para mayor confianza. Práctica estándar en proyectos de infraestructura subterránea de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "RMR",
+      "Q",
+      "correlación"
+    ],
+    "subtopic": "clasificaciones geomecánicas",
+    "competency": "Compara RMR y Q y aplica la correlación entre ambos sistemas para diseño de túneles",
+    "course_hint": "Diseño de Túneles",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el estallido de roca (rock burst) y en qué condiciones ocurre?",
+    "options": [
+      "Falla lenta de roca por creep (deformación viscosa)",
+      "Liberación violenta de energía de deformación almacenada en roca competente bajo alto confinamiento — frecuente en minería profunda (>500 m) en rocas duras (UCS>100 MPa)",
+      "Colapso de roca por saturación con agua",
+      "Falla superficial de taludes por descompresión"
+    ],
+    "correct": 1,
+    "norm": "ISRM / ASTM D7012",
+    "explanation": "Rock burst: fenómeno en minería profunda en rocas duras y masivas (Q > 10). Frecuente en minería de Cu, Au y Ag en Andes de Perú y Chile (El Teniente, Codelco, Antamina). Se controla con pernos dinámicos (Swellex, Split Set) y voladuras de alivio.",
+    "difficulty": "intermedio",
+    "tags": [
+      "rock burst",
+      "minería profunda",
+      "estallido"
+    ],
+    "subtopic": "minería",
+    "competency": "Identifica las condiciones de riesgo de estallido de roca y las medidas de control",
+    "course_hint": "Minería Subterránea",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cómo afecta la anisotropía de la roca a los ensayos de compresión uniaxial?",
+    "options": [
+      "La anisotropía no existe en rocas; todas son isótropas",
+      "En rocas foliadas/estratificadas, la UCS varía con el ángulo β: mínimo a β≈30–45° (falla por foliación), máximo a β=0° y 90°",
+      "La anisotropía solo afecta la permeabilidad de la roca",
+      "La anisotropía siempre es favorable para la estabilidad de excavaciones"
+    ],
+    "correct": 1,
+    "norm": "ISRM / ASTM D7012",
+    "explanation": "En rocas metamórficas y sedimentarias foliadas: UCS mín a β≈30–45° (deslizamiento sobre foliación) y UCS máx a β=0° y 90°. ISRM recomienda ensayar a 0°, 15°, 30°, 45°, 60°, 75°, 90°. Frecuente en esquistos andinos y lutitas carboníferas de LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "anisotropía",
+      "foliación",
+      "UCS orientado"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Evalúa el efecto de la anisotropía en la resistencia y el diseño de excavaciones en roca",
+    "course_hint": "Propiedades Mecánicas de Rocas",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué mide el ultrasonido en roca (ASTM D2845) y qué índices de calidad se derivan?",
+    "options": [
+      "La resistencia estática a la compresión uniaxial",
+      "La velocidad de ondas P (Vp) y S (Vs); se calcula el índice de calidad Kv=(Vp_campo/Vp_lab)² y módulos elásticos dinámicos",
+      "La permeabilidad de la roca intacta bajo presión confinante",
+      "El punto de ablandamiento de la roca a alta temperatura"
+    ],
+    "correct": 1,
+    "norm": "ASTM D2845",
+    "explanation": "Vp > 5000 m/s → roca muy buena. Índice Kv = (Vp_campo/Vp_lab)²: compara el macizo con la roca intacta. Ed = ρ×Vs²×(3Vp²−4Vs²)/(Vp²−Vs²). Usado en exploración de canteras y control de calidad de bloques de roca para revestimientos en LATAM.",
+    "difficulty": "intermedio",
+    "tags": [
+      "ultrasonido",
+      "Vp",
+      "módulo dinámico"
+    ],
+    "subtopic": "mecánica de rocas",
+    "competency": "Interpreta los resultados del ultrasonido para evaluar la calidad del macizo rocoso",
+    "course_hint": "Ensayos Geofísicos en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cuál es el criterio de rotura apropiado para macizos rocosos y cuándo se usa Mohr-Coulomb en su lugar?",
+    "options": [
+      "Siempre Mohr-Coulomb en todos los casos",
+      "Hoek-Brown para macizos (envolvente curvada, parámetros mb, s, a, σci). Mohr-Coulomb cuando se puede linealizar en el rango de esfuerzos del problema o cuando el software lo requiere.",
+      "Solo Hoek-Brown siempre; Mohr-Coulomb es obsoleto",
+      "Barton-Bandis para roca intacta y Mohr-Coulomb para macizos"
+    ],
+    "correct": 1,
+    "norm": "Hoek-Brown 2002",
+    "explanation": "En la práctica LATAM: se usa Hoek-Brown para caracterizar el macizo y luego se ajusta una envolvente Mohr-Coulomb equivalente (c', φ') para el rango de esfuerzos del problema. Implementado en RocData, Phase2/RS2, Slide, ampliamente usados en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "Hoek-Brown",
+      "Mohr-Coulomb",
+      "criterio de rotura"
+    ],
+    "subtopic": "criterios de rotura",
+    "competency": "Selecciona el criterio de rotura apropiado según las características del macizo rocoso y el problema de diseño",
+    "course_hint": "Criterios de Rotura en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el ángulo de fricción básico φb de una discontinuidad y cómo se obtiene experimentalmente?",
+    "options": [
+      "Es el ángulo de fricción del macizo rocoso intacto",
+      "φb = atan(τ/σn) de ensayos de corte directo en superficies sawcut (cortadas con sierra, lisas) bajo condición seca. Elimina la contribución de la rugosidad (JRC) y la resistencia de paredes (JCS).",
+      "Es el ángulo de fricción estimado del índice Q de Barton",
+      "Es la resistencia pico de la discontinuidad incluyendo la dilatancia"
+    ],
+    "correct": 1,
+    "norm": "ISRM",
+    "explanation": "φb varía típicamente 25°–35° según la mineralogía de la roca. Junto con JRC y JCS forma el criterio de Barton-Bandis: τ = σn × tan[φb + JRC × log10(JCS/σn)]. Parámetro fundamental en análisis de estabilidad de taludes en roca en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "φb",
+      "sawcut",
+      "fricción básica"
+    ],
+    "subtopic": "mecánica de discontinuidades",
+    "competency": "Determina experimentalmente el ángulo de fricción básico de discontinuidades rocosas",
+    "course_hint": "Mecánica de Discontinuidades",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué diferencia existe entre los métodos de minería a cielo abierto y subterránea para la selección del método?",
+    "options": [
+      "Solo la profundidad del yacimiento determina la selección",
+      "La selección depende de la geometría y profundidad del yacimiento, la relación de despaje (strip ratio), el valor del mineral, la estabilidad geomecánica y el impacto ambiental. A cielo abierto es rentable con strip ratio < 5–8:1.",
+      "Solo el volumen del yacimiento determina el método",
+      "La selección es siempre económica sin consideraciones geomecánicas"
+    ],
+    "correct": 1,
+    "norm": "Ingeniería Minera / ISRM",
+    "explanation": "Strip ratio crítico: si toneladas de desmonte por tonelada de mineral es alto → minería subterránea más económica. En los Andes (Antamina, Cerro Verde, Collahuasi) se usa tajo a cielo abierto. En minerales de alta ley o gran profundidad (El Teniente, Codelco) → subterráneo. Balance técnico-económico clave en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "minería a cielo abierto",
+      "minería subterránea",
+      "strip ratio"
+    ],
+    "subtopic": "minería",
+    "competency": "Evalúa los criterios para seleccionar entre minería a cielo abierto y subterránea",
+    "course_hint": "Métodos de Explotación Minera",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el análisis cinemático de taludes en roca y qué mecanismos de falla evalúa?",
+    "options": [
+      "Análisis de la velocidad de propagación de fracturas",
+      "Análisis usando proyección estereográfica (Schmidt/Wulff) que evalúa si la orientación de discontinuidades permite: falla planar, en cuña o por vuelco (toppling), comparando con la orientación del talud.",
+      "Análisis de flujo de agua a través de discontinuidades",
+      "Análisis sísmico de la estabilidad del talud"
+    ],
+    "correct": 1,
+    "norm": "ISRM / Goodman & Bray",
+    "explanation": "La proyección estereográfica permite identificar rápidamente en campo si la geometría de las discontinuidades es compatible con los mecanismos de falla. Primer paso obligatorio en el diseño de taludes de carreteras y tajos en LATAM.",
+    "difficulty": "avanzado",
+    "tags": [
+      "análisis cinemático",
+      "estereográfica",
+      "taludes en roca"
+    ],
+    "subtopic": "taludes en roca",
+    "competency": "Aplica el análisis cinemático para identificar mecanismos de falla en taludes rocosos",
+    "course_hint": "Estabilidad de Taludes en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué es el método sublevel stoping (cámaras y pilares) en minería subterránea?",
+    "options": [
+      "Método de extracción de carbón por galerías horizontales",
+      "Método de minería subterránea donde se extraen cámaras horizontales dejando pilares de roca entre ellas para soporte del techo. Aplicable en roca competente (UCS>70 MPa, Q>4) y yacimientos de mediana potencia.",
+      "Método de cementación de relleno solo para yacimientos de oro",
+      "Método de hundimiento de suelo aplicado en arcillas"
+    ],
+    "correct": 1,
+    "norm": "Ingeniería Minera / ISRM",
+    "explanation": "Sublevel stoping: alta productividad pero requiere roca competente. Variantes: cámaras y pilares, open stoping, blasthole stoping. Ampliamente usado en minería de Ag, Zn y Pb en minas andinas de Perú, Bolivia y México (Atacocha, Milpo, Peñoles).",
+    "difficulty": "avanzado",
+    "tags": [
+      "sublevel stoping",
+      "cámaras y pilares",
+      "minería subterránea"
+    ],
+    "subtopic": "minería",
+    "competency": "Describe el método sublevel stoping y sus condiciones de aplicación geomecánica",
+    "course_hint": "Métodos de Minería Subterránea",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cómo se diseña la malla de perforación y voladura en un tajo minero a cielo abierto?",
+    "options": [
+      "Empíricamente sin cálculos, basándose solo en la experiencia del operador",
+      "La malla se calcula con el espaciado S y burden B en función de las propiedades de la roca (UCS, densidad), el diámetro del taladro, el explosivo (ANFO, emulsión) y la fragmentación requerida. S≈1.15×B típicamente.",
+      "Solo depende del tipo de explosivo disponible",
+      "Se usa la misma malla para todas las rocas y equipos"
+    ],
+    "correct": 1,
+    "norm": "Ingeniería de Voladura / ISRM",
+    "explanation": "Parámetros clave: B = 25–40× diámetro taladro para ANFO. S = 1.0–1.25 × B. La fragmentación objetivo controla el diseño. Herramientas como JKSimBlast y Blastware se usan en grandes tajos de LATAM para optimizar la voladura y reducir costos de chancado.",
+    "difficulty": "avanzado",
+    "tags": [
+      "perforación y voladura",
+      "malla de voladura",
+      "tajo abierto"
+    ],
+    "subtopic": "perforación y voladura",
+    "competency": "Diseña los parámetros básicos de una malla de perforación y voladura para tajo abierto",
+    "course_hint": "Perforación y Voladura",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Qué fenómeno geomecánico es la mayor amenaza en la explotación de tajos muy profundos (>500 m) en LATAM?",
+    "options": [
+      "La percolación de agua subterránea únicamente",
+      "La combinación de altos esfuerzos in situ, fracturamiento inducido por las voladuras y reblandecimiento de los taludes, que puede desencadenar fallas en cuña, planares o rotacionales en los bancos.",
+      "Solo los deslizamientos superficiales por lluvia",
+      "Solo el estallido de roca en la roca intacta"
+    ],
+    "correct": 1,
+    "norm": "ISRM / Hoek-Brown",
+    "explanation": "En tajos profundos de LATAM (Chuquicamata >800 m, Escondida Chile, Toquepala Perú), el diseño de taludes requiere análisis geomecánicos detallados con RS2/Phase2, monitoreo geotécnico continuo (radar, inclinómetros) y ajuste dinámico de los ángulos de talud.",
+    "difficulty": "avanzado",
+    "tags": [
+      "tajos profundos",
+      "esfuerzos in situ",
+      "estabilidad"
+    ],
+    "subtopic": "taludes en roca",
+    "competency": "Identifica las amenazas geomecánicas en tajos profundos y las estrategias de monitoreo y control",
+    "course_hint": "Estabilidad de Taludes en Roca",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  },
+  {
+    "question": "¿Cuál es la diferencia entre el método de elements finitos (FEM) y los métodos de equilibrio límite (LEM) para análisis de estabilidad en roca?",
+    "options": [
+      "Son equivalentes; los resultados son siempre iguales",
+      "LEM: analiza el equilibrio de una masa rígida en la superficie de falla → FS global. FEM: modela la distribución completa de esfuerzos y deformaciones → identifica zonas de plastificación y obtiene FS por reducción de resistencia (SRM).",
+      "LEM es más preciso que FEM en todos los casos",
+      "FEM no aplica a problemas de estabilidad de taludes"
+    ],
+    "correct": 1,
+    "norm": "ISRM / RS2 / Slide",
+    "explanation": "LEM (Bishop, Spencer): rápido, robusto, ampliamente aceptado por normas. FEM/SRM (Phase2/RS2): más informativo sobre el comportamiento deformacional y la progresión de la falla. En proyectos críticos de LATAM (presas, tajos profundos) se usan ambos de forma complementaria.",
+    "difficulty": "avanzado",
+    "tags": [
+      "FEM",
+      "LEM",
+      "métodos de análisis"
+    ],
+    "subtopic": "métodos de análisis",
+    "competency": "Compara FEM y LEM para análisis de estabilidad en roca y selecciona el apropiado",
+    "course_hint": "Métodos Computacionales en Geomecánica",
+    "region": "LATAM",
+    "category": "rocas_mineria"
+  }
+]
