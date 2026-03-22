@@ -53,7 +53,7 @@ Para agregar o modificar preguntas:
 
 ## 🌐 Dominio personalizado
 
-1. Vercel → Settings → Domains → agregar `trivia.iltec.lat`
+1. Vercel → Settings → Domains → agregar `leveltest.iltec.lat`
 2. En Hostinger (hpanel.hostinger.com) → DNS → CNAME:
    - Nombre: `trivia`
    - Valor: `cname.vercel-dns.com`
