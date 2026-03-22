@@ -39,7 +39,7 @@ const SLIDES = [
   {
     badge: "Diagnóstico técnico profesional",
     title: <>Pon a prueba tus<br/><span className="accent">conocimientos técnicos</span>.</>,
-    sub: "Descubre tu nivel real en ingeniería civil y laboratorio. Avalado por normas ASTM, ACI, AASHTO, ISO y mas — los estándares que la industria exige.",
+    sub: "Descubre tu nivel real en ingeniería civil y laboratorio. Avalado por normas ASTM, ACI, AASHTO, ISO y NTP — los estándares que la industria exige.",
     cta: "Iniciar evaluación →",
   },
   {
@@ -49,7 +49,7 @@ const SLIDES = [
     cta: "Evalúate ahora →",
   },
   {
-    badge: "Perú · Colombia · México · Chile · Ecuador · Agentina · Bolivia y Centroamerica",
+    badge: "Perú · Colombia · México · Chile · Ecuador y más",
     title: <>En toda Latinoamérica,<br/><span className="accent">una sola plataforma</span>.</>,
     sub: "Mide tu competencia técnica con los mismos estándares internacionales que se aplican en proyectos reales de LATAM.",
     cta: "Comenzar evaluación →",
@@ -61,21 +61,176 @@ const SLIDES = [
     cta: "Ver mis áreas →",
   },
   {
-    badge: "LEVELTEST+ PRO",
+    badge: "LEVELTEST+ EXPERT — Próximamente",
     title: <>Tu diagnóstico,<br/>tu <span className="accent">ruta de aprendizaje</span>.</>,
     sub: "Basado en tu resultado, ILTEC diseña la ruta de cursos exacta que necesitas para avanzar al siguiente nivel profesional.",
     cta: "Evalúate hoy →",
   },
 ];
 
-// ─── COURSE LINKS por categoría ───────────────────────────────────────────────
-const COURSE_LINKS = {
-  mecanica_suelos:         { label: "Ver cursos de Mecánica de Suelos",     url: "https://iltec.lat/auto-learn/" },
-  concreto:                { label: "Ver cursos de Tecnología del Concreto", url: "https://iltec.lat/product/diseno-de-concreto/" },
-  asfalto_pavimentos:      { label: "Ver cursos de Pavimentos y Asfalto",    url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
-  geotecnia_cimentaciones: { label: "Ver cursos de Geotecnia",               url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
-  laboratorio_materiales:  { label: "Ver cursos de Laboratorio",             url: "https://iltec.lat/testing/" },
-  rocas_mineria:           { label: "Ver cursos de Geomecánica y Minería",   url: "https://iltec.lat/product/curso-rocas-astm/" },
+// ─── CATÁLOGO DE CURSOS ILTEC ─────────────────────────────────────────────────
+// Estructura: cada categoría tiene cursos generales y cursos por subtópico.
+// El CTA inteligente usa subtopics de las preguntas falladas para recomendar
+// el curso más específico disponible.
+
+const CATALOG = {
+  mecanica_suelos: {
+    general: [
+      { label: "Mecánica de Suelos aplicada a Cimentaciones", url: "https://iltec.lat/product/curso-mecanica-de-suelos-con-fines-de-cimentacion/" },
+      { label: "Mecánica de Suelos en Obras Viales",          url: "https://iltec.lat/product/curso-mecanica-de-suelos-en-obras-viales/" },
+    ],
+    subtopics: {
+      "consolidación":           { label: "Ensayo de Consolidación Unidimensional", url: "https://iltec.lat/product/ensayo-de-consolidacion-unidimensional-en-suelos/" },
+      "consolidación y asentamientos": { label: "Ensayo de Consolidación Unidimensional", url: "https://iltec.lat/product/ensayo-de-consolidacion-unidimensional-en-suelos/" },
+      "resistencia al corte":    { label: "Ensayo Triaxial en Suelos",               url: "https://iltec.lat/product/triaxial-suelos/" },
+      "propiedades índice":      { label: "Mecánica de Suelos aplicada a Cimentaciones", url: "https://iltec.lat/product/curso-mecanica-de-suelos-con-fines-de-cimentacion/" },
+      "clasificación":           { label: "Mecánica de Suelos en Obras Viales",      url: "https://iltec.lat/product/curso-mecanica-de-suelos-en-obras-viales/" },
+      "compactación":            { label: "Mecánica de Suelos en Obras Viales",      url: "https://iltec.lat/product/curso-mecanica-de-suelos-en-obras-viales/" },
+      "exploración":             { label: "Mecánica de Suelos aplicada a Cimentaciones", url: "https://iltec.lat/product/curso-mecanica-de-suelos-con-fines-de-cimentacion/" },
+      "permeabilidad y flujo":   { label: "Mecánica de Suelos aplicada a Cimentaciones", url: "https://iltec.lat/product/curso-mecanica-de-suelos-con-fines-de-cimentacion/" },
+      "dinámica de suelos":      { label: "Mecánica de Suelos aplicada a Cimentaciones", url: "https://iltec.lat/product/curso-mecanica-de-suelos-con-fines-de-cimentacion/" },
+    },
+  },
+
+  concreto: {
+    general: [
+      { label: "Diseño y Control de Calidad del Concreto", url: "https://iltec.lat/product/diseno-de-concreto/" },
+      { label: "Diseño de Mezclas ACI 211",                url: "https://iltec.lat/product/curso-aci211-1-22/" },
+    ],
+    subtopics: {
+      "diseño de mezclas":       { label: "Diseño de Mezclas ACI 211",               url: "https://iltec.lat/product/curso-aci211-1-22/" },
+      "control de calidad":      { label: "Control de Calidad del Concreto",         url: "https://iltec.lat/product/cccoc/" },
+      "durabilidad":             { label: "Diseño de Concretos Especiales",          url: "https://iltec.lat/product/diseno-de-mezclas-de-concretos-especiales/" },
+      "concreto fresco":         { label: "Diseño y Control de Calidad del Concreto",url: "https://iltec.lat/product/diseno-de-concreto/" },
+      "propiedades mecánicas":   { label: "Diseño y Control de Calidad del Concreto",url: "https://iltec.lat/product/diseno-de-concreto/" },
+      "materiales":              { label: "Diseño de Concretos Especiales",          url: "https://iltec.lat/product/diseno-de-mezclas-de-concretos-especiales/" },
+      "evaluación de estructuras": { label: "Control de Calidad del Concreto",       url: "https://iltec.lat/product/cccoc/" },
+    },
+  },
+
+  asfalto_pavimentos: {
+    general: [
+      { label: "Diseño de Pavimentos y Mezclas Asfálticas", url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+      { label: "Diseño Marshall",                           url: "https://iltec.lat/product/diseno-marshall/" },
+    ],
+    subtopics: {
+      "diseño de mezclas":       { label: "Diseño Marshall",                         url: "https://iltec.lat/product/diseno-marshall/" },
+      "caracterización del ligante": { label: "Diseño de Pavimentos y Mezclas Asfálticas", url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+      "especificaciones superpave": { label: "Diseño de Pavimentos y Mezclas Asfálticas", url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+      "control de calidad":      { label: "Control de Calidad en Movimiento de Tierras", url: "https://iltec.lat/product/control-calidad-movimiento-tierras/" },
+      "diseño de pavimentos":    { label: "Diseño de Pavimentos y Mezclas Asfálticas", url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+      "evaluación de pavimentos": { label: "Diseño de Pavimentos y Mezclas Asfálticas", url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+      "ensayos de desempeño":    { label: "Diseño Marshall",                         url: "https://iltec.lat/product/diseno-marshall/" },
+      "durabilidad":             { label: "Diseño de Pavimentos y Mezclas Asfálticas", url: "https://iltec.lat/product/diseno-de-pavimentos-y-mezclas-asfalticas/" },
+    },
+  },
+
+  geotecnia_cimentaciones: {
+    general: [
+      { label: "Geotecnia Aplicada a Cimentaciones",        url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      { label: "Estabilidad de Taludes",                    url: "https://iltec.lat/product/estabilidad-de-taludes/" },
+    ],
+    subtopics: {
+      "cimentaciones superficiales":  { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "cimentaciones profundas":      { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "estabilidad de taludes":       { label: "Estabilidad de Taludes en Suelos y Rocas", url: "https://iltec.lat/product/estabilidad-de-taludes/" },
+      "presión lateral de tierras":   { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "exploración geotécnica":       { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "dinámica de suelos":           { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "consolidación":                { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "normativa sísmica":            { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+      "permeabilidad y flujo":        { label: "Geotecnia Aplicada a Cimentaciones", url: "https://iltec.lat/product/estudios-geotecnicos-cimentaciones/" },
+    },
+  },
+
+  laboratorio_materiales: {
+    general: [
+      { label: "Catálogo completo TESTING+ — Ensayos ASTM", url: "https://iltec.lat/testing/" },
+      { label: "Microsoft Excel aplicado a Laboratorio",    url: "https://iltec.lat/product/exlab/" },
+    ],
+    subtopics: {
+      "áridos":                  { label: "ASTM D6913 — Granulometría",              url: "https://iltec.lat/product/astm-d6913/" },
+      "propiedades índice":      { label: "ASTM D4318 — Límites de Consistencia",    url: "https://iltec.lat/product/astm-d4318/" },
+      "compactación":            { label: "ASTM D1557 — Proctor Modificado",         url: "https://iltec.lat/product/astm-d1557-12/" },
+      "ensayos básicos de suelos": { label: "ASTM D2216 — Contenido de Humedad",    url: "https://iltec.lat/product/d2216-19/" },
+      "cemento y morteros":      { label: "ASTM C39 — Compresión del Concreto",      url: "https://iltec.lat/product/c39/" },
+      "evaluación de estructuras": { label: "ASTM C39 — Compresión del Concreto",   url: "https://iltec.lat/product/c39/" },
+      "control de calidad":      { label: "Catálogo TESTING+ — Ensayos ASTM",       url: "https://iltec.lat/testing/" },
+      "metrología":              { label: "Microsoft Excel aplicado a Laboratorio",  url: "https://iltec.lat/product/exlab/" },
+      "gestión de laboratorios": { label: "Catálogo TESTING+ — Ensayos ASTM",       url: "https://iltec.lat/testing/" },
+      "acero":                   { label: "Catálogo TESTING+ — Ensayos ASTM",       url: "https://iltec.lat/testing/" },
+    },
+  },
+
+  rocas_mineria: {
+    general: [
+      { label: "Ensayos en Rocas — Normas ASTM",            url: "https://iltec.lat/product/curso-rocas-astm/" },
+      { label: "Estabilidad de Taludes en Suelos y Rocas",  url: "https://iltec.lat/product/estabilidad-de-taludes/" },
+    ],
+    subtopics: {
+      "mecánica de rocas":       { label: "Ensayos en Rocas — Normas ASTM",          url: "https://iltec.lat/product/curso-rocas-astm/" },
+      "clasificaciones geomecánicas": { label: "Ensayos en Rocas — Normas ASTM",    url: "https://iltec.lat/product/curso-rocas-astm/" },
+      "taludes en roca":         { label: "Estabilidad de Taludes en Suelos y Rocas",url: "https://iltec.lat/product/estabilidad-de-taludes/" },
+      "tunelería":               { label: "Ensayos en Rocas — Normas ASTM",          url: "https://iltec.lat/product/curso-rocas-astm/" },
+      "criterios de rotura":     { label: "Ensayos en Rocas — Normas ASTM",          url: "https://iltec.lat/product/curso-rocas-astm/" },
+      "mecánica de discontinuidades": { label: "Ensayos en Rocas — Normas ASTM",    url: "https://iltec.lat/product/curso-rocas-astm/" },
+      "minería":                 { label: "Ensayos en Rocas — Normas ASTM",          url: "https://iltec.lat/product/curso-rocas-astm/" },
+      "perforación y voladura":  { label: "Ensayos en Rocas — Normas ASTM",          url: "https://iltec.lat/product/curso-rocas-astm/" },
+    },
+  },
+};
+
+// ── Función: obtiene el curso más específico para una categoría + subtopic ──
+const getCourse = (catId, subtopic) => {
+  const cat = CATALOG[catId];
+  if (!cat) return null;
+  // buscar match exacto o parcial en subtopics
+  if (subtopic) {
+    const key = subtopic.toLowerCase().trim();
+    const match = Object.entries(cat.subtopics).find(([k]) => key.includes(k) || k.includes(key));
+    if (match) return match[1];
+  }
+  // fallback: primer curso general
+  return cat.general[0] || null;
+};
+
+// ── Función: top 2 áreas más débiles con cursos recomendados ──
+const getSmartRecos = (results) => {
+  // agrupar por categoría + rastrear subtopics fallados
+  const stats = {};
+  results.forEach(r => {
+    const cat = r.q.category || "";
+    if (!stats[cat]) stats[cat] = { correct:0, total:0, failedSubtopics:[] };
+    stats[cat].total++;
+    if (r.correct) {
+      stats[cat].correct++;
+    } else {
+      if (r.q.subtopic) stats[cat].failedSubtopics.push(r.q.subtopic);
+    }
+  });
+
+  // ordenar por % de error descendente, filtrar >= 25% de error
+  return Object.entries(stats)
+    .map(([cat, s]) => ({
+      cat,
+      pct: Math.round((s.correct / s.total) * 100),
+      failedSubtopics: s.failedSubtopics,
+    }))
+    .filter(({ pct }) => pct < 75)
+    .sort((a, b) => a.pct - b.pct)
+    .slice(0, 2)
+    .map(({ cat, pct, failedSubtopics }) => {
+      // el subtopic más fallado
+      const topSubtopic = failedSubtopics.length
+        ? failedSubtopics.sort((a,b) =>
+            failedSubtopics.filter(x=>x===b).length - failedSubtopics.filter(x=>x===a).length
+          )[0]
+        : null;
+      const course = getCourse(cat, topSubtopic);
+      const catLabel = CATEGORIES.find(c => c.id === cat)?.label || cat;
+      return { cat, catLabel, pct, topSubtopic, course };
+    })
+    .filter(r => r.course !== null);
 };
 
 // ─── SVG ICONS ────────────────────────────────────────────────────────────────
@@ -399,21 +554,41 @@ const css = `
   .lt-breakdown-bar{height:100%;border-radius:3px;transition:width 1s ease}
   .lt-breakdown-pct{font-size:11px;color:${C.subtle};width:32px;text-align:right;flex-shrink:0}
 
-  /* smart CTA box */
-  .lt-smart-cta{
-    background:rgba(20,184,166,0.05);border:1px solid rgba(20,184,166,0.15);
-    border-radius:12px;padding:20px 24px;margin-bottom:20px;
-    display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  /* smart reco cards */
+  .lt-recos{margin-bottom:24px}
+  .lt-recos-title{font-size:11px;color:${C.subtle};font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:12px}
+  .lt-reco-card{
+    background:${C.surface};
+    border:1px solid rgba(20,184,166,0.18);
+    border-left:3px solid ${C.teal};
+    border-radius:10px;padding:18px 20px;margin-bottom:10px;
+    display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;
   }
-  .lt-smart-cta-text p:first-child{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:${C.white};margin-bottom:4px}
-  .lt-smart-cta-text p:last-child{font-size:12px;color:${C.subtle}}
-  .lt-smart-cta-btn{
-    background:${C.teal};color:#0F172A;border:none;border-radius:8px;
-    padding:10px 20px;font-family:'Space Grotesk',sans-serif;font-size:12px;
+  .lt-reco-card-body{}
+  .lt-reco-area{font-size:10px;font-weight:600;color:${C.teal};letter-spacing:.8px;text-transform:uppercase;margin-bottom:4px}
+  .lt-reco-title{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:${C.white};margin-bottom:4px}
+  .lt-reco-sub{font-size:12px;color:${C.subtle};line-height:1.5}
+  .lt-reco-pill{
+    display:inline-flex;align-items:center;gap:4px;font-size:10px;font-weight:600;
+    background:rgba(239,68,68,0.1);color:${C.error};border-radius:4px;padding:2px 7px;
+    margin-bottom:4px;
+  }
+  .lt-reco-pill.ok{background:rgba(34,197,94,0.1);color:${C.success}}
+  .lt-reco-btn{
+    background:${C.teal};color:#0F172A;border:none;border-radius:7px;
+    padding:9px 16px;font-family:'Space Grotesk',sans-serif;font-size:12px;
     font-weight:700;cursor:pointer;transition:background .2s;white-space:nowrap;
-    text-decoration:none;display:inline-block;
+    text-decoration:none;display:inline-flex;align-items:center;gap:5px;flex-shrink:0;
   }
-  .lt-smart-cta-btn:hover{background:${C.tealHov}}
+  .lt-reco-btn:hover{background:${C.tealHov}}
+
+  .lt-general-cta{
+    text-align:center;padding:16px;background:rgba(20,184,166,0.04);
+    border:1px solid rgba(20,184,166,0.1);border-radius:10px;margin-bottom:20px;
+  }
+  .lt-general-cta p{font-size:13px;color:${C.subtle};margin-bottom:8px}
+  .lt-general-cta a{color:${C.teal};font-weight:600;font-size:13px;text-decoration:none}
+  .lt-general-cta a:hover{text-decoration:underline}
 
   /* review */
   .lt-review-list{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
@@ -458,21 +633,10 @@ const getLevel = pct => {
 
 const catColor = pct => pct >= 75 ? C.success : pct >= 50 ? C.warn : C.error;
 
-// worst category from results
+// getWeakestCat kept as lightweight alias for backwards compat
 const getWeakestCat = (results) => {
-  const stats = {};
-  results.forEach(r => {
-    const cat = r.q.category || "";
-    if (!stats[cat]) stats[cat] = { correct:0, total:0 };
-    stats[cat].total++;
-    if (r.correct) stats[cat].correct++;
-  });
-  let worst = null, worstPct = 101;
-  Object.entries(stats).forEach(([cat, s]) => {
-    const p = (s.correct / s.total) * 100;
-    if (p < worstPct) { worstPct = p; worst = cat; }
-  });
-  return worst;
+  const recos = getSmartRecos(results);
+  return recos.length ? recos[0].cat : null;
 };
 
 // save lead to localStorage
@@ -966,11 +1130,8 @@ export default function LevelTestApp() {
       pct: Math.round((s.correct/s.total)*100), correct:s.correct, total:s.total,
     })).sort((a,b) => b.pct - a.pct);
 
-    // smart CTA: worst category
-    const weakestCat = getWeakestCat(results);
-    const courseLink = COURSE_LINKS[weakestCat];
-    const weakestLabel = CATEGORIES.find(c => c.id === weakestCat)?.label || "";
-    const weakestPct = catStats[weakestCat] ? Math.round((catStats[weakestCat].correct / catStats[weakestCat].total) * 100) : 0;
+    // ── smart recommendations ──
+    const recos = getSmartRecos(results);
 
     return (
       <div className="lt-app">
@@ -1040,18 +1201,41 @@ export default function LevelTestApp() {
             </div>
           )}
 
-          {/* smart CTA — weakest category */}
-          {courseLink && weakestPct < 75 && (
-            <div className="lt-smart-cta">
-              <div className="lt-smart-cta-text">
-                <p>Oportunidad de mejora detectada en {weakestLabel}</p>
-                <p>Tu puntaje en esta área fue {weakestPct}% — ILTEC tiene el curso exacto que necesitas.</p>
+          {/* ── smart course recommendations ── */}
+          {recos.length > 0 && (
+            <div className="lt-recos">
+              <div className="lt-recos-title">
+                📚 Cursos ILTEC recomendados para ti
               </div>
-              <a href={courseLink.url} target="_blank" rel="noopener noreferrer" className="lt-smart-cta-btn">
-                {courseLink.label} →
-              </a>
+              {recos.map(({ cat, catLabel, pct: p, topSubtopic, course }) => {
+                const intensity = p < 40 ? "Área crítica" : p < 60 ? "Necesitas refuerzo" : "Oportunidad de mejora";
+                const subMsg = topSubtopic
+                  ? `Subtema con más errores: ${topSubtopic}`
+                  : `Tu puntaje en ${catLabel} fue ${p}%`;
+                return (
+                  <div key={cat} className="lt-reco-card">
+                    <div className="lt-reco-card-body">
+                      <div className="lt-reco-area">{catLabel}</div>
+                      <div className="lt-reco-pill">{intensity} · {p}%</div>
+                      <div className="lt-reco-title">{course.label}</div>
+                      <div className="lt-reco-sub">{subMsg}</div>
+                    </div>
+                    <a href={course.url} target="_blank" rel="noopener noreferrer" className="lt-reco-btn">
+                      Ver curso →
+                    </a>
+                  </div>
+                );
+              })}
             </div>
           )}
+
+          {/* general CTA — always visible */}
+          <div className="lt-general-cta">
+            <p>¿Quieres ver todos los cursos y membresías disponibles?</p>
+            <a href="https://iltec.lat" target="_blank" rel="noopener noreferrer">
+              Explorar catálogo completo en ILTEC →
+            </a>
+          </div>
 
           <div className="lt-cta-bar">
             <button className="lt-btn-outline" onClick={() => setShowReview(!showReview)}>
